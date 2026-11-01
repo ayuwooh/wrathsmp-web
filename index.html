@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WrathSMP — Sobrevivência, progressão e lendas</title>
+  <meta name="description" content="WrathSMP é um servidor de Minecraft com jornada de níveis 1–60, Codex de descobertas, proteção de bases, túmulos, PvP opt-in e um mundo terraformado com mais de 40 biomas.">
+  <meta name="theme-color" content="#070708">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="WrathSMP — Sobrevivência, progressão e lendas">
+  <meta property="og:description" content="Suba do nível 1 ao 60, descubra 295 segredos no Codex e deixe sua marca em um mundo feito para durar.">
+  <meta property="og:image" content="assets/img/server-icon.png">
+  <link rel="icon" type="image/png" href="assets/img/server-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-home">
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
+
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="WrathSMP — início">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none">
+            <path d="M24 3.5 42 10v12.4c0 9.7-7.4 16.5-18 21.1C13.4 38.9 6 32.1 6 22.4V10L24 3.5Z" stroke="currentColor" stroke-width="1.7"/>
+            <path d="M24 8.5 37 13.3v9c0 7-5.5 12.4-13 16.1-7.5-3.7-13-9.1-13-16.1v-9L24 8.5Z" fill="currentColor" fill-opacity=".08"/>
+            <path d="M15.5 17.5 19.5 31l4.5-7 4.5 7 4-13.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter"/>
+          </svg>
+        </span>
+        <span class="brand-copy">
+          <strong>WRATH<span>SMP</span></strong>
+          <small>SURVIVAL MULTIPLAYER</small>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" data-nav aria-label="Navegação principal">
+        <a class="nav-link is-active" href="index.html">Início</a>
+        <a class="nav-link" href="recursos.html">Recursos</a>
+        <a class="nav-link" href="recursos.html#progressao">Progressão</a>
+        <a class="nav-link" href="http://187.75.120.140:8123" target="_blank" rel="noopener" data-dynmap-link>
+          Mapa
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+        </a>
+        <a class="nav-link nav-link-cta" href="#entrar">Entrar no servidor</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="ip-mini" type="button" data-copy-ip title="Copiar o IP do servidor">
+          <span class="ip-mini-dot" aria-hidden="true"></span>
+          <span class="ip-mini-text" data-ip>187.75.120.140</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        </button>
+        <a class="btn btn-primary btn-sm desktop-cta" href="#entrar">
+          Jogar agora
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="mainNav" data-menu-toggle>
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+      <div class="hero-ghost" aria-hidden="true">WRATHSMP</div>
+      <div class="hero-emblem" aria-hidden="true"></div>
+      <div class="hero-art" aria-hidden="true">
+        <span class="float-block fb-1"></span>
+        <span class="float-block fb-2"></span>
+        <span class="float-block fb-3"></span>
+        <span class="float-block fb-4"></span>
+        <span class="float-block fb-5"></span>
+      </div>
+
+      <div class="container hero-inner">
+        <div class="hero-badge">
+          <span class="dot" data-status-dot aria-hidden="true"></span>
+          <span data-status-label>Servidor online</span>
+          <span class="hero-badge-sep">/</span>
+          <span>Temporada 1</span>
+        </div>
+
+        <h1 class="hero-title">
+          <span class="title-main">WRATH</span><span class="title-accent">SMP</span>
+        </h1>
+
+        <p class="hero-tagline">
+          Um mundo de sobrevivência feito para durar. Suba do <strong>nível 1 ao 60</strong>,
+          desvende <strong>295 segredos</strong> no Codex e construa uma história que seja só sua.
+        </p>
+
+        <div class="hero-actions">
+          <button class="ip-box" type="button" data-copy-ip title="Copiar o IP do servidor">
+            <span class="ip-box-copy">
+              <span class="ip-box-label">IP do servidor</span>
+              <span class="ip-box-value" data-ip>187.75.120.140</span>
+            </span>
+            <span class="ip-box-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            </span>
+          </button>
+
+          <a class="btn btn-ghost" href="recursos.html">
+            Explorar recursos
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+
+        <div class="hero-meta">
+          <span><span class="dot" data-status-dot aria-hidden="true"></span><span data-status-label>Servidor online</span></span>
+          <span class="meta-sep">•</span>
+          <span>Java + Bedrock</span>
+          <span class="meta-sep">•</span>
+          <span>Minecraft 26.3</span>
+          <span class="meta-sep">•</span>
+          <span><span data-players>—</span> / <span data-max-players>20</span> online</span>
+        </div>
+      </div>
+
+      <div class="scroll-cue" aria-hidden="true">Role para explorar</div>
+    </section>
+
+    <!-- ================= QUICK STATS ================= -->
+    <section class="container quick-stats" aria-label="Números do servidor">
+      <div class="stat">
+        <span class="stat-value"><span data-players>—</span><small> / <span data-max-players>20</span></small></span>
+        <span class="stat-label">Jogadores online</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">1<span class="stat-accent"> → </span>60</span>
+        <span class="stat-label">Jornada de níveis</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">295</span>
+        <span class="stat-label">Descobertas no Codex</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">300</span>
+        <span class="stat-label">Nível máximo de habilidade</span>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section class="section about" id="sobre">
+      <div class="container split">
+        <div class="about-copy reveal">
+          <p class="eyebrow"><span class="eyebrow-line"></span> A experiência</p>
+          <h2>Não é só sobreviver.<br><em>É sobre evoluir.</em></h2>
+          <p class="lead">
+            WrathSMP mistura a liberdade do survival clássico com uma progressão própria:
+            cada passo conta, cada descoberta fica registrada e cada base tem uma história.
+          </p>
+          <p>
+            Existem três contadores de XP diferentes — a barra vanilla, as habilidades e a jornada
+            de níveis. Enquanto você joga, caça, minera e explora, o servidor acompanha tudo e
+            transforma o seu tempo em recompensas de verdade.
+          </p>
+
+          <ul class="check-list">
+            <li>Jornada com recompensas a cada nível</li>
+            <li>295 descobertas permanentes no Codex</li>
+            <li>Bases protegidas com energia</li>
+            <li>Mundo terraformado com 40+ biomas</li>
+            <li>Habilidades até o nível 300</li>
+            <li>PvP opt-in e combate escalado</li>
+          </ul>
+
+          <a class="text-link" href="recursos.html">
+            Ver o guia completo
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+
+        <div class="journey-panel reveal" style="--delay: .12s">
+          <div class="panel-head">
+            <span>JORNADA DO JOGADOR</span>
+            <span class="tag">NÍVEL 1 → 60</span>
+          </div>
+
+          <div class="level-readout">
+            <strong>01</strong>
+            <span>/ 60</span>
+            <span class="level-max">O COMEÇO DE TUDO</span>
+          </div>
+
+          <div class="level-bar" aria-hidden="true"><span></span></div>
+          <div class="level-scale" aria-hidden="true">
+            <span>1</span><span>10</span><span>20</span><span>30</span><span>40</span><span>50</span><span>60</span>
+          </div>
+
+          <div class="milestones">
+            <div class="milestone">
+              <strong>NÍVEL 10</strong>
+              <span>O Nether se abre</span>
+            </div>
+            <div class="milestone">
+              <strong>NÍVEL 30</strong>
+              <span>O End se abre</span>
+            </div>
+            <div class="milestone">
+              <strong>NÍVEL 60</strong>
+              <span>Celebração global</span>
+            </div>
+          </div>
+
+          <div class="journey-note">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>
+            <span>Todo nível cura e enche a fome por completo. Os primeiros sobem rápido; os últimos pedem mais tempo.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FEATURES ================= -->
+    <section class="section" id="recursos">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow"><span class="eyebrow-line"></span> O que te espera</p>
+          <h2>Muito além do<br><span class="outline">survival comum.</span></h2>
+          <p class="section-lead">
+            Sistemas pensados para recompensar quem joga, proteger quem constrói e dar
+            motivos novos para continuar explorando.
+          </p>
+        </div>
+
+        <div class="feature-grid">
+          <a class="feature-card reveal" href="recursos.html#progressao">
+            <span class="card-index">01</span>
+            <span class="icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 19V5M4 19h16"/><path d="m7 15 3-4 3 2 4-6"/></svg>
+            </span>
+            <h3>Progressão 1 → 60</h3>
+            <p>Ganhe XP jogando, caçando, minerando e explorando. Cada nível rende itens, poções e acesso a novas dimensões.</p>
+            <div class="card-tags"><span>XP</span><span>Recompensas</span><span>Nether + End</span></div>
+            <span class="card-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
+
+          <a class="feature-card reveal" href="recursos.html#codex" style="--delay: .05s">
+            <span class="card-index">02</span>
+            <span class="icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 6.5C10.5 4.8 8 4 4.5 4v15c3.5 0 6 .8 7.5 2.5 1.5-1.7 4-2.5 7.5-2.5V4C16 4 13.5 4.8 12 6.5Z"/><path d="M12 6.5v15"/></svg>
+            </span>
+            <h3>Codex de descobertas</h3>
+            <p>295 páginas de lore para desbloquear. Monstros, biomas, relíquias, discos, poções e muito mais — cada uma vale XP.</p>
+            <div class="card-tags"><span>295 entradas</span><span>Lore</span><span>XP</span></div>
+            <span class="card-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
+
+          <a class="feature-card reveal" href="recursos.html#base-itens" style="--delay: .1s">
+            <span class="card-index">03</span>
+            <span class="icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3 20 6v5c0 5-3.4 8.4-8 10-4.6-1.6-8-5-8-10V6l8-3Z"/><path d="m9 12 2 2 4-4"/></svg>
+            </span>
+            <h3>Bases protegidas</h3>
+            <p>Reivindique chunks, convide amigos e mantenha tudo seguro com permissões finas e uma powercell que alimenta sua base.</p>
+            <div class="card-tags"><span>20 chunks</span><span>Energia</span><span>Permissões</span></div>
+            <span class="card-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
+
+          <a class="feature-card reveal" href="recursos.html#tumulos" style="--delay: .15s">
+            <span class="card-index">04</span>
+            <span class="icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 21V11a6 6 0 0 1 12 0v10"/><path d="M4 21h16M12 8v6M9 11h6"/></svg>
+            </span>
+            <h3>Túmulos seguros</h3>
+            <p>Morreu? Seus itens e 70% do XP ficam em um túmulo no local, com proteção, holograma e uma bússola para encontrar o caminho.</p>
+            <div class="card-tags"><span>70% do XP</span><span>3 horas</span><span>Bússola</span></div>
+            <span class="card-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
+
+          <a class="feature-card reveal" href="recursos.html#combate" style="--delay: .2s">
+            <span class="card-index">05</span>
+            <span class="icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m14 4 6-2-2 6L9 17l-3 1 1-3 7-11Z"/><path d="m5 15 4 4M3 21l3-3"/></svg>
+            </span>
+            <h3>Combate & PvP opt-in</h3>
+            <p>Dragão do End escalado, PvP desligado por padrão, recompensas por trim, cabeças de mobs e ovos de spawn raros.</p>
+            <div class="card-tags"><span>PvP opcional</span><span>Boss</span><span>Trims</span></div>
+            <span class="card-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
+
+          <a class="feature-card reveal" href="recursos.html#mundo" style="--delay: .25s">
+            <span class="card-index">06</span>
+            <span class="icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="m16 8-2.4 5.6L8 16l2.4-5.6L16 8Z"/></svg>
+            </span>
+            <h3>Mundo terraformado</h3>
+            <p>Mais de 40 biomas, estruturas próprias, cavernas especiais, tesouros que surgem perto de você e um mapa 3D no navegador.</p>
+            <div class="card-tags"><span>40+ biomas</span><span>Tesouros</span><span>Dynmap</span></div>
+            <span class="card-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CODEX ================= -->
+    <section class="section codex-section" id="codex">
+      <div class="container codex-layout">
+        <div class="codex-copy reveal">
+          <p class="eyebrow"><span class="eyebrow-line"></span> Codex</p>
+          <h2>Um compêndio<br><em>escrito por você.</em></h2>
+          <p>
+            Abra o Codex com <span class="command">/codex</span> e transforme cada encontro em uma
+            página permanente de lore. Derrote monstros, domestique animais, visite biomas, pesque
+            tesouros e suba suas habilidades para completar as 13 categorias.
+          </p>
+          <p>
+            Descobertas bloqueadas aparecem como <strong>??</strong>. Quando você encontra algo novo,
+            o banner <strong>“CÓDICE ATUALIZADO”</strong> aparece e o XP cai na sua jornada.
+          </p>
+
+          <div class="codex-facts">
+            <div class="fact"><strong>295</strong><span>descobertas</span></div>
+            <div class="fact"><strong>13</strong><span>categorias</span></div>
+            <div class="fact"><strong>+35k</strong><span>XP ao completar</span></div>
+          </div>
+
+          <a class="text-link" href="recursos.html#codex">
+            Abrir o Codex completo
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+
+        <div class="codex-window reveal" style="--delay: .1s" aria-label="Prévia visual do Codex">
+          <div class="codex-titlebar" aria-hidden="true">
+            <span class="window-dot"></span><span class="window-dot"></span><span class="window-dot"></span>
+            <span>CODEX / DESCOBERTAS</span>
+          </div>
+          <div class="codex-body">
+            <div class="codex-hero">
+              <div class="codex-total">295 <small>ENTRADAS</small></div>
+              <div class="codex-hero-label">Sua coleção de lore começa com uma única descoberta</div>
+            </div>
+
+            <div class="codex-list">
+              <div class="codex-row" style="--row-color:#b492ff;--w:82%"><i></i><span>Monstros</span><b>27 / 33</b><span class="bar"><span></span></span></div>
+              <div class="codex-row" style="--row-color:#7ee787;--w:64%"><i></i><span>Vida Selvagem</span><b>24 / 37</b><span class="bar"><span></span></span></div>
+              <div class="codex-row" style="--row-color:#ef5b4c;--w:44%"><i></i><span>Lendas & Monstruosidades</span><b>4 / 9</b><span class="bar"><span></span></span></div>
+              <div class="codex-row" style="--row-color:#74b87a;--w:71%"><i></i><span>Biomas</span><b>34 / 48</b><span class="bar"><span></span></span></div>
+              <div class="codex-row" style="--row-color:#7cb8ff;--w:58%"><i></i><span>Relíquias</span><b>14 / 24</b><span class="bar"><span></span></span></div>
+              <div class="codex-row" style="--row-color:#f6c453;--w:90%"><i></i><span>Música</span><b>17 / 19</b><span class="bar"><span></span></span></div>
+            </div>
+
+            <div class="codex-banner">
+              <span>CÓDICE ATUALIZADO</span>
+              <small>+1.000 XP DE JORNADA</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= WORLD ================= -->
+    <section class="section" id="mundo">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow"><span class="eyebrow-line"></span> O mundo</p>
+          <h2>Um mundo que<br><em>vale a pena explorar.</em></h2>
+          <p class="section-lead">
+            Terreno gerado à mão, estruturas próprias e tesouros que aparecem perto de jogadores
+            ativos. Não é só um mapa: é um lugar cheio de coisas para descobrir.
+          </p>
+        </div>
+
+        <div class="world-grid">
+          <article class="world-card reveal">
+            <div class="world-top">
+              <div class="world-coords">
+                <span>OVERWORLD</span>
+                <span>40+ BIOMAS</span>
+                <span>ESTRUTURAS PRÓPRIAS</span>
+              </div>
+              <div class="compass" aria-hidden="true"></div>
+            </div>
+            <div class="world-bottom">
+              <h3>Montanhas pintadas,<br><em>cavernas de cogumelo.</em></h3>
+              <p>
+                Vilas, pirâmides, mansões, cidades antigas, câmaras de prova, catacumbas,
+                naufrágios e acampamentos abandonados espalhados por um terreno que não segue
+                o padrão vanilla.
+              </p>
+            </div>
+          </article>
+
+          <div class="dimension-list">
+            <article class="dimension-card reveal" style="--dim-color:#ff8b54;--delay:.05s">
+              <div class="dimension-level">10<small>NÍVEL</small></div>
+              <div class="dimension-copy">
+                <h3>Nether</h3>
+                <p>Abra o portal ao alcançar o nível 10 e encare o inferno.</p>
+              </div>
+            </article>
+
+            <article class="dimension-card reveal" style="--dim-color:#b492ff;--delay:.1s">
+              <div class="dimension-level">30<small>NÍVEL</small></div>
+              <div class="dimension-copy">
+                <h3>End</h3>
+                <p>Cidades do End, elytras e o dragão escalado esperam por você.</p>
+              </div>
+            </article>
+
+            <article class="dimension-card reveal" style="--dim-color:#7cb8ff;--delay:.15s">
+              <div class="dimension-level">60<small>NÍVEL</small></div>
+              <div class="dimension-copy">
+                <h3>Sift <span class="tag">EM BREVE</span></h3>
+                <p>A próxima dimensão. O nível máximo abre a última porta.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= BASES / QOL ================= -->
+    <section class="section section-tight" id="base">
+      <div class="container">
+        <div class="bento">
+          <article class="bento-card reveal">
+            <span class="icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3 20 6v5c0 5-3.4 8.4-8 10-4.6-1.6-8-5-8-10V6l8-3Z"/><path d="M9 12h6M12 9v6"/></svg>
+            </span>
+            <h3>Sua base, suas regras.</h3>
+            <p>
+              Reivindique o chunk onde está com <span class="command">/c</span>. Os chunks precisam
+              se tocar. Convide membros, defina permissões e monte uma powercell para manter a
+              energia fluindo.
+            </p>
+
+            <div class="bento-stats">
+              <div class="bento-stat"><strong>20</strong><span>chunks por base</span></div>
+              <div class="bento-stat"><strong>2</strong><span>regiões</span></div>
+              <div class="bento-stat"><strong>24h</strong><span>energia inicial</span></div>
+            </div>
+
+            <ul class="check-list">
+              <li>Permissões para dono, membro e visitante</li>
+              <li>PVP, redstone, portas, trocas, fogo e TNT</li>
+              <li>Auditoria de ações e bossbar de energia</li>
+            </ul>
+
+            <a class="text-link" href="recursos.html#base-itens">
+              Ver proteção de bases
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </article>
+
+          <article class="bento-card qol-card reveal" style="--delay:.08s">
+            <span class="icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m12 3 1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3Z"/><path d="m19 16 .8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8L19 16Z"/></svg>
+            </span>
+            <h3>Qualidade de vida<br>de verdade.</h3>
+            <p>
+              Bigornas sem limite de 40 níveis, reciclagem de equipamentos, mineração em cadeia,
+              agricultura offline, luz dinâmica e dezenas de pequenos ajustes que fazem diferença.
+            </p>
+
+            <ul class="check-list">
+              <li>Mochilas de 27 slots e waystones</li>
+              <li>Bússola de explorador para 9 estruturas</li>
+              <li>Reciclagem com 40% a 80% de retorno</li>
+              <li>Túmulos, votação de sono e poses</li>
+            </ul>
+
+            <a class="text-link" href="recursos.html#qol">
+              Explorar qualidade de vida
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= JOIN ================= -->
+    <section class="section join" id="entrar">
+      <div class="container">
+        <div class="join-panel reveal">
+          <p class="eyebrow"><span class="eyebrow-line"></span> O próximo capítulo é seu</p>
+          <h2>Pronto para deixar<br><em>sua marca?</em></h2>
+          <p>
+            Copie o IP, entre no servidor e comece sua jornada. Não existe um jeito certo de jogar —
+            só o seu.
+          </p>
+
+          <div class="join-actions">
+            <button class="ip-box" type="button" data-copy-ip title="Copiar o IP do servidor">
+              <span class="ip-box-copy">
+                <span class="ip-box-label">IP do servidor</span>
+                <span class="ip-box-value" data-ip>187.75.120.140</span>
+              </span>
+              <span class="ip-box-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              </span>
+            </button>
+
+            <a class="btn btn-ghost" href="recursos.html">
+              Ler o guia do jogador
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+
+          <div class="join-steps">
+            <span><b>01</b> Abra o Minecraft</span>
+            <span><b>02</b> Adicione o servidor</span>
+            <span><b>03</b> Entre e sobreviva</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="brand" href="index.html" aria-label="WrathSMP — início">
+            <span class="brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none">
+                <path d="M24 3.5 42 10v12.4c0 9.7-7.4 16.5-18 21.1C13.4 38.9 6 32.1 6 22.4V10L24 3.5Z" stroke="currentColor" stroke-width="1.7"/>
+                <path d="M24 8.5 37 13.3v9c0 7-5.5 12.4-13 16.1-7.5-3.7-13-9.1-13-16.1v-9L24 8.5Z" fill="currentColor" fill-opacity=".08"/>
+                <path d="M15.5 17.5 19.5 31l4.5-7 4.5 7 4-13.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter"/>
+              </svg>
+            </span>
+            <span class="brand-copy">
+              <strong>WRATH<span>SMP</span></strong>
+              <small>SURVIVAL MULTIPLAYER</small>
+            </span>
+          </a>
+          <p>
+            Um servidor de sobrevivência com progressão própria, descobertas permanentes e
+            espaço para construir a sua história.
+          </p>
+          <span class="footer-note"><span class="dot" data-status-dot aria-hidden="true"></span><span data-status-label>Servidor online</span></span>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <a href="index.html">Início</a>
+          <a href="recursos.html">Recursos</a>
+          <a href="recursos.html#progressao">Progressão</a>
+          <a href="http://187.75.120.140:8123" target="_blank" rel="noopener" data-dynmap-link>Mapa 3D</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Guia do jogador</h4>
+          <a href="recursos.html#codex">Codex</a>
+          <a href="recursos.html#base-itens">Bases & itens</a>
+          <a href="recursos.html#tumulos">Túmulos</a>
+          <a href="recursos.html#comandos">Comandos</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Servidor</h4>
+          <button class="footer-ip" type="button" data-copy-ip><span data-ip>187.75.120.140</span> · copiar</button>
+          <a href="http://187.75.120.140:8123" target="_blank" rel="noopener" data-dynmap-link>Dynmap</a>
+          <span style="display:block;color:var(--muted);font-size:12.5px;margin-bottom:10px;">Minecraft 26.3</span>
+          <span style="display:block;color:var(--muted);font-size:12.5px;">Java + Bedrock</span>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> WrathSMP. Todos os direitos reservados.</span>
+        <span class="status"><span class="dot" data-status-dot aria-hidden="true"></span><span data-status-label>Servidor online</span> · <span data-players>—</span>/<span data-max-players>20</span> jogadores</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite" data-toast>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>
+    <span data-toast-text>IP copiado!</span>
+  </div>
+
+  <button class="back-to-top" type="button" aria-label="Voltar ao topo" data-back-to-top>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+  </button>
+
+  <script src="main.js"></script>
+</body>
+</html>

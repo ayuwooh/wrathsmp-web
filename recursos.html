@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Recursos — Guia do Jogador | WrathSMP</title>
+  <meta name="description" content="Guia completo do WrathSMP: progressão 1–60, Codex com 295 descobertas, bases protegidas, mochilas, waystones, túmulos, PvP, mundo terraformado, qualidade de vida e comandos.">
+  <meta name="theme-color" content="#070708">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Recursos — Guia do Jogador | WrathSMP">
+  <meta property="og:description" content="Tudo o que o servidor oferece, explicado do nível 1 ao 60.">
+  <meta property="og:image" content="assets/img/server-icon.png">
+  <link rel="icon" type="image/png" href="assets/img/server-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-docs">
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
+
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="WrathSMP — início">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none">
+            <path d="M24 3.5 42 10v12.4c0 9.7-7.4 16.5-18 21.1C13.4 38.9 6 32.1 6 22.4V10L24 3.5Z" stroke="currentColor" stroke-width="1.7"/>
+            <path d="M24 8.5 37 13.3v9c0 7-5.5 12.4-13 16.1-7.5-3.7-13-9.1-13-16.1v-9L24 8.5Z" fill="currentColor" fill-opacity=".08"/>
+            <path d="M15.5 17.5 19.5 31l4.5-7 4.5 7 4-13.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter"/>
+          </svg>
+        </span>
+        <span class="brand-copy">
+          <strong>WRATH<span>SMP</span></strong>
+          <small>SURVIVAL MULTIPLAYER</small>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" data-nav aria-label="Navegação principal">
+        <a class="nav-link" href="index.html">Início</a>
+        <a class="nav-link is-active" href="recursos.html" aria-current="page">Recursos</a>
+        <a class="nav-link" href="#progressao">Progressão</a>
+        <a class="nav-link" href="http://187.75.120.140:8123" target="_blank" rel="noopener" data-dynmap-link>
+          Mapa
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+        </a>
+        <a class="nav-link nav-link-cta" href="index.html#entrar">Entrar no servidor</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="ip-mini" type="button" data-copy-ip title="Copiar o IP do servidor">
+          <span class="ip-mini-dot" aria-hidden="true"></span>
+          <span class="ip-mini-text" data-ip>187.75.120.140</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        </button>
+        <a class="btn btn-primary btn-sm desktop-cta" href="index.html#entrar">
+          Jogar agora
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="mainNav" data-menu-toggle>
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ================= PAGE HERO ================= -->
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Você está aqui">
+          <a href="index.html">Início</a>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+          <span>Guia do jogador</span>
+        </nav>
+
+        <p class="eyebrow"><span class="eyebrow-line"></span> Guia do jogador</p>
+        <h1>Tudo o que o<br><span>servidor oferece.</span></h1>
+        <p>
+          Da primeira picareta ao nível 60: progressão, Codex, bases, túmulos, combate,
+          mundo e qualidade de vida. Use a busca ou navegue pelos capítulos.
+        </p>
+
+        <div class="page-hero-meta">
+          <span><span class="dot" aria-hidden="true"></span> Guia completo</span>
+          <span>8 capítulos</span>
+          <span>295 descobertas</span>
+          <span>60 níveis</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= DOCS ================= -->
+    <div class="container docs-layout">
+      <aside class="docs-sidebar" aria-label="Navegação do guia">
+        <div class="search-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <label class="sr-only" for="featureSearch">Buscar nos recursos</label>
+          <input id="featureSearch" type="search" placeholder="Buscar recurso…" autocomplete="off" spellcheck="false">
+          <kbd>/</kbd>
+        </div>
+
+        <p class="toc-label">Capítulos</p>
+        <nav aria-label="Índice do guia">
+          <ul class="toc">
+            <li><a href="#progressao"><span class="num">01</span> Progressão</a></li>
+            <li><a href="#codex"><span class="num">02</span> Codex</a></li>
+            <li><a href="#base-itens"><span class="num">03</span> Base e itens</a></li>
+            <li><a href="#tumulos"><span class="num">04</span> Túmulos</a></li>
+            <li><a href="#combate"><span class="num">05</span> Combate e PvP</a></li>
+            <li><a href="#mundo"><span class="num">06</span> O mundo</a></li>
+            <li><a href="#qol"><span class="num">07</span> Qualidade de vida</a></li>
+            <li><a href="#comandos"><span class="num">08</span> Comandos</a></li>
+          </ul>
+        </nav>
+
+        <div class="sidebar-card">
+          <p>Já sabe jogar? Copie o IP e entre agora.</p>
+          <button class="ip-box" type="button" data-copy-ip title="Copiar o IP do servidor">
+            <span class="ip-box-copy">
+              <span class="ip-box-label">IP do servidor</span>
+              <span class="ip-box-value" data-ip>187.75.120.140</span>
+            </span>
+            <span class="ip-box-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            </span>
+          </button>
+        </div>
+      </aside>
+
+      <div class="docs-content">
+        <p class="search-count" id="searchCount" aria-live="polite"></p>
+
+        <!-- =====================================================
+             01 — PROGRESSÃO
+             ===================================================== -->
+        <section class="doc-section" id="progressao" data-doc-section>
+          <div class="section-head">
+            <span class="section-num">01</span>
+            <div>
+              <p class="eyebrow">Progressão</p>
+              <h2>Sua jornada começa no nível 1.</h2>
+              <p class="section-intro">
+                Todos os jogadores seguem a mesma jornada. Os primeiros níveis sobem rápido;
+                os últimos pedem mais tempo — e recompensam muito mais.
+              </p>
+            </div>
+          </div>
+
+          <article class="feature-block" data-search-item>
+            <h3>
+              <span class="inline-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 19V5M4 19h16"/><path d="m7 15 3-4 3 2 4-6"/></svg>
+              </span>
+              Jornada de níveis — 1 → 60
+            </h3>
+            <p>
+              Ganhe XP de jornada enquanto joga. A barra verde vanilla, os níveis de habilidade e
+              a jornada 1–60 são contadores separados — recompensas do Codex e dos avanços
+              alimentam a <strong>jornada</strong>.
+            </p>
+
+            <div class="mini-grid">
+              <div class="mini-card"><strong>Jogando</strong><span>XP a cada 5 minutos.</span></div>
+              <div class="mini-card"><strong>Caçando</strong><span>Quanto mais forte o mob, maior a recompensa.</span></div>
+              <div class="mini-card"><strong>Minerando</strong><span>Minérios mais raros dão mais XP.</span></div>
+              <div class="mini-card"><strong>Descobrindo</strong><span>Avanços e entradas do Codex rendem XP.</span></div>
+            </div>
+
+            <div class="callout">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>
+              <span><strong>Três contadores de XP:</strong> a barra verde vanilla, os níveis de habilidade e a jornada 1–60 são separados.</span>
+            </div>
+
+            <h4 class="recipe-title">Recompensas por nível</h4>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr><th>Nível</th><th>O que você recebe</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td><span class="lvl-badge">5</span></td><td>2× Maçã Dourada</td></tr>
+                  <tr><td><span class="lvl-badge">10</span></td><td>3× Maçã Dourada + 1× Diamante + acesso ao <strong>Nether</strong></td></tr>
+                  <tr><td><span class="lvl-badge">15</span></td><td>8× Esmeralda</td></tr>
+                  <tr><td><span class="lvl-badge">20</span></td><td>3× Diamante + 16× Salmão Assado</td></tr>
+                  <tr><td><span class="lvl-badge">25</span></td><td>Regeneração I (90s) + Velocidade II (2 min)</td></tr>
+                  <tr><td><span class="lvl-badge">30</span></td><td>4× Diamante + 12× Garrafas de XP + acesso ao <strong>End</strong></td></tr>
+                  <tr><td><span class="lvl-badge">35</span></td><td>6× Maçã Dourada + Força II (2 min)</td></tr>
+                  <tr><td><span class="lvl-badge">40</span></td><td>6× Diamante + 24× Garrafas de XP</td></tr>
+                  <tr><td><span class="lvl-badge">45</span></td><td>8× Maçã Dourada + 16× Lápis-lazúli</td></tr>
+                  <tr><td><span class="lvl-badge">50</span></td><td>6× Diamante + <strong>Totem da Imortalidade</strong></td></tr>
+                  <tr><td><span class="lvl-badge">55</span></td><td>8× Diamante + 2× Carapaça de Shulker</td></tr>
+                  <tr><td><span class="lvl-badge">60</span></td><td>10× Diamante + 8× Maçã Dourada + 4× Sucata de Netherite — nível máximo, com <strong>celebração global</strong> 🎉</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="callout">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3v18M3 12h18"/></svg>
+              <span><strong>Todo nível</strong> cura e enche sua fome por completo, além de mostrar o aviso de subida.</span>
+            </div>
+          </article>
+
+          <article class="feature-block" data-search-item>
+            <h3>
+              <span class="inline-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6 4v16M18 4v16M6 8h12M6 16h12"/></svg>
+              </span>
+              Habilidades — até o nível 300
+            </h3>
+            <p>
+              Cada habilidade tem seu próprio nível e pode chegar ao <strong>nível 300</strong>,
+              alcançado apenas jogando. Acompanhe o progresso de cada uma com os comandos abaixo.
+            </p>
+            <div class="mini-grid">
+              <div class="mini-card"><strong>/fishing</strong><span>Progresso de pesca.</span></div>
+              <div class="mini-card"><strong>/mining</strong><span>Progresso de mineração.</span></div>
+              <div class="mini-card"><strong>/swords</strong><span>Progresso de espadas.</span></div>
+              <div class="mini-card"><strong>/help</strong><span>Lista completa de comandos.</span></div>
+            </div>
+            <div class="callout">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m12 3 1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3Z"/></svg>
+              <span>As habilidades também contam para o Codex: <strong>Mestres mcMMO</strong> reúne 17 habilidades no nível 100.</span>
+            </div>
+          </article>
+
+          <article class="feature-block" data-search-item>
+            <h3>
+              <span class="inline-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M8 4h8v5a4 4 0 0 1-8 0V4Z"/><path d="M8 6H5v2a3 3 0 0 0 3 3M16 6h3v2a3 3 0 0 1-3 3M12 13v4M8 21h8M9 17h6"/></svg>
+              </span>
+              Conquistas — XP por avançar
+            </h3>
+            <p>
+              Cada conquista rende XP automaticamente, uma única vez por jogador. O chat mostra
+              <span class="command">[+N XP] Conquista desbloqueada: Nome da Conquista</span>.
+            </p>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Tipo de conquista</th><th>XP</th></tr></thead>
+                <tbody>
+                  <tr><td>História</td><td class="xp">25 XP</td></tr>
+                  <tr><td>Aventura</td><td class="xp">30 XP</td></tr>
+                  <tr><td>Agricultura e animais</td><td class="xp">30 XP</td></tr>
+                  <tr><td>Nether</td><td class="xp">40 XP</td></tr>
+                  <tr><td>Fim</td><td class="xp">60 XP</td></tr>
+                  <tr><td>Desafios especiais</td><td class="xp">80–300 XP</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+        </section>
+
+        <!-- =====================================================
+             02 — CODEX
+             ===================================================== -->
+        <section class="doc-section" id="codex" data-doc-section>
+          <div class="section-head">
+            <span class="section-num">02</span>
+            <div>
+              <p class="eyebrow">Codex</p>
+              <h2>295 páginas de lore para descobrir.</h2>
+              <p class="section-intro">
+                Abra com <span class="command">/codex</span>. Cada descoberta desbloqueia uma página
+                permanente e rende XP de jornada.
+              </p>
+            </div>
+          </div>
+
+          <article class="feature-block" data-search-item>
+            <h3>
+              <span class="inline-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 6.5C10.5 4.8 8 4 4.5 4v15c3.5 0 6 .8 7.5 2.5 1.5-1.7 4-2.5 7.5-2.5V4C16 4 13.5 4.8 12 6.5Z"/><path d="M12 6.5v15"/></svg>
+              </span>
+              O compêndio de descobertas
+            </h3>
+            <p>
+              Ao encontrar algo novo, aparece o banner <strong>“CÓDICE ATUALIZADO”</strong>.
+              Descobertas ainda bloqueadas aparecem como <strong>??</strong>. Desbloqueie
+              derrotando mobs, domesticando animais, visitando biomas, obtendo itens, preparando
+              poções, subindo habilidades, acumulando tempo de jogo e pescando.
+            </p>
+
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr><th>Categoria</th><th>O que reúne</th><th>Por descoberta</th><th>Ao completar</th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="cat" style="--cat:#b492ff"><i></i>Monstros</span></td>
+                    <td>33 inimigos hostis</td>
+                    <td class="xp">+100 XP</td>
+                    <td class="xp">+5.000 XP</td>
+                  </tr>
+                  <tr>
+                    <td><span class="cat" style="--cat:#7ee787"><i></i>Vida Selvagem</span></td>
+                    <td>37 animais e criaturas</td>
+                    <td class="xp">+100 XP</td>
+                    <td class="xp">+4.000 XP</td>
+                  </tr>
+                  <tr>
+                    <td><span class="cat" style="--cat:#ef5b4c"><i></i>Lendas & Monstruosidades</span></td>
+                    <td>9 bosses e criaturas lendárias</td>
+                    <td class="xp">+1.000 XP</td>
+                    <td class="xp">+15.000 XP + Totem</td>
+                  </tr>
+                  <tr>
+                    <td><span class="cat" style="--cat:#74b87a"><i></i>Biomas</span></td>
+                    <td>48 paisagens do Overworld</td>
+                    <td class="xp">+5 XP</td>
+                    <td class="xp">+1.000 XP</td>
+                  </tr>
+                  <tr>
+                    <td><span class="cat" style="--cat:#7cb8ff"><i></i>Biomas Exóticos</span></td>
+                    <td>19 terras raras, Nether, End e Vazio</td>
+                    <td class="xp">+10 XP</td>
+                    <td class="xp">+800 XP</td>
+                  </tr>
+                  <tr>
+                    <td><span class="cat" style="--cat:#82d8e8"><i></i>Relíquias</span></td>
+                    <td>24 itens difíceis de obter</td>
+                    <td class="xp">+80 XP</td>
+                    <td class="xp">+1.500 XP</td>
+                  </tr>
+                  <tr>
+                    <td><span class="cat" style="--cat:#e7a96b"><i></i>Domesticação</span></td>
+                    <td>11 animais domáveis e montarias</td>
+                    <td class="xp">+100 XP</td>
+                    <td class="xp">+1.000 XP</td>
+                  </tr>
+                  <tr>
+                    <td><span class="cat" style="--cat:#f6c453"><i></i>Música</span></td>
+                    <td>19 discos</td>
+                    <td class="xp">+50 XP</td>
+                    <td class="xp">+1.000 XP</td>
+                  </tr>
+                  <tr>
+                    <td><span class="cat" style="--cat:#c99b72"><i></i>Arqueologia</span></td>
+                    <td>42 fragmentos e moldes</td>
+                    <td class="xp">+30 XP</td>
+                    <td class="xp">+1.200 XP</td>
+                  </tr>
+                  <tr>
+                    <td><span class="cat" style="--cat:#a8dc6f"><i></i>Alquimia</span></td>
+                    <td>20 efeitos e poções especiais</td>
+                    <td class="xp">+40 XP</td>
+                    <td class="xp">+1.000 XP</td>
+                  </tr>
+                  <tr>
+                    <td><span class="cat" style="--cat:#ff8b54"><i></i>Mestres mcMMO</span></td>
+                    <td>17 habilidades no nível 100</td>
+                    <td class="xp">+150 XP</td>
+                    <td class="xp">+2.000 XP</td>
+                  </tr>
+                  <tr>
+                    <td><span class="cat" style="--cat:#d7a3ff"><i></i>Tempo de Casa</span></td>
+                    <td>6 marcos, de 1 a 100 horas</td>
+                    <td class="xp">+80 XP</td>
+                    <td class="xp">+800 XP</td>
+                  </tr>
+                  <tr>
+                    <td><span class="cat" style="--cat:#7ec9d6"><i></i>Pescaria</span></td>
+                    <td>10 peixes e tesouros fisgados</td>
+                    <td class="xp">+50 XP</td>
+                    <td class="xp">+1.000 XP</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="stat-ribbon">
+              <div class="mini-card"><strong>295</strong><span>descobertas no total</span></div>
+              <div class="mini-card"><strong>13</strong><span>categorias</span></div>
+              <div class="mini-card"><strong>+35.300</strong><span>XP só completando categorias</span></div>
+            </div>
+
+            <div class="callout">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>
+              <span>Completar <strong>Lendas & Monstruosidades</strong> ainda rende um <strong>Totem da Imortalidade</strong>.</span>
+            </div>
+          </article>
+
+          <article class="feature-block" data-search-item>
+            <h3>
+              <span class="inline-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              </span>
+              Como desbloquear
+            </h3>
+            <div class="info-grid">
+              <div class="info-card"><h4>Derrote e domestique</h4><p>Monstros, bosses, animais selvagens, domáveis e montarias entram no Codex ao serem encontrados ou derrotados.</p></div>
+              <div class="info-card"><h4>Explore o mundo</h4><p>Visite biomas do Overworld, terras exóticas, Nether, End e o Vazio. Cada paisagem é uma entrada.</p></div>
+              <div class="info-card"><h4>Colecione e crie</h4><p>Relíquias, discos, fragmentos de arqueologia, poções, efeitos e peixes também têm páginas próprias.</p></div>
+              <div class="info-card"><h4>Jogue e evolua</h4><p>Suba habilidades mcMMO, acumule horas de casa e pesque tesouros para fechar as categorias restantes.</p></div>
+            </div>
+          </article>
+        </section>
+
+        <!-- =====================================================
+             03 — BASE E ITENS
+             ===================================================== -->
+        <section class="doc-section" id="base-itens" data-doc-section>
+          <div class="section-head">
+            <span class="section-num">03</span>
+            <div>
+              <p class="eyebrow">Base e itens</p>
+              <h2>Construa, proteja, viaje.</h2>
+              <p class="section-intro">
+                Reivindique seu espaço, alimente sua base com energia e leve o essencial
+                para qualquer aventura.
+              </p>
+            </div>
+          </div>
+
+          <article class="feature-block" data-search-item>
+            <h3>
+              <span class="inline-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3 20 6v5c0 5-3.4 8.4-8 10-4.6-1.6-8-5-8-10V6l8-3Z"/><path d="m9 12 2 2 4-4"/></svg>
+              </span>
+              Proteção de bases
+            </h3>
+            <p>
+              Reivindique o chunk onde está com <span class="command">/c</span>. Os chunks da base
+              precisam se tocar. Limites: <strong>20 chunks</strong>, <strong>2 regiões</strong> e
+              <strong>10 membros</strong> por base.
+            </p>
+            <p>
+              A base começa com <strong>24 horas de energia</strong> para você construir a powercell.
+              Sem ela, a energia cai e a base acaba dissolvida. Monte a receita no centro de um
+              <strong>baú único</strong> (não duplo) dentro da base e feche o baú.
+            </p>
+
+            <div class="recipe-layout">
+              <div class="recipe-card">
+                <div class="recipe-grid" role="img" aria-label="Receita da powercell: ferro nos cantos e no centro, diamante nas laterais">
+                  <span class="recipe-cell">F</span><span class="recipe-cell">D</span><span class="recipe-cell">F</span>
+                  <span class="recipe-cell">D</span><span class="recipe-cell">F</span><span class="recipe-cell">D</span>
+                  <span class="recipe-cell">F</span><span class="recipe-cell">D</span><span class="recipe-cell">F</span>
+                </div>
+                <div>
+                  <p class="recipe-title">Powercell</p>
+                  <ul class="recipe-legend">
+                    <li><b>F</b> Ferro (5)</li>
+                    <li><b>D</b> Diamante (4)</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="recipe-card">
+                <div class="fuel-list">
+                  <p class="recipe-title">Energia por combustível</p>
+                  <div class="fuel-row"><span><i></i>Diamante</span><b>48 h</b></div>
+                  <div class="fuel-row"><span><i></i>Ouro</span><b>8 h</b></div>
+                  <div class="fuel-row"><span><i></i>Ferro</span><b>6 h</b></div>
+                  <div class="fuel-row"><span><i></i>Carvão</span><b>3 h</b></div>
+                  <div class="fuel-row"><span><i></i>Cobre</span><b>2 h</b></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bullet-list">
+              <li>O consumo cresce com o número de chunks da base.</li>
+              <li>Ficar sem energia por muito tempo dissolve a base.</li>
+              <li>Permissões separadas para <strong>dono, membro e visitante</strong>: quebrar, colocar, interagir, PVP, redstone, portas, trocas, mobs, fogo, TNT, voo e mais.</li>
+              <li>Convide, aceite, expulse, bana e desbane jogadores; tranque a base, renomeie e veja as bordas com <span class="command">/c show</span>.</li>
+              <li>A base tem <strong>auditoria</strong> de ações (limpeza após 30 dias) e uma <strong>bossbar</strong> com nome e energia ao entrar.</li>
+            </div>
+          </article>
+
+          <article class="feature-block" data-search-item>
+            <h3>
+              <span class="inline-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 8h14l-1 12H6L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+              </span>
+              Mochilas — 27 slots
+            </h3>
+            <p>
+              Uma mochila com <strong>27 slots</strong>. Segure e clique com o botão direito para
+              abrir. A receita é aprendida automaticamente ao entrar no servidor.
+            </p>
+
+            <div class="recipe-layout">
+              <div class="recipe-card">
+                <div class="recipe-grid" role="img" aria-label="Receita da mochila: couro, pau, couro, laço, baú, laço, couro, couro, couro">
+                  <span class="recipe-cell">C</span><span class="recipe-cell">P</span><span class="recipe-cell">C</span>
+                  <span class="recipe-cell">L</span><span class="recipe-cell">B</span><span class="recipe-cell">L</span>
+                  <span class="recipe-cell">C</span><span class="recipe-cell">C</span><span class="recipe-cell">C</span>
+                </div>
+                <div>
+                  <p class="recipe-title">Mochila</p>
+                  <ul class="recipe-legend">
+                    <li><b>C</b> Couro (5)</li>
+                    <li><b>P</b> Pau (1)</li>
+                    <li><b>L</b> Laço (2)</li>
+                    <li><b>B</b> Baú (1)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="feature-block" data-search-item>
+            <h3>
+              <span class="inline-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3v4M5 8h14M7 8l-2 13h14L17 8"/><path d="M9 13h6"/></svg>
+              </span>
+              Waystones
+            </h3>
+            <p>
+              Pedras de teleporte craftáveis, com aparência de pedra de âncora. Clique com o
+              direito para abrir o menu de destinos e viajar.
+            </p>
+
+            <div class="recipe-layout">
+              <div class="recipe-card">
+                <div class="recipe-grid" role="img" aria-label="Receita da waystone: obsidiana nos cantos, pérola do Ender nas laterais, bússola no centro">
+                  <span class="recipe-cell">O</span><span class="recipe-cell">P</span><span class="recipe-cell">O</span>
+                  <span class="recipe-cell">P</span><span class="recipe-cell">C</span><span class="recipe-cell">P</span>
+                  <span class="recipe-cell">O</span><span class="recipe-cell">P</span><span class="recipe-cell">O</span>
+                </div>
+                <div>
+                  <p class="recipe-title">Waystone</p>
+                  <ul class="recipe-legend">
+                    <li><b>O</b> Obsidiana (4)</li>
+                    <li><b>P</b> Pérola do Ender (4)</li>
+                    <li><b>C</b> Bússola (1)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="bullet-list">
+              <li>Nomeie com <span class="command">/tw setname &lt;nome&gt;</span>.</li>
+              <li>Cada waystone é sua por padrão; <span class="command">/tw setpublic true</span> a libera para todos.</li>
+              <li>Podem ser quebradas e levadas para outro lugar.</li>
+            </div>
+          </article>
+
+          <article class="feature-block" data-search-item>
+            <h3>
+              <span class="inline-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="m16 8-2.4 5.6L8 16l2.4-5.6L16 8Z"/></svg>
+              </span>
+              Bússola de Explorador
+            </h3>
+            <p>
+              Localiza estruturas do mundo. Botão direito vai para o <strong>próximo</strong> alvo;
+              botão esquerdo, para o <strong>anterior</strong>. A agulha aponta para o alvo e as
+              coordenadas aparecem no chat. Há <strong>2,5s</strong> entre os cliques.
+            </p>
+
+            <div class="recipe-layout">
+              <div class="recipe-card">
+                <div class="recipe-grid" role="img" aria-label="Receita da bússola de explorador: papel na parte superior, ouro nas laterais, luneta no centro e bússola embaixo">
+                  <span class="recipe-cell">P</span><span class="recipe-cell">P</span><span class="recipe-cell">P</span>
+                  <span class="recipe-cell">L</span><span class="recipe-cell">S</span><span class="recipe-cell">L</span>
+                  <span class="recipe-cell">P</span><span class="recipe-cell">B</span><span class="recipe-cell">P</span>
+                </div>
+                <div>
+                  <p class="recipe-title">Bússola de Explorador</p>
+                  <ul class="recipe-legend">
+                    <li><b>P</b> Papel (6)</li>
+                    <li><b>L</b> Lingote de Ouro (2)</li>
+                    <li><b>S</b> Luneta (1)</li>
+                    <li><b>B</b> Bússola (1)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="callout">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m16 8-2.4 5.6L8 16l2.4-5.6L16 8Z"/></svg>
+              <span><strong>Alvos (9):</strong> Vila, Cidade Antiga, Câmaras de Prova, Pirâmide do Deserto, Mansão, Cabana da Bruxa, Posto de Saqueador, Fortaleza e Cavernas Grandes. A receita é aprendida automaticamente.</span>
+            </div>
+          </article>
+        </section>
+
+        <!-- =====================================================
+             04 — TÚMULOS
+             ===================================================== -->
+        <section class="doc-section" id="tumulos" data-doc-section>
+          <div class="section-head">
+            <span class="section-num">04</span>
+            <div>
+              <p class="eyebrow">Túmulos</p>
+              <h2>Morrer não precisa ser o fim.</h2>
+              <p class="section-intro">
+                Seus itens e 70% do XP ficam em um túmulo no local da morte, em vez de
+                espalhados pelo chão.
+              </p>
+            </div>
+          </div>
+
+          <article class="feature-block" data-search-item>
+            <h3>
+              <span class="inline-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6 21V11a6 6 0 0 1 12 0v10"/><path d="M4 21h16M12 8v6M9 11h6"/></svg>
+              </span>
+              Como funcionam os túmulos
+            </h3>
+            <p>
+              O túmulo é uma <strong>cabeça de jogador</strong> com holograma do dono, tempo
+              restante, causa da morte e proteção.
+            </p>
+
+            <div class="stat-ribbon">
+              <div class="mini-card"><strong>70%</strong><span>do XP fica guardado</span></div>
+              <div class="mini-card"><strong>3 h</strong><span>de duração</span></div>
+              <div class="mini-card"><strong>18</strong><span>túmulos por jogador</span></div>
+            </div>
+
+            <div class="bullet-list">
+              <li><strong>Duração:</strong> 3 horas. Depois, o conteúdo cai no chão.</li>
+              <li><strong>Limite:</strong> 18 túmulos por jogador.</li>
+              <li><strong>Local seguro:</strong> se morrer no ar, na lava, no void ou dentro de um bloco, o túmulo vai para o último lugar seguro.</li>
+              <li><strong>Proteção:</strong> nos primeiros <strong>5 minutos</strong>, só você e quem te matou podem abrir. Depois, qualquer um.</li>
+              <li><strong>Não explode</strong> com TNT ou creepers. Pode ser quebrado com a mão; quem quebrar leva o conteúdo.</li>
+              <li>Ao renascer, você recebe uma <strong>bússola</strong> que aponta para o túmulo mais próximo por 5 minutos.</li>
+              <li><span class="command">/graves</span> lista seus túmulos.</li>
+              <li>O túmulo guarda um <strong>livro</strong> com nome, causa da morte, data, itens, XP e coordenadas. O layout do inventário e a armadura são preservados.</li>
+              <li>Se o túmulo não puder ser criado, você mantém o inventário.</li>
+            </div>
+          </article>
+        </section>
+
+        <!-- =====================================================
+             05 — COMBATE
+             ===================================================== -->
+        <section class="doc-section" id="combate" data-doc-section>
+          <div class="section-head">
+            <span class="section-num">05</span>
+            <div>
+              <p class="eyebrow">Combate e PvP</p>
+              <h2>Escolha suas batalhas.</h2>
+              <p class="section-intro">
+                PvP é opt-in. O resto do mundo continua perigoso — e cheio de recompensas.
+              </p>
+            </div>
+          </div>
+
+          <article class="feature-block" data-search-item>
+            <h3>
+              <span class="inline-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="m14 4 6-2-2 6L9 17l-3 1 1-3 7-11Z"/><path d="m5 15 4 4M3 21l3-3"/></svg>
+              </span>
+              PvP e o Dragão do End
+            </h3>
+
+            <div class="info-grid">
+              <div class="info-card">
+                <h4>🐉 Dragão do End escalado</h4>
+                <p>Vida, dano e resistência crescem com o número de jogadores. Ele usa raios, sopro e bolas de fogo, e as recompensas são divididas pelo dano causado. Cristais do End explodem com mais força e causam fogo.</p>
+              </div>
+              <div class="info-card">
+                <h4>⚔️ PvP opt-in</h4>
+                <p>Começa <strong>desligado</strong>. Use <span class="command">/pvp</span> para ligar ou desligar. Sem PvP, você não dá nem recebe dano de jogadores (leva knockback), e animais domados, fogo/lava próximos e efeitos hostis também são protegidos.</p>
+              </div>
+              <div class="info-card">
+                <h4>⏱️ 30 segundos</h4>
+                <p>Após entrar em combate, são 30s para poder alternar o PvP. Sair do jogo durante o combate não mata seu personagem.</p>
+              </div>
+              <div class="info-card">
+                <h4>🏆 Recompensas por trim</h4>
+                <p>Conjuntos completos com o mesmo padrão dão efeitos passivos (2, 3 e 4 peças; set completo vira “Ascended”). Misturar padrões pode gerar penalidades.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="feature-block" data-search-item>
+            <h3>
+              <span class="inline-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3 4 7v5c0 5 3 8 8 9 5-1 8-4 8-9V7l-8-4Z"/><path d="M9 12h6"/></svg>
+              </span>
+              Loot e recompensas de combate
+            </h3>
+            <div class="bullet-list">
+              <li><strong>Ovos de spawn</strong> — 2% de chance ao derrotar um mob, inclusive os de spawners.</li>
+              <li><strong>Cabeças de mobs</strong> — chance de cair ao derrotar; Looting aumenta a chance. Também dá para fazer mini-blocos na pedra de corte ou comprar do vendedor ambulante.</li>
+              <li><strong>Recompensas por trim</strong> — conjuntos completos com o mesmo padrão dão efeitos passivos; o set completo vira “Ascended”.</li>
+            </div>
+          </article>
+        </section>
+
+        <!-- =====================================================
+             06 — MUNDO
+             ===================================================== -->
+        <section class="doc-section" id="mundo" data-doc-section>
+          <div class="section-head">
+            <span class="section-num">06</span>
+            <div>
+              <p class="eyebrow">O mundo</p>
+              <h2>Um mundo feito para se perder.</h2>
+              <p class="section-intro">
+                Terreno personalizado, estruturas próprias, dimensões com nível mínimo e
+                tesouros que surgem perto de jogadores ativos.
+              </p>
+            </div>
+          </div>
+
+          <article class="feature-block" data-search-item>
+            <h3>
+              <span class="inline-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="m3 17 6-8 4 5 3-4 5 7H3Z"/><path d="M3 21h18"/></svg>
+              </span>
+              Mundo terraformado
+            </h3>
+            <p>
+              O mundo principal usa geração personalizada de terreno, biomas, rios, montanhas,
+              cavernas e estruturas próprias.
+            </p>
+            <div class="bullet-list">
+              <li><strong>40+ biomas</strong>, incluindo montanhas pintadas, savanas fragmentadas, florestas escarlates, cerejeiras, taigas, manguezais e vários oceanos.</li>
+              <li><strong>Estruturas próprias:</strong> vilas, postos de saqueador, pirâmides, monumentos oceânicos, mansões, fortes, cidades antigas, câmaras de prova, catacumbas, minas, ruínas, naufrágios, iglus, poços do deserto e acampamentos abandonados.</li>
+              <li><strong>Cavernas especiais:</strong> grandes, exuberantes (lush) e de cogumelos.</li>
+            </div>
+          </article>
+
+          <article class="feature-block" data-search-item>
+            <h3>
+              <span class="inline-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg>
+              </span>
+              Dimensões
+            </h3>
+            <p>O portal avisa o nível necessário antes de você atravessar.</p>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Dimensão</th><th>Abre no nível</th><th>O que há lá</th></tr></thead>
+                <tbody>
+                  <tr><td><strong>🌋 Nether</strong></td><td><span class="lvl-badge">10</span></td><td>Fortalezas, bastiões e os recursos do inferno.</td></tr>
+                  <tr><td><strong>🔮 End</strong></td><td><span class="lvl-badge">30</span></td><td>Cidades do End e elytras.</td></tr>
+                  <tr><td><strong>🌀 Sift</strong> <span class="tag">EM BREVE</span></td><td><span class="lvl-badge">60</span></td><td>A última dimensão.</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+
+          <article class="feature-block" data-search-item>
+            <h3>
+              <span class="inline-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2Z"/><path d="M9 4v14M15 6v14"/></svg>
+              </span>
+              Mapa e conexão
+            </h3>
+            <div class="bullet-list">
+              <li><strong>Mapa 3D no navegador:</strong> <a class="text-link" style="display:inline-flex;font-size:11px;text-transform:none;letter-spacing:0" href="http://187.75.120.140:8123" target="_blank" rel="noopener" data-dynmap-link>187.75.120.140:8123</a>.</li>
+              <li><strong>Voxy:</strong> clientes com o mod recebem terreno distante do servidor (até 512 chunks no Overworld e no End, 64 no Nether).</li>
+              <li><strong>Java + Bedrock:</strong> o servidor aceita as duas edições.</li>
+            </div>
+          </article>
+
+          <article class="feature-block" data-search-item>
+            <h3>
+              <span class="inline-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 8h16v11H4z"/><path d="M4 8V5h16v3M9 12h6"/></svg>
+              </span>
+              Tesouros e recompensas do mundo
+            </h3>
+
+            <div class="info-grid">
+              <div class="info-card">
+                <h4>💎 Baús de tesouro</h4>
+                <p>Surgem perto de jogadores ativos a cada <strong>15–30 minutos</strong>, entre 12 e 30 blocos. Cada jogador tem 1 por vez, e o baú dura 5 minutos. São 4 raridades (Comum, Rara, Lendária e Mítica) e os primeiros 60 segundos são só seus.</p>
+              </div>
+              <div class="info-card">
+                <h4>🎭 Mimics</h4>
+                <p><strong>10% são mimics:</strong> alguns entregam o loot, outros se disfarçam de raridade melhor. Vencer um mimic dobra o loot e dá <strong>40 XP</strong>; se ele fugir em 60s, você perde o restante. O loot sai aos poucos conforme você causa dano.</p>
+              </div>
+              <div class="info-card">
+                <h4>🎣 Recompensas de pesca</h4>
+                <p>Ao pescar, há chance de um baú-recompensa com animação, do comum ao <strong>Leviatã</strong>, com itens, XP e surpresas.</p>
+              </div>
+              <div class="info-card">
+                <h4>🔮 Cofres das Cidades do End</h4>
+                <p>Garantem elytra para mais de um jogador.</p>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <!-- =====================================================
+             07 — QUALIDADE DE VIDA
+             ===================================================== -->
+        <section class="doc-section" id="qol" data-doc-section>
+          <div class="section-head">
+            <span class="section-num">07</span>
+            <div>
+              <p class="eyebrow">Qualidade de vida</p>
+              <h2>Os detalhes que mudam tudo.</h2>
+              <p class="section-intro">
+                Agricultura, encantamentos, reciclagem e dezenas de pequenos ajustes para
+                o dia a dia ficar melhor.
+              </p>
+            </div>
+          </div>
+
+          <article class="feature-block" data-search-item>
+            <h3>
+              <span class="inline-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21V9M12 9C12 5 9 3 4 3c0 5 3 7 8 6ZM12 13c0-3 3-5 8-5 0 4-3 6-8 5Z"/><path d="M6 21h12"/></svg>
+              </span>
+              🌱 Agricultura
+            </h3>
+            <div class="bullet-list two-col">
+              <li>Colher plantações maduras dá XP; plantações continuam crescendo <strong>offline</strong>.</li>
+              <li>Pisotear terra arada <strong>não destrói</strong> mais a plantação.</li>
+              <li><strong>Farinha de osso</strong> acelera cacto, nether wart e cana-de-açúcar.</li>
+              <li><strong>Enxadas replantam</strong> a cultura na hora da colheita.</li>
+              <li>No <strong>composter</strong>, agache e clique com o direito para processar tudo de uma vez.</li>
+              <li>Receitas veganas permitem craftar couro, penas, slime, canas de blaze, pólvora e mais sem matar mobs passivos.</li>
+            </div>
+          </article>
+
+          <article class="feature-block" data-search-item>
+            <h3>
+              <span class="inline-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 20h16M6 20V9h12v11M9 9V5h6v4"/><path d="M10 14h4"/></svg>
+              </span>
+              🛠️ Equipamentos e encantamentos
+            </h3>
+            <div class="bullet-list two-col">
+              <li><strong>Bigornas sem “Muito Caro!”</strong> — o limite de 40 níveis não existe; o custo real de XP é exibido e cobrado.</li>
+              <li><strong>Cores em bigornas e placas</strong> — use <span class="command">&amp;</span>, hex (<span class="command">#55ffff</span>) e gradientes (<span class="command">&lt;gradient:red:gold&gt;</span>) ao renomear ou escrever.</li>
+              <li><strong>Pedra de amolar</strong> remove a Maldição do Vínculo e a Maldição do Desaparecimento.</li>
+              <li><strong>Recuperação de Encantamentos</strong> — permite guardar encantamentos de itens em livros usando a pedra de amolar.</li>
+              <li><strong>Arco Infinito</strong> dispara mesmo sem flechas no inventário.</li>
+              <li><strong>Totem da Imortalidade</strong> funciona de qualquer slot do inventário.</li>
+              <li><strong>Tesouras</strong> têm 50% de chance de desarmar TNT acesa; correr com tesouras não machuca.</li>
+              <li><strong>Spawners</strong> podem ser minerados com Toque Suave usando picareta de ferro ou melhor.</li>
+              <li><strong>Encantamento Escavador</strong> — picaretas com ele abrem um túnel de minérios e pedra em uma ação.</li>
+            </div>
+          </article>
+
+          <article class="feature-block" data-search-item>
+            <h3>
+              <span class="inline-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M7 7h10l3 4v8H4v-8l3-4Z"/><path d="M4 11h16M9 19v-4h6v4"/></svg>
+              </span>
+              ♻️ Reciclagem
+            </h3>
+            <p>
+              Agache e clique com o direito numa <strong>mesa de ferraria</strong> para abrir o
+              Recycler. Coloque uma ferramenta, arma ou armadura e clique em <strong>Reciclar
+              Item</strong>: você recebe de <strong>40% a 80%</strong> dos materiais de crafting,
+              sorteados a cada reciclagem.
+            </p>
+            <div class="bullet-list">
+              <li>Funciona com itens <strong>encantados, danificados ou renomeados</strong>. Itens com modelo customizado são bloqueados.</li>
+              <li>Itens sem receita de crafting têm retorno próprio: <strong>netherita</strong> → sucata de netherita + diamante, <strong>malha</strong> → ferro, <strong>tridente</strong> → fragmento de prismarinho, <strong>elytra</strong> → membrana de phantom.</li>
+              <li>Selas e armaduras de cavalo e de lobo também podem ser recicladas.</li>
+            </div>
+            <div class="callout">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.3-5.7L4 8"/><path d="M4 4v4h4"/></svg>
+              <span>O retorno é <strong>sorteado</strong> a cada reciclagem — pode variar entre 40% e 80%.</span>
+            </div>
+          </article>
+
+          <article class="feature-block" data-search-item>
+            <h3>
+              <span class="inline-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 20V4h16v16H4Z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+              </span>
+              🔥 Blocos e utilidades
+            </h3>
+            <div class="bullet-list two-col">
+              <li><strong>Forno em cima de lava</strong> funciona sem combustível — a fonte de lava embaixo é consumida.</li>
+              <li><strong>Redstone desliga spawners.</strong></li>
+              <li><strong>Creepers não destroem mais blocos</strong> — a explosão continua machucando jogadores e mobs, mas não abre crateras nem apaga construções.</li>
+              <li><strong>Pedra de corte</strong> machuca quem pisa nela: 1 coração por passo.</li>
+              <li><strong>Mesa de encantamentos</strong> mantém o lápis-lazúli entre usos e devolve o que sobrou se a mesa for quebrada.</li>
+              <li><strong>Beacons</strong> funcionam através de vidro tingido.</li>
+              <li><strong>Baú do End</strong> tem 6 fileiras.</li>
+              <li>É possível colocar <strong>água no End</strong> com baldes.</li>
+              <li><strong>Lava e água infinitas</strong> com apenas 2 fontes.</li>
+              <li><strong>Mineração em cadeia</strong> — agache e quebre com a ferramenta certa para derrubar a veia inteira (picareta→minério, machado→madeira, pá→terra, enxada→planta).</li>
+              <li><strong>Pedreira expandida</strong> — mais de 500 receitas: cortes de madeira, pedra, reciclagem e “un-crafting”.</li>
+              <li><strong>Luz dinâmica</strong> — tochas e lanternas na mão iluminam ao redor.</li>
+              <li><strong>Fogueiras curam</strong> lentamente num raio de 3 blocos.</li>
+              <li><strong>Decaimento de folhas</strong> — ao cortar uma árvore, as folhas somem em segundos, com drops.</li>
+              <li><strong>Votação de sono</strong> — deitar na cama inicia uma votação com bossbar; metade dos jogadores pula a noite. Tempestades também podem ser puladas.</li>
+              <li><strong>Hologramas de itens</strong> em baús, fornos e barris; ative ou desative com <span class="command">/iv</span>.</li>
+              <li><strong>Bússola na mão</strong> mostra uma bossbar com a direção.</li>
+              <li><strong>Bolas de neve</strong> apagam fogo, velas e fogueiras.</li>
+              <li><strong>Mobs que pegaram itens</strong> voltam a despawnar normalmente.</li>
+              <li><strong>Aldeões</strong> seguem você quando segura um bloco de esmeralda; trocas podem ser rerroladas na tela de troca.</li>
+              <li><strong>Cavalgar golfinhos</strong> e dirigir carrinhos com W/A/S/D (o carrinho sobe degraus de 1 bloco). Filhotes e animais ainda não domados também podem ser montados.</li>
+              <li><strong>O dia dura mais</strong> e as noites passam mais rápido; a barra de ar debaixo d'água é maior.</li>
+              <li><strong>Vindicators Johnny</strong> — 5% perseguem o jogador continuamente 🪓.</li>
+              <li><strong>Mensagens de morte exclusivas</strong>, como escorregar nas próprias tesouras ou se serrar ao meio.</li>
+              <li><strong>Comer até encher</strong> causa um arroto 🫧.</li>
+              <li><strong>Poses e emotes</strong> — sentar, deitar, rastejar, abraçar, acenar e mais. Skins personalizadas e sprays de imagens também estão disponíveis.</li>
+            </div>
+          </article>
+        </section>
+
+        <!-- =====================================================
+             08 — COMANDOS
+             ===================================================== -->
+        <section class="doc-section" id="comandos" data-doc-section>
+          <div class="section-head">
+            <span class="section-num">08</span>
+            <div>
+              <p class="eyebrow">Comandos essenciais</p>
+              <h2>Atalhos para o dia a dia.</h2>
+              <p class="section-intro">
+                Os comandos que você mais vai usar. Para a lista completa, use
+                <span class="command">/help</span>.
+              </p>
+            </div>
+          </div>
+
+          <article class="feature-block" data-search-item>
+            <h3>
+              <span class="inline-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="m4 6 7 6-7 6M12 18h8"/></svg>
+              </span>
+              Comandos essenciais
+            </h3>
+
+            <div class="table-wrap command-table">
+              <table>
+                <thead><tr><th>Comando</th><th>Para quê</th></tr></thead>
+                <tbody>
+                  <tr><td><span class="command">/codex</span></td><td>Compêndio de descobertas.</td></tr>
+                  <tr><td><span class="command">/fishing</span></td><td>Progresso da habilidade (ou <span class="command">/mining</span>, <span class="command">/swords</span>…).</td></tr>
+                  <tr><td><span class="command">/c</span></td><td>Proteção de bases.</td></tr>
+                  <tr><td><span class="command">/graves</span></td><td>Seus túmulos e teleporte.</td></tr>
+                  <tr><td><span class="command">/pvp</span></td><td>Liga/desliga o PvP.</td></tr>
+                  <tr><td><span class="command">/sb</span></td><td>Scoreboard liga/desliga.</td></tr>
+                  <tr><td><span class="command">/help</span></td><td>Lista completa de comandos.</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="callout">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 12h16M12 4v16"/></svg>
+              <span>Também vale lembrar: <span class="command">/tw setname</span> e <span class="command">/tw setpublic</span> para waystones, e <span class="command">/iv</span> para hologramas de itens.</span>
+            </div>
+
+            <p style="margin-top:22px;color:var(--gold);font-family:var(--font-mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;">
+              Bom jogo. 🎉
+            </p>
+          </article>
+        </section>
+
+        <div class="empty-state" id="emptyState" role="status">
+          <strong>Nada encontrado.</strong>
+          Tente outra palavra, como “diamante”, “túmulo” ou “encantamento”.
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="brand" href="index.html" aria-label="WrathSMP — início">
+            <span class="brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none">
+                <path d="M24 3.5 42 10v12.4c0 9.7-7.4 16.5-18 21.1C13.4 38.9 6 32.1 6 22.4V10L24 3.5Z" stroke="currentColor" stroke-width="1.7"/>
+                <path d="M24 8.5 37 13.3v9c0 7-5.5 12.4-13 16.1-7.5-3.7-13-9.1-13-16.1v-9L24 8.5Z" fill="currentColor" fill-opacity=".08"/>
+                <path d="M15.5 17.5 19.5 31l4.5-7 4.5 7 4-13.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter"/>
+              </svg>
+            </span>
+            <span class="brand-copy">
+              <strong>WRATH<span>SMP</span></strong>
+              <small>SURVIVAL MULTIPLAYER</small>
+            </span>
+          </a>
+          <p>
+            Um servidor de sobrevivência com progressão própria, descobertas permanentes e
+            espaço para construir a sua história.
+          </p>
+          <span class="footer-note"><span class="dot" data-status-dot aria-hidden="true"></span><span data-status-label>Servidor online</span></span>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <a href="index.html">Início</a>
+          <a href="recursos.html">Recursos</a>
+          <a href="recursos.html#progressao">Progressão</a>
+          <a href="http://187.75.120.140:8123" target="_blank" rel="noopener" data-dynmap-link>Mapa 3D</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Guia do jogador</h4>
+          <a href="#codex">Codex</a>
+          <a href="#base-itens">Bases & itens</a>
+          <a href="#tumulos">Túmulos</a>
+          <a href="#comandos">Comandos</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Servidor</h4>
+          <button class="footer-ip" type="button" data-copy-ip><span data-ip>187.75.120.140</span> · copiar</button>
+          <a href="http://187.75.120.140:8123" target="_blank" rel="noopener" data-dynmap-link>Dynmap</a>
+          <span style="display:block;color:var(--muted);font-size:12.5px;margin-bottom:10px;">Minecraft 26.3</span>
+          <span style="display:block;color:var(--muted);font-size:12.5px;">Java + Bedrock</span>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> WrathSMP. Todos os direitos reservados.</span>
+        <span class="status"><span class="dot" data-status-dot aria-hidden="true"></span><span data-status-label>Servidor online</span> · <span data-players>—</span>/<span data-max-players>20</span> jogadores</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite" data-toast>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>
+    <span data-toast-text>IP copiado!</span>
+  </div>
+
+  <button class="back-to-top" type="button" aria-label="Voltar ao topo" data-back-to-top>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+  </button>
+
+  <script src="main.js"></script>
+</body>
+</html>
