@@ -5,3 +5,58 @@
 * {
     font-family: Arial, Helvetica, sans-serif;
 }
+
+#top {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 16px;
+    padding: 0px 10px;
+}
+
+#logo {
+    max-width: 50px;
+    height: auto;
+}
+
+#topbar {
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: center;
+}
+
+#ips {
+    justify-self: end;
+    text-align: right;
+}
+
+#ips dl,
+#ips dd {
+    margin: 0;
+}
+
+#titlesec {
+    position: relative;
+}
+
+#backgroundimg {
+    max-width: 1900px;
+    margin: 0;
+}
+
+#title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+#content {
+    justify-content: center;
+    text-align: center;
+}
+
+#bottom {
+    text-align: center;
+}
