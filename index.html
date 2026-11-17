@@ -1,42 +1,83 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Servidor Minecraft SMP com mecânicas de MMORPG, raças, níveis e economia.">
     <title>WrathSMP - Home</title>
+    <link rel="icon" href="assets/img/server-icon.png">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>WrathSMP</h1>
-        <nav>
+        <img src="assets/img/server-icon.png" alt="">
+        <nav aria-label="Navegação principal">
             <a href="#">Home</a>
             <a href="#">Wiki</a>
             <a href="#">Contato</a>
         </nav>
         <div>
-            <p>IP Java: wrathsmp.blackhosting.com.br</p>
-            <p>IP Bedrock: wrathsmpbr.blackhosting.com.br</p>
+            <dl>
+            <dt>IP Java</dt>
+            <dd><code>wrathsmp.blackhosting.com.br</code></dd>
+            <dt>IP Bedrock</dt>
+            <dd><code>wrathsmpbr.blackhosting.com.br:27184</code></dd>
+            </dl>
         </div>
     </header>
-    <section>
-        <img src="#" alt="">
-        <div>
-            <h1>WrathSMP</h1>
-            <p>Um servidor que experimenta trazer mecânicas e funções de um jogo MMORPG para o Minecraft SMP</p>
-        </div>
-    </section>
-    <section>
-        <p>O que esperar deste servidor?</p>
-        <ul>
-            <li>Raças temáticas de RPG como Dungeons & Dragons, Senhor dos Aneis e Warcraft</li>
-            <li>Níveis de jornada, combate e profissões, utilizando o famoso <a href="#" id="mcmmo">McMMO</a></li>
-            <li>Economia a base de esmeraldas com mercado, leilão e sistema de encomenda de itens</li>
-            <li>Geração de mundo aumentada, com novas estruturas, masmorras e mais para explorar</li>
-            <li>E mais! Leia nossa <a href="#">Wiki</a> para saber mais</li>
-        </ul>
-    </section>
+    <main id="content">
+        <section id="titulo">
+            <img src="#" alt="">
+            <div>
+                <h1>WrathSMP</h1>
+                <p>Um servidor que experimenta trazer mecânicas e funções de um jogo MMORPG para o Minecraft SMP</p>
+            </div>
+        </section>
+        <section id="sobre">
+            <h2>O que esperar deste servidor?</h2>
+            <ul>
+                <li>Raças temáticas de RPG como Dungeons & Dragons, Senhor dos Aneis e Warcraft</li>
+                <li>Níveis de jornada, combate e profissões, utilizando o famoso <a href="#" id="mcmmo">McMMO</a></li>
+                <li>Economia a base de esmeraldas com mercado, leilão e sistema de encomenda de itens</li>
+                <li>Geração de mundo aumentada, com novas estruturas, masmorras e mais para explorar</li>
+                <li>E mais! Leia nossa <a href="#">Wiki</a> para saber mais</li>
+            </ul>
+        </section>
+        <section id="versoes">
+            <h2>Versão</h2>
+            <table>
+                <caption>IPs e versões suportadas</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Edição</th>
+                        <th scope="col">IP</th>
+                        <th scope="col">Versão</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Java</th>
+                        <td>wrathsmp.blackhosting.com.br</td>
+                        <td>26.3</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Bedrock</th>
+                        <td>wrathsmpbr.blackhosting.com.br:27184</td>
+                        <td>26.50+</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="faq">
+            <h2>Perguntas frequentes</h2>
+            <details>
+                <summary>Preciso instalar mods?</summary>
+                <p>Não, o servidor apenas utiliza plugins e resourcepacks, tudo é gerênciado pelo servidor. É só sentrar e jogar!</p>
+            </details>
+        </section>
+    </main>
     <footer>
-        
+
     </footer>
 </body>
 </html>
