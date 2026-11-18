@@ -4,8 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Guia completo do WrathSMP: progressão, Codex, bases, combate, exploração, qualidade de vida e comandos.">
+    <meta name="theme-color" content="#0E0F0F">
+    <!-- Prévia do link em Discord e redes sociais -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:title" content="WrathSMP - Wiki">
+    <meta property="og:description" content="Guia completo do WrathSMP: progressão, Codex, bases, combate, exploração, qualidade de vida e comandos.">
+    <meta property="og:image" content="assets/img/background.webp">
+    <meta name="twitter:card" content="summary_large_image">
     <title>WrathSMP - Wiki</title>
-    <link rel="icon" href="assets/img/wrathsmp_icon.png">
+    <link rel="icon" href="assets/img/wrathsmp_icon.webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -14,13 +22,14 @@
 </head>
 <body>
     <a class="skip-link" href="#content">Pular para o conteúdo</a>
+    <div class="reading-progress" aria-hidden="true"></div>
 
     <header id="top">
-        <img src="assets/img/wrathsmp_logo_W.png" alt="WrathSMP" id="logo">
+        <img src="assets/img/wrathsmp_logo_W.webp" alt="WrathSMP" id="logo">
 
         <nav id="topbar" aria-label="Navegação principal">
             <a href="index.html">Home</a>
-            <a href="wiki.html">Wiki</a>
+            <a href="wiki.html" aria-current="page">Wiki</a>
             <a href="changelog.html">Atualizações</a>
             <a href="suporte.html">Suporte</a>
         </nav>
@@ -38,7 +47,8 @@
 
     <main id="content" class="wiki-layout">
     <aside class="wiki-sidebar">
-<nav aria-label="Índice do guia">
+<button type="button" class="sidebar-toggle" aria-expanded="true" aria-controls="wiki-index">Índice <span aria-hidden="true">▾</span></button>
+<nav id="wiki-index" aria-label="Índice do guia">
 <p class="side-title">Índice</p>
 <ul class="side-list">
 <li class="side-group"><a href="#progressao">📈 Progressão</a><ul>
@@ -305,7 +315,7 @@
 <p class="section-lead">Reúne os sistemas de proteção de base, armazenamento, teleporte e itens especiais. Cada subsistema tem regras próprias e pode ser usado de forma independente.</p>
 <h3 id="protecao-de-bases">Proteção de bases 🏠</h3>
 <ul><li>Reivindique o chunk onde está com <strong><code>/c</code></strong>. Os chunks da base precisam se tocar.</li><li>Limites: <strong>32 chunks</strong>, <strong>2 regiões</strong> e <strong>10 membros</strong> por base.</li><li>A base começa com <strong>24 horas</strong> de energia para você construir a powercell. Sem ela, a energia cai e a base acaba dissolvida.</li><li><strong>Powercell:</strong> monte a receita no centro de um <strong>baú único</strong> (não duplo) dentro da base e feche o baú.</li></ul>
-<figure class="recipe"><img src="assets/img/crafts/cell.png" alt="Receita da Powercell" width="216" height="216" loading="lazy"><figcaption>Receita da Powercell</figcaption></figure>
+<figure class="recipe"><img src="assets/img/crafts/cell.webp" alt="Receita da Powercell" width="216" height="216" loading="lazy"><figcaption>Receita da Powercell</figcaption></figure>
 <table>
 <thead><tr>
 <th scope="col">Combustível</th>
@@ -370,10 +380,10 @@
 <p>Mochilas não são entregues automaticamente ao entrar. Segure uma mochila e clique com o botão direito para abrir. As melhorias preservam os itens guardados. O sistema também oferece um guia visual de receitas no jogo.</p>
 <h4 id="mochila-inicial-couro">Mochila inicial: Couro</h4>
 <p>Faça na bancada de trabalho:</p>
-<figure class="recipe"><img src="assets/img/crafts/bag.png" alt="Receita da Mochila de Couro" width="216" height="216" loading="lazy"><figcaption>Receita da Mochila de Couro</figcaption></figure>
+<figure class="recipe"><img src="assets/img/crafts/bag.webp" alt="Receita da Mochila de Couro" width="216" height="216" loading="lazy"><figcaption>Receita da Mochila de Couro</figcaption></figure>
 <h4 id="melhorias">Melhorias</h4>
 <p>Para cada melhoria até Diamante, coloque a mochila atual no centro da bancada e cerque-a com <strong>8 materiais</strong> do próximo nível:</p>
-<figure class="recipe"><img src="assets/img/crafts/bag_upgrade.png" alt="Receita de melhoria de mochila" width="216" height="216" loading="lazy"><figcaption>Receita de melhoria de mochila</figcaption></figure>
+<figure class="recipe"><img src="assets/img/crafts/bag_upgrade.webp" alt="Receita de melhoria de mochila" width="216" height="216" loading="lazy"><figcaption>Receita de melhoria de mochila</figcaption></figure>
 <table>
 <thead><tr>
 <th scope="col">Mochila atual</th>
@@ -407,17 +417,17 @@
 <p>É uma alternativa menor, criada ao cercar uma Mochila de Couro com <strong>8 blocos de terra</strong> na bancada. Essa receita é uma redução de nível, não faz parte da sequência de melhorias.</p>
 <h4 id="enderpack">Enderpack</h4>
 <p>A Enderpack é uma mochila especial, criada na bancada:</p>
-<figure class="recipe"><img src="assets/img/crafts/ender_pack.png" alt="Receita da Enderpack" width="216" height="216" loading="lazy"><figcaption>Receita da Enderpack</figcaption></figure>
+<figure class="recipe"><img src="assets/img/crafts/ender_pack.webp" alt="Receita da Enderpack" width="216" height="216" loading="lazy"><figcaption>Receita da Enderpack</figcaption></figure>
 <p>Também é possível colocar <strong>1 Enderpack + 1 Pérola do Ender</strong> em qualquer espaço da bancada para receber <strong>2 Enderpacks com o mesmo armazenamento compartilhado</strong>. Guarde isso em mente: são dois acessos ao mesmo inventário, não duas cópias dos itens.</p>
 <p>Mochilas não podem ser colocadas dentro de outras mochilas.</p>
 <h3 id="pedras-de-teleporte">Pedras de teleporte 🪨</h3>
 <p>Pedras de teleporte craftáveis, com aparência de pedra de âncora.</p>
-<figure class="recipe"><img src="assets/img/crafts/waystone.png" alt="Receita da Pedra de Teleporte" width="216" height="216" loading="lazy"><figcaption>Receita da Pedra de Teleporte</figcaption></figure>
+<figure class="recipe"><img src="assets/img/crafts/waystone.webp" alt="Receita da Pedra de Teleporte" width="216" height="216" loading="lazy"><figcaption>Receita da Pedra de Teleporte</figcaption></figure>
 <ul><li>Clique com o direito para abrir o menu de destinos e viajar.</li><li>Cada waystone é privada por padrão. Para renomeá-la, fique ao lado e use <code>/tw setname &lt;nome&gt;</code> (sem espaços); para permitir que qualquer pessoa viaje até ela sem ter visitado antes, olhe para a pedra e use <code>/tw setpublic true</code>. Use <code>false</code> para torná-la privada novamente.</li><li>Podem ser quebradas e levadas para outro lugar.</li></ul>
 <h3 id="pedra-do-regresso">Pedra do Regresso 🏡</h3>
 <p>Uma pedra que guarda um ponto de retorno escolhido por você. Agache e clique com o botão direito antes de usá-la para vincular sua localização; depois, clique com o botão direito para voltar. A ativação leva <strong>5 segundos</strong> e o item tem um tempo de recarga de <strong>60 segundos</strong>. Cada pedra fica vinculada ao primeiro jogador que a usar.</p>
 <p>Receita na bancada:</p>
-<figure class="recipe"><img src="assets/img/crafts/hearthstone.png" alt="Receita da Pedra do Regresso" width="216" height="216" loading="lazy"><figcaption>Receita da Pedra do Regresso</figcaption></figure>
+<figure class="recipe"><img src="assets/img/crafts/hearthstone.webp" alt="Receita da Pedra do Regresso" width="216" height="216" loading="lazy"><figcaption>Receita da Pedra do Regresso</figcaption></figure>
 <h3 id="missoes-e-contratos">Missões e contratos 📜</h3>
 <p>No Spawn, interaja com o NPC <strong>Missões</strong> para abrir o menu de contratos.</p>
 <ul><li><strong>Diárias:</strong> 2 missões fáceis, 2 médias e 2 difíceis por ciclo diário. Os objetivos variam entre mineração, combate, coleta, criação de animais, pesca, exploração, culinária e outras atividades; várias exigem uma quantidade planejada de recursos ou ações.</li><li><strong>Semanais:</strong> 2 de cada dificuldade por ciclo semanal, com tarefas de maior duração e metas acumuladas.</li><li><strong>Marcos globais:</strong> objetivos únicos da jornada, como contribuir com produção, exploração, combate e contratos. Eles ficam disponíveis no menu de missões e não substituem as descobertas permanentes do Codex.</li><li>Concluir missões concede recompensas e contribui para a progressão de cada trilha, que também concede insígnias em determinados níveis. As missões concluídas permanecem visíveis no menu.</li><li>Os objetivos disponíveis mudam conforme o ciclo; confira o menu para requisitos e recompensas atuais.</li></ul>
@@ -483,7 +493,7 @@
 <p>Os nomes refletem o cadastro atual do Spawn; serviços e aparência podem mudar com atualizações.</p>
 <h3 id="bussola-de-explorador">Bússola de Explorador 🧭</h3>
 <p>Localiza estruturas do mundo. Botão direito vai para o <strong>próximo</strong> alvo; botão esquerdo, para o <strong>anterior</strong>. A agulha aponta para o alvo e as coordenadas aparecem no chat. Há <strong>2,5s</strong> entre os cliques.</p>
-<figure class="recipe"><img src="assets/img/crafts/explorer_compass.png" alt="Receita da Bússola de Explorador" width="216" height="216" loading="lazy"><figcaption>Receita da Bússola de Explorador</figcaption></figure>
+<figure class="recipe"><img src="assets/img/crafts/explorer_compass.webp" alt="Receita da Bússola de Explorador" width="216" height="216" loading="lazy"><figcaption>Receita da Bússola de Explorador</figcaption></figure>
 <p><strong>Alvos (16):</strong> Vila, Vila Medieval, Cidade Antiga, Câmaras de Prova, Pirâmide do Deserto, Mansão, Cabana da Bruxa, Posto de Saqueador, Fortaleza, Monumento Oceânico, Cripta, Mina, Fortaleza do Nether, Bastião, Cidade do End e Castelo do End. Alguns alvos só podem ser procurados na dimensão correspondente. A receita é aprendida automaticamente.</p>
 <hr>
 <h2 id="tumulos">⚰️ Túmulos</h2>

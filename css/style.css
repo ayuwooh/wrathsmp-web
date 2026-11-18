@@ -114,7 +114,8 @@ body {
 
 /* Moldura que aparece ao passar o mouse (ou focar) no IP.
    O texto vem do atributo data-tooltip no HTML */
-.ip-copy::after {
+.ip-copy::after,
+.anchor-copy::after {
     content: attr(data-tooltip);
     position: absolute;
     top: calc(100% + 6px);
@@ -133,7 +134,9 @@ body {
 }
 
 .ip-copy:hover::after,
-.ip-copy:focus-visible::after {
+.ip-copy:focus-visible::after,
+.anchor-copy:hover::after,
+.anchor-copy:focus-visible::after {
     opacity: 1;
 }
 
@@ -497,27 +500,27 @@ body {
 }
 
 /* Estrutura de artigo da Wiki (visual de enciclopédia) */
-#wiki .wiki-breadcrumb {
+.wiki-breadcrumb {
     margin-bottom: 1.5rem;
     color: var(--muted);
     font-size: 0.85rem;
 }
 
-#wiki .wiki-breadcrumb a {
+.wiki-breadcrumb a {
     color: var(--pink-light);
     text-decoration: none;
 }
 
-#wiki .wiki-breadcrumb a:hover {
+.wiki-breadcrumb a:hover {
     text-decoration: underline;
 }
 
-#wiki .wiki-breadcrumb span[aria-hidden] {
+.wiki-breadcrumb span[aria-hidden] {
     margin: 0 0.35rem;
     color: var(--line);
 }
 
-#wiki .wiki-breadcrumb [aria-current] {
+.wiki-breadcrumb [aria-current] {
     color: var(--gold);
 }
 
@@ -599,6 +602,46 @@ body {
     text-align: center;
 }
 
+/* Botão "#" que copia o link da seção (criado pelo script.js) */
+#wiki h2[id],
+#wiki h3[id],
+#changelog h3[id] {
+    position: relative;
+    padding-right: 1.75rem;
+}
+
+.anchor-copy {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    padding: 0 0.35rem;
+    border: 0;
+    background: none;
+    color: var(--gold);
+    font-size: 1rem;
+    opacity: 0;
+    cursor: pointer;
+}
+
+#wiki h2:hover .anchor-copy,
+#wiki h3:hover .anchor-copy,
+#changelog h3:hover .anchor-copy,
+.anchor-copy:focus-visible {
+    opacity: 1;
+}
+
+/* Barra fina de progresso de leitura, no topo da página */
+.reading-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: var(--progresso, 0%);
+    height: 3px;
+    background: linear-gradient(90deg, var(--pink), var(--gold));
+}
+
 /* Índice lateral fixo da Wiki */
 .wiki-layout {
     display: grid;
@@ -626,6 +669,17 @@ body {
 .side-title {
     margin: 0 0 0.75rem;
     color: var(--pink-light);
+    font-weight: bold;
+}
+
+/* Botão para abrir/fechar o índice só aparece no celular */
+.sidebar-toggle {
+    display: none;
+}
+
+/* Link da seção atualmente em leitura */
+.wiki-sidebar a[aria-current="location"] {
+    color: var(--gold);
     font-weight: bold;
 }
 
@@ -697,6 +751,36 @@ body {
         position: static;
         max-height: none;
     }
+
+    .sidebar-toggle {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0;
+        border: 0;
+        background: none;
+        color: var(--pink-light);
+        font: inherit;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .sidebar-toggle span {
+        transition: transform 0.15s ease;
+    }
+
+    .wiki-sidebar.is-collapsed .sidebar-toggle span {
+        transform: rotate(-90deg);
+    }
+
+    .wiki-sidebar.is-collapsed nav {
+        display: none;
+    }
+
+    .wiki-sidebar .side-title {
+        display: none;
+    }
 }
 
 /* Telas pequenas: o menu desce para uma linha própria.
@@ -718,5 +802,50 @@ body {
     /* Em telas pequenas, o card das versões desce para baixo dos passos */
     .section-row {
         grid-template-columns: 1fr;
+    }
+}
+
+/* Versão para impressão: só o conteúdo do artigo, em preto e branco */
+@media print {
+    #top,
+    #bottom,
+    .wiki-sidebar,
+    .wiki-infobox,
+    .wiki-breadcrumb,
+    .reading-progress,
+    .anchor-copy,
+    .skip-link {
+        display: none !important;
+    }
+
+    body {
+        background: #fff;
+        color: #000;
+    }
+
+    #wiki,
+    #changelog {
+        padding: 0;
+    }
+
+    #wiki h1,
+    #wiki h2,
+    #wiki h3,
+    #changelog h1,
+    #changelog h2,
+    #changelog h3 {
+        color: #000;
+    }
+
+    #wiki a,
+    #changelog a {
+        color: #000;
+        text-decoration: underline;
+    }
+
+    table,
+    .recipe,
+    blockquote {
+        break-inside: avoid;
     }
 }
