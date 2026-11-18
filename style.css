@@ -1,33 +1,81 @@
 :root {
+    /* Paleta do site: mude aqui para trocar as cores de uma vez.
+       As cores originais (preto, vinho e rosa) foram mantidas; as novas
+       são tons próximos para dar profundidade e contraste sem quebrar a identidade. */
+    --bg: #0E0F0F;           /* fundo principal */
+    --wine: #73022C;         /* vinho original: preenchimentos e botões */
+    --pink: #F2055C;         /* rosa original: acento principal */
+    --pink-mid: #F20574;     /* rosa original: estados de hover */
+    --pink-light: #F2059F;   /* rosa original: títulos e links */
 
+    /* Complementos que combinam com o vinho/rosa */
+    --line: #8E1B4B;         /* vinho mais claro: bordas e divisórias visíveis */
+    --plum: #2A0C22;         /* ameixa escura: fundo de painéis laterais */
+    --surface: #1A1218;      /* preto com leve tom ameixa: tabelas e cards */
+    --gold: #F0B862;         /* dourado quente: metadados e legendas */
+    --muted: #D7C4CC;        /* cinza rosado: texto secundário */
+
+    --text: #FFFFFF;         /* texto branco para leitura sobre fundo escuro */
+    --content-width: 960px;
 }
 
-* {
-    font-family: Arial, Helvetica, sans-serif;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    /* Outfit é a fonte principal; Arial entra se o Google Fonts falhar */
+    font-family: "Outfit", Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Cabeçalho: 3 colunas (logo | menu | IPs).
+   As colunas laterais com 1fr mantêm o menu exatamente no centro */
 #top {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    gap: 16px;
-    padding: 0px 10px;
+    gap: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background: var(--bg);
+    border-bottom: 3px solid var(--pink);
+    color: var(--text);
 }
 
+/* Tamanho do logo do servidor */
 #logo {
-    max-width: 50px;
+    display: block;
+    width: 50px;
     height: auto;
 }
 
+/* gap controla o espaço entre os links do menu */
 #topbar {
-    padding-left: 50px;
-    padding-right: 50px;
-    text-align: center;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
 }
 
+#topbar a {
+    color: var(--text);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#topbar a:hover {
+    color: var(--pink-light);
+}
+
+/* justify-self: end empurra os IPs para a borda direita */
 #ips {
     justify-self: end;
     text-align: right;
+    font-size: 0.8rem;
 }
 
 #ips dl,
@@ -35,29 +83,640 @@
     margin: 0;
 }
 
+#ips dt {
+    color: var(--muted);
+}
+
+#ips code {
+    color: var(--pink-light);
+}
+
+/* Botão que copia o IP: parece texto, mas tem cursor de clique */
+.ip-copy {
+    position: relative;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+}
+
+.ip-copy:hover code,
+.ip-copy:focus-visible code {
+    text-decoration: underline;
+}
+
+.ip-copy:focus-visible {
+    outline: 2px solid var(--pink);
+    outline-offset: 3px;
+}
+
+/* Moldura que aparece ao passar o mouse (ou focar) no IP.
+   O texto vem do atributo data-tooltip no HTML */
+.ip-copy::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 0;
+    z-index: 20;
+    padding: 0.35rem 0.6rem;
+    border: 1px solid var(--pink);
+    border-radius: 4px;
+    background: var(--wine);
+    color: var(--text);
+    font-size: 0.75rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s ease;
+}
+
+.ip-copy:hover::after,
+.ip-copy:focus-visible::after {
+    opacity: 1;
+}
+
+/* Aviso "IP copiado!" temporário */
+#copy-status {
+    min-height: 1.2rem;
+    margin: 0.25rem 0 0;
+    color: var(--pink-light);
+    font-size: 0.8rem;
+}
+
+/* Banner: position: relative é o que faz o texto absoluto
+   ficar posicionado em relação a esta seção */
 #titlesec {
     position: relative;
+    overflow: hidden;
+    border-bottom: 3px solid var(--line);
 }
 
+/* Ajustes do banner:
+   - height define a altura da imagem
+   - blur controla o desfoque e brightness o escurecimento
+   - scale(1.06) esconde as bordas transparentes criadas pelo desfoque */
 #backgroundimg {
-    max-width: 1900px;
-    margin: 0;
-    filter: blur(5px);
+    display: block;
+    width: 100%;
+    height: min(70vh, 680px);
+    object-fit: cover;
+    filter: blur(6px) brightness(0.45);
+    transform: scale(1.06);
 }
 
+/* Camada de vinho e rosa sobre a imagem desfocada: dá unidade às cores */
+#titlesec::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(115, 2, 44, 0.45), rgba(242, 5, 159, 0.18));
+    pointer-events: none;
+}
+
+/* Texto sobre a imagem: top/left 50% + translate centralizam os dois eixos.
+   Se mudar um desses valores, o texto sai do centro */
 #title {
     position: absolute;
+    z-index: 1;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: min(90%, 720px);
+    color: var(--text);
     text-align: center;
-    color: white;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
 }
-#content {
-    justify-content: center;
+
+#title h1 {
+    margin: 0 0 1rem;
+}
+
+/* Logo em vez do texto do título: mantém o <h1> para acessibilidade */
+#hero-logo {
+    display: block;
+    width: min(100%, 640px);
+    height: auto;
+    margin: 0 auto;
+}
+
+#title p {
+    margin: 0 0 1rem;
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+}
+
+/* Botão "Conheça o servidor": vinho com texto branco;
+   no hover fica rosa com texto escuro para manter contraste */
+#title a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border: 1px solid var(--pink);
+    border-radius: 6px;
+    background: var(--wine);
+    color: var(--text);
+    font-weight: bold;
+    text-decoration: none;
+    text-shadow: none;
+}
+
+#title a:hover {
+    background: var(--pink-light);
+    color: var(--bg);
+}
+
+/* Seções de texto: padding controla o espaço acima e abaixo,
+   --content-width controla o comprimento das linhas */
+#content section:not(#titlesec) {
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+    text-align: left;
+}
+
+/* Linha separadora entre seções */
+#content section:not(#titlesec) + section,
+#faq {
+    border-top: 1px solid var(--line);
+}
+
+#content section:not(#titlesec) h2 {
+    margin-top: 0;
+    color: var(--pink-light);
+    font-weight: 700;
+}
+
+#content li {
+    margin-bottom: 0.6rem;
+}
+
+/* Linha de duas colunas: passos à esquerda, card de versões à direita */
+.section-row {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(220px, 1fr);
+    gap: 2rem;
+    align-items: start;
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: 3rem 1.5rem 0;
+}
+
+/* Dentro da linha, o passo a passo não usa o padding das seções normais */
+.section-row #como-entrar {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    border-top: 0;
+}
+
+/* Card lateral: apenas as versões, sem IP */
+#versoes {
+    padding: 1.5rem;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--plum);
+}
+
+#versoes h2 {
+    margin-top: 0;
+    color: var(--pink-light);
+    font-weight: 700;
+}
+
+#versoes dl {
+    margin: 0;
+}
+
+#versoes dt {
+    margin-top: 0.75rem;
+    color: var(--gold);
+    font-size: 0.8rem;
+}
+
+#versoes dd {
+    margin: 0.1rem 0 0;
+    color: var(--text);
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+/* FAQ: cada <details> ganha uma linha separadora */
+#faq details {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--line);
+}
+
+#faq summary {
+    color: var(--pink-light);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#faq p {
+    margin: 0.75rem 0 0;
+}
+
+/* Rodapé: mesma cor do cabeçalho, com linha rosa em cima */
+#bottom {
+    padding: 2rem 1.5rem;
+    background: var(--bg);
+    border-top: 3px solid var(--pink);
+    color: var(--text);
     text-align: center;
 }
 
-#bottom {
+#bottom p {
+    margin: 0.35rem 0;
+}
+
+#bottom a {
+    color: var(--pink-light);
+}
+
+#bottom a:hover {
+    color: var(--pink-mid);
+}
+
+/* Link de acessibilidade: fica fora da tela até receber foco pelo teclado (Tab) */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+}
+
+.skip-link:focus {
+    top: 1rem;
+    left: 1rem;
+    z-index: 10;
+    padding: 0.5rem 0.75rem;
+    border: 2px solid var(--pink);
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* Páginas Wiki e Changelog */
+#wiki,
+#changelog {
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 4rem;
+    text-align: left;
+}
+
+#wiki h1,
+#changelog h1 {
+    margin: 0 0 1rem;
+    color: var(--pink-light);
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+
+#wiki h2,
+#changelog h2 {
+    margin: 2.5rem 0 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--line);
+    color: var(--pink-light);
+}
+
+#wiki h3,
+#changelog h3 {
+    margin: 1.75rem 0 0.75rem;
+    color: var(--pink-mid);
+}
+
+#wiki ul,
+#changelog ul {
+    padding-left: 1.25rem;
+}
+
+#wiki li,
+#changelog li {
+    margin-bottom: 0.4rem;
+}
+
+#wiki a,
+#changelog a {
+    color: var(--pink-light);
+}
+
+#wiki a:hover,
+#changelog a:hover {
+    color: var(--pink-mid);
+}
+
+#wiki code,
+#changelog code {
+    padding: 0.1rem 0.35rem;
+    border-radius: 4px;
+    background: var(--surface);
+    color: var(--pink-light);
+}
+
+#wiki pre,
+#changelog pre {
+    margin: 1rem 0;
+    padding: 1rem;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--surface);
+    overflow-x: auto;
+}
+
+#wiki pre code,
+#changelog pre code {
+    padding: 0;
+    background: none;
+    color: var(--text);
+    white-space: pre;
+}
+
+#wiki blockquote,
+#changelog blockquote {
+    margin: 1rem 0;
+    padding: 0.75rem 1rem;
+    border-left: 3px solid var(--pink);
+    border-radius: 0 6px 6px 0;
+    background: var(--surface);
+    color: var(--muted);
+}
+
+#wiki table,
+#changelog table {
+    width: 100%;
+    margin: 1rem 0;
+    border-collapse: collapse;
+    background: var(--surface);
+}
+
+#wiki th,
+#wiki td,
+#changelog th,
+#changelog td {
+    padding: 0.6rem 0.75rem;
+    border: 1px solid var(--line);
+    text-align: left;
+    vertical-align: top;
+}
+
+#wiki thead th,
+#changelog thead th {
+    background: var(--wine);
+    color: var(--text);
+}
+
+#wiki hr,
+#changelog hr {
+    margin: 2rem 0;
+    border: 0;
+    border-top: 1px solid var(--line);
+}
+
+/* Imagens das receitas de craft */
+.recipe {
+    margin: 1.25rem 0;
+    padding: 1rem;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--surface);
     text-align: center;
+}
+
+.recipe img {
+    display: block;
+    width: 216px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    image-rendering: pixelated;
+}
+
+.recipe figcaption {
+    margin-top: 0.5rem;
+    color: var(--gold);
+    font-size: 0.85rem;
+}
+
+/* Estrutura de artigo da Wiki (visual de enciclopédia) */
+#wiki .wiki-breadcrumb {
+    margin-bottom: 1.5rem;
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+#wiki .wiki-breadcrumb a {
+    color: var(--pink-light);
+    text-decoration: none;
+}
+
+#wiki .wiki-breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+#wiki .wiki-breadcrumb span[aria-hidden] {
+    margin: 0 0.35rem;
+    color: var(--line);
+}
+
+#wiki .wiki-breadcrumb [aria-current] {
+    color: var(--gold);
+}
+
+#wiki .wiki-header {
+    padding-bottom: 1.25rem;
+    border-bottom: 2px solid var(--line);
+}
+
+#wiki .wiki-header h1 {
+    margin-bottom: 0.35rem;
+}
+
+#wiki .wiki-subtitle {
+    margin: 0 0 0.5rem;
+    font-size: 1.15rem;
+}
+
+#wiki .wiki-meta {
+    margin: 0;
+    color: var(--gold);
+    font-size: 0.85rem;
+}
+
+#wiki .wiki-lead {
+    margin: 1.5rem 0;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+/* Ficha rápida: coluna fixa na borda direita da página */
+.wiki-infobox {
+    grid-area: info;
+    position: sticky;
+    top: 1rem;
+    max-height: calc(100vh - 2rem);
+    overflow-y: auto;
+    padding: 1rem;
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--pink);
+    border-radius: 6px;
+    background: var(--plum);
+    font-size: 0.9rem;
+}
+
+.wiki-infobox h2 {
+    margin: 0 0 0.75rem;
+    color: var(--pink-light);
+    font-size: 1.1rem;
+}
+
+.wiki-infobox dl {
+    margin: 0;
+}
+
+.wiki-infobox dt {
+    margin-top: 0.6rem;
+    color: var(--pink-light);
+    font-weight: bold;
+}
+
+.wiki-infobox dd {
+    margin: 0.1rem 0 0;
+    color: var(--muted);
+}
+
+/* Resumo curto no início de cada seção */
+#wiki .section-lead {
+    margin-top: 0;
+    color: var(--muted);
+    font-style: italic;
+}
+
+#wiki .wiki-see-also {
+    margin-top: 2.5rem;
+}
+
+#wiki .wiki-end {
+    color: var(--gold);
+    text-align: center;
+}
+
+/* Índice lateral fixo da Wiki */
+.wiki-layout {
+    display: grid;
+    grid-template-columns: 230px minmax(0, 1fr) 270px;
+    grid-template-areas: "index article info";
+    gap: 2rem;
+    align-items: start;
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+}
+
+.wiki-sidebar {
+    grid-area: index;
+    position: sticky;
+    top: 1rem;
+    max-height: calc(100vh - 2rem);
+    overflow-y: auto;
+    padding: 1rem;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--plum);
+}
+
+.side-title {
+    margin: 0 0 0.75rem;
+    color: var(--pink-light);
+    font-weight: bold;
+}
+
+.wiki-sidebar ul {
+    margin: 0;
+    padding-left: 1.1rem;
+}
+
+.wiki-sidebar li {
+    margin-bottom: 0.35rem;
+}
+
+/* Grupos com subitens (ex.: Itens > Mochilas, Waystone...) */
+.side-group > ul {
+    margin-top: 0.35rem;
+    padding-left: 0.9rem;
+    border-left: 1px solid var(--line);
+}
+
+.side-group > ul li {
+    font-size: 0.82rem;
+}
+
+.side-list > li > a,
+.side-group > a {
+    font-weight: bold;
+}
+
+.wiki-sidebar a {
+    color: var(--text);
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.wiki-sidebar a:hover {
+    color: var(--pink-light);
+}
+
+/* Dentro da linha, o artigo não usa o max-width das páginas normais */
+.wiki-layout #wiki {
+    grid-area: article;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Sem espaço para três colunas, a ficha desce abaixo do índice */
+@media (max-width: 1200px) {
+    .wiki-layout {
+        grid-template-columns: 220px minmax(0, 1fr);
+        grid-template-areas:
+            "index info"
+            "index article";
+    }
+}
+
+/* Em telas estreitas, índice e ficha sobem para cima do texto */
+@media (max-width: 900px) {
+    .wiki-layout {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "index"
+            "info"
+            "article";
+    }
+
+    .wiki-sidebar,
+    .wiki-infobox {
+        position: static;
+        max-height: none;
+    }
+}
+
+/* Telas pequenas: o menu desce para uma linha própria.
+   720px é o ponto de quebra — mude aqui se quiser outro */
+@media (max-width: 720px) {
+    #top {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    #topbar {
+        order: 3;
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    /* Em telas pequenas, o card das versões desce para baixo dos passos */
+    .section-row {
+        grid-template-columns: 1fr;
+    }
 }

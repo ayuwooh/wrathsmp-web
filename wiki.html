@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guia completo do WrathSMP: progressão, Codex, bases, combate, exploração, qualidade de vida e comandos.">
+    <title>WrathSMP - Wiki</title>
+    <link rel="icon" href="assets/img/wrathsmp_icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#content">Pular para o conteúdo</a>
+
+    <header id="top">
+        <img src="assets/img/wrathsmp_logo_W.png" alt="WrathSMP" id="logo">
+
+        <nav id="topbar" aria-label="Navegação principal">
+            <a href="index.html">Home</a>
+            <a href="wiki.html">Wiki</a>
+            <a href="changelog.html">Atualizações</a>
+            <a href="suporte.html">Suporte</a>
+        </nav>
+
+        <div id="ips">
+            <dl>
+                <dt>IP Java</dt>
+                <dd><button type="button" class="ip-copy" data-tooltip="Clique para copiar" aria-label="Copiar IP Java"><code>wrathsmp.blackhosting.com.br</code></button></dd>
+                <dt>IP Bedrock</dt>
+                <dd><button type="button" class="ip-copy" data-tooltip="Clique para copiar" aria-label="Copiar IP Bedrock"><code>wrathsmpbr.blackhosting.com.br:27184</code></button></dd>
+            </dl>
+            <p id="copy-status" role="status" aria-live="polite"></p>
+        </div>
+    </header>
+
+    <main id="content" class="wiki-layout">
+    <aside class="wiki-sidebar">
+<nav aria-label="Índice do guia">
+<p class="side-title">Índice</p>
+<ul class="side-list">
+<li class="side-group"><a href="#progressao">📈 Progressão</a><ul>
+<li><a href="#jornada-de-niveis-1-60">Jornada de níveis — 1 → 60</a></li>
+<li><a href="#codex-o-compendio-de-descobertas">Codex — o compêndio de descobertas 📖</a></li>
+<li><a href="#habilidades">Habilidades ⚔️</a></li>
+<li><a href="#racas-e-origens">Raças e origens 🧬</a></li>
+<li><a href="#conquistas-xp-por-avancar">Conquistas — XP por avançar 🏆</a></li>
+</ul></li>
+<li class="side-group"><a href="#base-e-itens">🏡 Itens</a><ul>
+<li><a href="#protecao-de-bases">Proteção de bases 🏠</a></li>
+<li><a href="#mochilas">Mochilas 🎒</a></li>
+<li><a href="#pedras-de-teleporte">Pedras de teleporte 🪨</a></li>
+<li><a href="#pedra-do-regresso">Pedra do Regresso 🏡</a></li>
+<li><a href="#missoes-e-contratos">Missões e contratos 📜</a></li>
+<li><a href="#economia-e-comercio">Economia e comércio 💎</a></li>
+<li><a href="#npcs-do-spawn">NPCs do Spawn 🧑‍🤝‍🧑</a></li>
+<li><a href="#bussola-de-explorador">Bússola de Explorador 🧭</a></li>
+</ul></li>
+<li><a href="#tumulos">⚰️ Túmulos</a></li>
+<li><a href="#combate-e-pvp">⚔️ Combate e PvP</a></li>
+<li class="side-group"><a href="#o-mundo">🌍 O mundo</a><ul>
+<li><a href="#terreno-e-exploracao">Terreno e exploração</a></li>
+<li><a href="#datapacks-de-aventura-e-construcao">Datapacks de aventura e construção</a></li>
+<li><a href="#dimensoes">Dimensões</a></li>
+<li><a href="#mapa-e-conexao">Mapa e conexão</a></li>
+<li><a href="#tesouros-e-recompensas-do-mundo">Tesouros e recompensas do mundo</a></li>
+</ul></li>
+<li class="side-group"><a href="#qualidade-de-vida">✨ Qualidade de vida</a><ul>
+<li><a href="#agricultura">🌱 Agricultura</a></li>
+<li><a href="#equipamentos-e-encantamentos">🛠️ Equipamentos e encantamentos</a></li>
+<li><a href="#reciclagem">♻️ Reciclagem</a></li>
+<li><a href="#blocos-e-utilidades">🔥 Blocos e utilidades</a></li>
+</ul></li>
+<li><a href="#chat-guildas-e-interface">💬 Chat, guildas e interface</a></li>
+<li><a href="#comandos-essenciais">🧾 Comandos essenciais</a></li>
+<li><a href="#ver-tambem">🔎 Ver também</a></li>
+<li><a href="changelog.html">🧾 Atualizações</a></li>
+</ul></nav></aside>
+        <aside class="wiki-infobox" aria-label="Ficha rápida do servidor">
+    <h2>Ficha rápida</h2>
+    <dl>
+        <dt>Tipo</dt><dd>SMP com progressão de RPG</dd>
+        <dt>Edições</dt><dd>Java e Bedrock</dd>
+        <dt>Níveis</dt><dd>1 a 60</dd>
+        <dt>Moeda</dt><dd>Esmeralda</dd>
+        <dt>PvP</dt><dd>Opt-in (desligado por padrão)</dd>
+        <dt>Mapa</dt><dd><code>http://&lt;ip-do-servidor&gt;:8100</code></dd>
+        <dt>Atualizado em</dt><dd><time datetime="2026-11-03">3 de novembro de 2026</time></dd>
+    </dl>
+</aside>
+
+        <article id="wiki">
+<nav class="wiki-breadcrumb" aria-label="Trilha de navegação">
+    <a href="index.html">Início</a> <span aria-hidden="true">›</span>
+    <span aria-current="page">Wiki</span> <span aria-hidden="true">›</span>
+    <span>Guia do Jogador</span>
+</nav>
+
+<header class="wiki-header">
+    <h1 id="guia-do-jogador">Guia do Jogador</h1>
+    <p class="wiki-subtitle">Enciclopédia do WrathSMP — sistemas, regras e recursos para jogadores Java e Bedrock.</p>
+    <p class="wiki-meta">Última atualização: <time datetime="2026-11-03">3 de novembro de 2026</time> · 12 seções · leitura aproximada de 15 min</p>
+</header>
+
+<p class="wiki-lead">O WrathSMP é um servidor de sobrevivência com progressão própria: os jogadores sobem do <strong>nível 1 ao 60</strong>, exploram o mundo pelo <strong>Codex</strong> e evoluem habilidades com o mcMMO. Este guia organiza os sistemas principais em seções independentes para consulta rápida durante o jogo.</p>
+
+<blockquote><p>Este guia cobre recursos disponíveis para jogadores Java e Bedrock. Alguns itens especiais usam modelos e efeitos visuais enviados pelo servidor; a aparência pode variar entre plataformas. Receitas adicionais podem ser encontradas no livro de receitas e nos avanços do jogo.</p></blockquote>
+
+<h2 id="progressao">📈 Progressão</h2>
+<p class="section-lead">A progressão combina níveis de jornada, habilidades, descobertas do Codex e conquistas. Cada sistema tem seus próprios contadores e recompensas.</p>
+<h3 id="jornada-de-niveis-1-60">Jornada de níveis — 1 → 60</h3>
+<p>Todos os jogadores seguem a mesma jornada. Os primeiros níveis sobem rápido; os últimos pedem mais tempo.</p>
+<p><strong>Como ganhar XP:</strong></p>
+<ul><li><strong>Jogando</strong> — XP a cada 5 minutos.</li><li><strong>Caçando</strong> — quanto mais forte o mob, maior a recompensa.</li><li><strong>Minerando</strong> — minérios mais raros dão mais XP.</li><li><strong>Avanços e descobertas do Codex</strong> — cada um rende XP de jornada.</li></ul>
+<blockquote><p>💡 <strong>Três contadores de XP:</strong> a barra verde vanilla, os níveis de habilidade e a jornada 1–60 são separados. Recompensas do Codex e dos avanços alimentam a <strong>jornada</strong>.</p></blockquote>
+<p><strong>Recompensas por nível:</strong></p>
+<table>
+<thead><tr>
+<th scope="col">Nível</th>
+<th scope="col">O que você recebe</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">5</th>
+<td>2× Maçã Dourada</td>
+</tr>
+<tr>
+<th scope="row">10</th>
+<td>3× Maçã Dourada + 1× Diamante</td>
+</tr>
+<tr>
+<th scope="row">15</th>
+<td>8× Esmeralda + acesso ao <strong>Nether</strong></td>
+</tr>
+<tr>
+<th scope="row">20</th>
+<td>3× Diamante + 16× Salmão Assado</td>
+</tr>
+<tr>
+<th scope="row">25</th>
+<td>Regeneração I (90s) + Velocidade II (2 min)</td>
+</tr>
+<tr>
+<th scope="row">30</th>
+<td>4× Diamante + 12× Garrafas de XP + acesso ao <strong>End</strong></td>
+</tr>
+<tr>
+<th scope="row">35</th>
+<td>6× Maçã Dourada + Força II (2 min)</td>
+</tr>
+<tr>
+<th scope="row">40</th>
+<td>6× Diamante + 24× Garrafas de XP</td>
+</tr>
+<tr>
+<th scope="row">45</th>
+<td>8× Maçã Dourada + 16× Lapis-lazúli</td>
+</tr>
+<tr>
+<th scope="row">50</th>
+<td>6× Diamante + <strong>Totem da Imortalidade</strong></td>
+</tr>
+<tr>
+<th scope="row">55</th>
+<td>8× Diamante + 2× Carapaça de Shulker</td>
+</tr>
+<tr>
+<th scope="row">60</th>
+<td>10× Diamante + 8× Maçã Dourada + 4× Sucata de Netherite — nível máximo, com celebração global 🎉</td>
+</tr>
+</tbody></table>
+<ul><li><strong>Todo nível</strong> cura e enche sua fome por completo, além de mostrar o aviso de subida.</li></ul>
+<h3 id="codex-o-compendio-de-descobertas">Codex — o compêndio de descobertas 📖</h3>
+<p>Abra com <strong><code>/codex</code></strong>. Cada descoberta desbloqueia uma página de lore permanente e rende <strong>XP</strong>. Ao encontrar algo novo, aparece o banner <strong>“CÓDICE ATUALIZADO”</strong>.</p>
+<table>
+<thead><tr>
+<th scope="col">Categoria</th>
+<th scope="col">O que reúne</th>
+<th scope="col">Por descoberta</th>
+<th scope="col">Ao completar</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">🟣 Monstros</th>
+<td>33 inimigos hostis</td>
+<td>+100 XP</td>
+<td>+5000 XP</td>
+</tr>
+<tr>
+<th scope="row">🟢 Vida Selvagem</th>
+<td>37 animais e criaturas</td>
+<td>+100 XP</td>
+<td>+4000 XP</td>
+</tr>
+<tr>
+<th scope="row">🔴 Lendas &amp; Monstruosidades</th>
+<td>9 bosses e criaturas lendárias</td>
+<td>+1000 XP</td>
+<td>+15000 XP + <strong>Totem</strong></td>
+</tr>
+<tr>
+<th scope="row">🌿 Biomas</th>
+<td>48 paisagens do Overworld</td>
+<td>+5 XP</td>
+<td>+1000 XP</td>
+</tr>
+<tr>
+<th scope="row">🌌 Biomas Exóticos</th>
+<td>19 terras raras, Nether, End e Vazio</td>
+<td>+10 XP</td>
+<td>+800 XP</td>
+</tr>
+<tr>
+<th scope="row">💎 Relíquias</th>
+<td>24 itens difíceis de obter</td>
+<td>+80 XP</td>
+<td>+1500 XP</td>
+</tr>
+<tr>
+<th scope="row">🐺 Domesticação</th>
+<td>11 animais domáveis e montarias</td>
+<td>+100 XP</td>
+<td>+1000 XP</td>
+</tr>
+<tr>
+<th scope="row">🎵 Música</th>
+<td>19 discos</td>
+<td>+50 XP</td>
+<td>+1000 XP</td>
+</tr>
+<tr>
+<th scope="row">🏺 Arqueologia</th>
+<td>42 fragmentos e moldes</td>
+<td>+30 XP</td>
+<td>+1200 XP</td>
+</tr>
+<tr>
+<th scope="row">🧪 Alquimia</th>
+<td>20 efeitos e poções especiais</td>
+<td>+40 XP</td>
+<td>+1000 XP</td>
+</tr>
+<tr>
+<th scope="row">⚔️ Mestres mcMMO</th>
+<td>17 habilidades no nível 100</td>
+<td>+150 XP</td>
+<td>+2000 XP</td>
+</tr>
+<tr>
+<th scope="row">⏳ Tempo de Casa</th>
+<td>6 marcos, de 1 a 100 horas</td>
+<td>+80 XP</td>
+<td>+800 XP</td>
+</tr>
+<tr>
+<th scope="row">🎣 Pescaria</th>
+<td>10 peixes e tesouros fisgados</td>
+<td>+50 XP</td>
+<td>+1000 XP</td>
+</tr>
+</tbody></table>
+<ul><li>Descobertas ainda bloqueadas aparecem como <code>??</code>.</li><li>Desbloqueie derrotando mobs, domesticando animais, visitando biomas, obtendo itens, preparando poções, subindo habilidades, acumulando tempo de jogo e pescando.</li></ul>
+<h3 id="habilidades">Habilidades ⚔️</h3>
+<ul><li><strong>Nível 100 é o máximo</strong> em todas as habilidades, alcançado apenas jogando.</li><li>Cada habilidade tem seu próprio <strong>nível</strong>.</li><li>Veja o progresso de cada uma com <strong><code>/fishing</code></strong>, <strong><code>/mining</code></strong>, <strong><code>/swords</code></strong>…</li></ul>
+<h3 id="racas-e-origens">Raças e origens 🧬</h3>
+<p>Escolha uma raça no menu do NPC <strong>Mudar de Raça</strong> no Spawn. Há 12 opções: <strong>Anão, Elfo, Goblin, Halfling, Humano, Sereiano, Orc, Tiefling, Troll, Morto-Vivo, Vampiro e Lobisomem</strong>. Cada uma oferece habilidades próprias; leia a descrição no menu antes de escolher. A raça também aparece abaixo do nome dos jogadores.</p>
+<h3 id="conquistas-xp-por-avancar">Conquistas — XP por avançar 🏆</h3>
+<p>Cada conquista rende XP automaticamente, uma única vez por jogador:</p>
+<table>
+<thead><tr>
+<th scope="col">Tipo</th>
+<th scope="col">XP</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">História</th>
+<td>25</td>
+</tr>
+<tr>
+<th scope="row">Aventura</th>
+<td>30</td>
+</tr>
+<tr>
+<th scope="row">Agricultura e animais</th>
+<td>30</td>
+</tr>
+<tr>
+<th scope="row">Nether</th>
+<td>40</td>
+</tr>
+<tr>
+<th scope="row">Fim</th>
+<td>60</td>
+</tr>
+<tr>
+<th scope="row">Desafios especiais</th>
+<td>80–300</td>
+</tr>
+</tbody></table>
+<ul><li>O chat mostra <code>[+N XP] Conquista desbloqueada: Nome da Conquista</code>.</li></ul>
+<hr>
+<h2 id="base-e-itens">🏡 Base e itens</h2>
+<p class="section-lead">Reúne os sistemas de proteção de base, armazenamento, teleporte e itens especiais. Cada subsistema tem regras próprias e pode ser usado de forma independente.</p>
+<h3 id="protecao-de-bases">Proteção de bases 🏠</h3>
+<ul><li>Reivindique o chunk onde está com <strong><code>/c</code></strong>. Os chunks da base precisam se tocar.</li><li>Limites: <strong>32 chunks</strong>, <strong>2 regiões</strong> e <strong>10 membros</strong> por base.</li><li>A base começa com <strong>24 horas</strong> de energia para você construir a powercell. Sem ela, a energia cai e a base acaba dissolvida.</li><li><strong>Powercell:</strong> monte a receita no centro de um <strong>baú único</strong> (não duplo) dentro da base e feche o baú.</li></ul>
+<figure class="recipe"><img src="assets/img/crafts/cell.png" alt="Receita da Powercell" width="216" height="216" loading="lazy"><figcaption>Receita da Powercell</figcaption></figure>
+<table>
+<thead><tr>
+<th scope="col">Combustível</th>
+<th scope="col">Energia</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">Diamante</th>
+<td>48 h</td>
+</tr>
+<tr>
+<th scope="row">Ouro</th>
+<td>8 h</td>
+</tr>
+<tr>
+<th scope="row">Ferro</th>
+<td>6 h</td>
+</tr>
+<tr>
+<th scope="row">Carvão</th>
+<td>3 h</td>
+</tr>
+<tr>
+<th scope="row">Cobre</th>
+<td>2 h</td>
+</tr>
+<tr>
+<th scope="row">Esmeralda</th>
+<td>12 h</td>
+</tr>
+<tr>
+<th scope="row">Lápis-lazúli, ametista, quartzo e pó de pedra luminosa</th>
+<td>3–4 h</td>
+</tr>
+<tr>
+<th scope="row">Redstone, carvão vegetal e bambu</th>
+<td>2 h ou menos</td>
+</tr>
+<tr>
+<th scope="row">Vara de blaze, pérola do Ender e prismarina</th>
+<td>4–6 h</td>
+</tr>
+<tr>
+<th scope="row">Sucata de netherita</th>
+<td>96 h</td>
+</tr>
+<tr>
+<th scope="row">Blocos de metais, gemas e minerais</th>
+<td>de 18 h a 144 h</td>
+</tr>
+<tr>
+<th scope="row">Troncos</th>
+<td>30–45 min</td>
+</tr>
+<tr>
+<th scope="row">Colheitas e plantas</th>
+<td>20–60 min</td>
+</tr>
+</tbody></table>
+<ul><li>Também podem ser usados troncos, bambu e colheitas, para que lenhadores e agricultores mantenham suas bases. Os valores indicados são antes do ajuste pelo tamanho da base. O consumo cresce conforme o número de chunks reivindicados.</li><li>Ficar sem energia por muito tempo dissolve a base.</li><li>Permissões separadas para <strong>dono, membro e visitante</strong>: quebrar, colocar, interagir, PVP, redstone, portas, trocas, mobs, fogo, TNT, voo e mais.</li><li>Convide, aceite, expulse, bana e desbane jogadores; tranque a base, renomeie e veja as bordas com <code>/c show</code>.</li><li>A base tem <strong>auditoria</strong> de ações (limpeza após 30 dias) e uma <strong>bossbar</strong> com nome e energia ao entrar.</li></ul>
+<h3 id="mochilas">Mochilas 🎒</h3>
+<p>Mochilas não são entregues automaticamente ao entrar. Segure uma mochila e clique com o botão direito para abrir. As melhorias preservam os itens guardados. O sistema também oferece um guia visual de receitas no jogo.</p>
+<h4 id="mochila-inicial-couro">Mochila inicial: Couro</h4>
+<p>Faça na bancada de trabalho:</p>
+<figure class="recipe"><img src="assets/img/crafts/bag.png" alt="Receita da Mochila de Couro" width="216" height="216" loading="lazy"><figcaption>Receita da Mochila de Couro</figcaption></figure>
+<h4 id="melhorias">Melhorias</h4>
+<p>Para cada melhoria até Diamante, coloque a mochila atual no centro da bancada e cerque-a com <strong>8 materiais</strong> do próximo nível:</p>
+<figure class="recipe"><img src="assets/img/crafts/bag_upgrade.png" alt="Receita de melhoria de mochila" width="216" height="216" loading="lazy"><figcaption>Receita de melhoria de mochila</figcaption></figure>
+<table>
+<thead><tr>
+<th scope="col">Mochila atual</th>
+<th scope="col">Próxima mochila</th>
+<th scope="col">Material (8 unidades)</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">Couro</th>
+<td>Cobre</td>
+<td>Lingote de cobre</td>
+</tr>
+<tr>
+<th scope="row">Cobre</th>
+<td>Ferro</td>
+<td>Lingote de ferro</td>
+</tr>
+<tr>
+<th scope="row">Ferro</th>
+<td>Ouro</td>
+<td>Lingote de ouro</td>
+</tr>
+<tr>
+<th scope="row">Ouro</th>
+<td>Diamante</td>
+<td>Diamante</td>
+</tr>
+</tbody></table>
+<p>Para a melhoria final, use a <strong>mesa de ferraria</strong>: Mochila de Diamante + <strong>molde de melhoria de netherita</strong> + <strong>lingote de netherita</strong> → Mochila de Netherita.</p>
+<h4 id="mochila-de-terra">Mochila de Terra</h4>
+<p>É uma alternativa menor, criada ao cercar uma Mochila de Couro com <strong>8 blocos de terra</strong> na bancada. Essa receita é uma redução de nível, não faz parte da sequência de melhorias.</p>
+<h4 id="enderpack">Enderpack</h4>
+<p>A Enderpack é uma mochila especial, criada na bancada:</p>
+<figure class="recipe"><img src="assets/img/crafts/ender_pack.png" alt="Receita da Enderpack" width="216" height="216" loading="lazy"><figcaption>Receita da Enderpack</figcaption></figure>
+<p>Também é possível colocar <strong>1 Enderpack + 1 Pérola do Ender</strong> em qualquer espaço da bancada para receber <strong>2 Enderpacks com o mesmo armazenamento compartilhado</strong>. Guarde isso em mente: são dois acessos ao mesmo inventário, não duas cópias dos itens.</p>
+<p>Mochilas não podem ser colocadas dentro de outras mochilas.</p>
+<h3 id="pedras-de-teleporte">Pedras de teleporte 🪨</h3>
+<p>Pedras de teleporte craftáveis, com aparência de pedra de âncora.</p>
+<figure class="recipe"><img src="assets/img/crafts/waystone.png" alt="Receita da Pedra de Teleporte" width="216" height="216" loading="lazy"><figcaption>Receita da Pedra de Teleporte</figcaption></figure>
+<ul><li>Clique com o direito para abrir o menu de destinos e viajar.</li><li>Cada waystone é privada por padrão. Para renomeá-la, fique ao lado e use <code>/tw setname &lt;nome&gt;</code> (sem espaços); para permitir que qualquer pessoa viaje até ela sem ter visitado antes, olhe para a pedra e use <code>/tw setpublic true</code>. Use <code>false</code> para torná-la privada novamente.</li><li>Podem ser quebradas e levadas para outro lugar.</li></ul>
+<h3 id="pedra-do-regresso">Pedra do Regresso 🏡</h3>
+<p>Uma pedra que guarda um ponto de retorno escolhido por você. Agache e clique com o botão direito antes de usá-la para vincular sua localização; depois, clique com o botão direito para voltar. A ativação leva <strong>5 segundos</strong> e o item tem um tempo de recarga de <strong>60 segundos</strong>. Cada pedra fica vinculada ao primeiro jogador que a usar.</p>
+<p>Receita na bancada:</p>
+<figure class="recipe"><img src="assets/img/crafts/hearthstone.png" alt="Receita da Pedra do Regresso" width="216" height="216" loading="lazy"><figcaption>Receita da Pedra do Regresso</figcaption></figure>
+<h3 id="missoes-e-contratos">Missões e contratos 📜</h3>
+<p>No Spawn, interaja com o NPC <strong>Missões</strong> para abrir o menu de contratos.</p>
+<ul><li><strong>Diárias:</strong> 2 missões fáceis, 2 médias e 2 difíceis por ciclo diário. Os objetivos variam entre mineração, combate, coleta, criação de animais, pesca, exploração, culinária e outras atividades; várias exigem uma quantidade planejada de recursos ou ações.</li><li><strong>Semanais:</strong> 2 de cada dificuldade por ciclo semanal, com tarefas de maior duração e metas acumuladas.</li><li><strong>Marcos globais:</strong> objetivos únicos da jornada, como contribuir com produção, exploração, combate e contratos. Eles ficam disponíveis no menu de missões e não substituem as descobertas permanentes do Codex.</li><li>Concluir missões concede recompensas e contribui para a progressão de cada trilha, que também concede insígnias em determinados níveis. As missões concluídas permanecem visíveis no menu.</li><li>Os objetivos disponíveis mudam conforme o ciclo; confira o menu para requisitos e recompensas atuais.</li></ul>
+<h3 id="economia-e-comercio">Economia e comércio 💎</h3>
+<ul><li>A moeda do servidor é a <strong>esmeralda</strong> mantida na carteira. As missões e a venda de itens são formas de obter dinheiro.</li><li>No Spawn, converse com o NPC <strong>Mercado</strong> para abrir a loja ou vender itens. O NPC <strong>Preço Rotativo</strong> abre a seleção de produtos com preço especial.</li><li>Para comprar ou vender com outros jogadores, use os NPCs <strong>Leilão</strong> e <strong>Pedidos</strong> no Spawn. Consulte os menus para publicar, comprar, atender pedidos ou recolher transações.</li><li>Nem todo item é vendável; os valores podem variar conforme o produto e eventos de loja.</li><li>O sistema de bancos entre jogadores está desativado; o dinheiro recebido vai para sua carteira.</li></ul>
+<h3 id="npcs-do-spawn">NPCs do Spawn 🧑‍🤝‍🧑</h3>
+<p>Aproxime-se e interaja com o NPC para abrir o serviço; quando houver mais de uma opção, use o botão indicado pelo próprio NPC.</p>
+<table>
+<thead><tr>
+<th scope="col">NPC</th>
+<th scope="col">Serviço</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row"><strong>Pedidos</strong></th>
+<td>Quadro de pedidos de compra entre jogadores</td>
+</tr>
+<tr>
+<th scope="row"><strong>Leilão</strong></th>
+<td>Leilões e anúncios de itens entre jogadores</td>
+</tr>
+<tr>
+<th scope="row"><strong>Mercado</strong></th>
+<td>Loja geral (interação principal) e venda de itens (interação secundária)</td>
+</tr>
+<tr>
+<th scope="row"><strong>Preço Rotativo</strong></th>
+<td>Loja de itens com preços rotativos</td>
+</tr>
+<tr>
+<th scope="row"><strong>PvP</strong></th>
+<td>Abre a opção de alternar o PvP</td>
+</tr>
+<tr>
+<th scope="row"><strong>Skins</strong></th>
+<td>Menu de skins</td>
+</tr>
+<tr>
+<th scope="row"><strong>Capas</strong></th>
+<td>Menu de capas</td>
+</tr>
+<tr>
+<th scope="row"><strong>Guildas</strong></th>
+<td>Administração e menu de equipes</td>
+</tr>
+<tr>
+<th scope="row"><strong>Missões</strong></th>
+<td>Menu de missões e contratos</td>
+</tr>
+<tr>
+<th scope="row"><strong>Trails</strong></th>
+<td>Menu de rastros visuais</td>
+</tr>
+<tr>
+<th scope="row"><strong>Mudar de Raça</strong></th>
+<td>Menu para trocar sua origem/raça</td>
+</tr>
+<tr>
+<th scope="row"><strong>Guia</strong></th>
+<td>Orientação para começar; indica o quadro de Missões e o primeiro contrato</td>
+</tr>
+</tbody></table>
+<p>Os nomes refletem o cadastro atual do Spawn; serviços e aparência podem mudar com atualizações.</p>
+<h3 id="bussola-de-explorador">Bússola de Explorador 🧭</h3>
+<p>Localiza estruturas do mundo. Botão direito vai para o <strong>próximo</strong> alvo; botão esquerdo, para o <strong>anterior</strong>. A agulha aponta para o alvo e as coordenadas aparecem no chat. Há <strong>2,5s</strong> entre os cliques.</p>
+<figure class="recipe"><img src="assets/img/crafts/explorer_compass.png" alt="Receita da Bússola de Explorador" width="216" height="216" loading="lazy"><figcaption>Receita da Bússola de Explorador</figcaption></figure>
+<p><strong>Alvos (16):</strong> Vila, Vila Medieval, Cidade Antiga, Câmaras de Prova, Pirâmide do Deserto, Mansão, Cabana da Bruxa, Posto de Saqueador, Fortaleza, Monumento Oceânico, Cripta, Mina, Fortaleza do Nether, Bastião, Cidade do End e Castelo do End. Alguns alvos só podem ser procurados na dimensão correspondente. A receita é aprendida automaticamente.</p>
+<hr>
+<h2 id="tumulos">⚰️ Túmulos</h2>
+<p class="section-lead">Os túmulos guardam itens e experiência depois da morte, evitando que o conteúdo se perca no local da queda.</p>
+<p>Ao morrer, seus itens e <strong>70% do XP</strong> ficam num túmulo no local da morte, em vez de espalhados pelo chão.</p>
+<ul><li>O túmulo é uma <strong>cabeça de jogador</strong> com holograma do dono, tempo restante, causa da morte e proteção.</li><li><strong>Duração:</strong> 24 horas. Depois, o conteúdo cai no chão.</li><li><strong>Limite:</strong> 18 túmulos por jogador.</li><li><strong>Local seguro:</strong> se morrer no ar, na lava, no void ou dentro de um bloco, o túmulo vai para o último lugar seguro.</li><li><strong>Proteção:</strong> nos primeiros <strong>5 minutos</strong>, só você e quem te matou podem abrir; depois, qualquer pessoa pode acessar. Explosões não destroem o túmulo.</li><li>Ao renascer, você recebe uma <strong>bússola</strong> que aponta para seu túmulo por 5 minutos.</li><li><strong><code>/graves</code></strong> lista seus túmulos.</li><li>O inventário é preservado na ordem original. O túmulo armazena <strong>70% do XP</strong> que você tinha ao morrer.</li><li>Se o túmulo não puder ser criado, você mantém o inventário.</li></ul>
+<hr>
+<h2 id="combate-e-pvp">⚔️ Combate e PvP</h2>
+<p class="section-lead">O combate conta com mobs de nível escalado, um Dragão do End adaptativo e PvP opcional, desligado por padrão.</p>
+<ul><li><strong>Raça no nametag</strong> — sua raça aparece na linha abaixo do seu nome, junto à vida. Ela não aparece mais como prefixo na lista de jogadores.</li><li><strong>Níveis dos mobs</strong> — o nível acompanha o nível de jornada do jogador próximo, varia em até 2 níveis e aumenta em 1 por anel de 750 blocos após os primeiros 250 blocos do ponto de spawn da dimensão. O limite é nível 60. Ao mirar, acompanhar ou atacar um mob, o nametag mostra nível, nome e vida atual/máxima; animais passivos mostram essas informações quando são atacados.</li><li><strong>Dragão do End escalado</strong> 🐉 — vida, dano e resistência crescem com o número de jogadores. Ele usa raios, sopro e bolas de fogo, e as recompensas são divididas pelo dano causado. <strong>Cristais do End explodem com mais força e causam fogo</strong>.</li><li><strong>PvP opt-in</strong> — começa <strong>desligado</strong>. Use o NPC <strong>PvP</strong> no Spawn para ligar ou desligar. Sem PvP, você não dá nem recebe dano de jogadores (leva knockback), e animais domados, fogo/lava próximos e efeitos hostis também são protegidos. Após entrar em combate, são <strong>30s</strong> para poder alternar. Sair do jogo durante o combate não mata seu personagem.</li><li><strong>Ovos de spawn</strong> — 2% de chance ao derrotar um mob, inclusive os de spawners.</li><li><strong>Efeitos de adornos</strong> — usar quatro peças de armadura com o mesmo padrão de trim concede um efeito passivo associado ao padrão. Exemplos: velocidade, pressa, visão noturna, resistência ao fogo e regeneração.</li><li><strong>Cabeças de mobs</strong> — chance de cair ao derrotar; Looting aumenta a chance. Também dá para fazer mini-blocos na pedra de corte ou comprar do vendedor ambulante.</li></ul>
+<hr>
+<h2 id="o-mundo">🌍 O mundo</h2>
+<p class="section-lead">A geração personalizada adiciona estruturas, dimensões com acesso por nível, mapa 3D e recompensas ligadas à exploração.</p>
+<h3 id="terreno-e-exploracao">Terreno e exploração</h3>
+<p>A geração mantém a progressão de sobrevivência familiar, com mais detalhes naturais nos biomas e terrenos diferentes entre as dimensões. O Nether tem áreas mais amplas e rotas de viagem variadas; o End ganha ilhas e formações mais dramáticas.</p>
+<ul><li>Há muitas estruturas adicionais ou reformuladas para descobrir: vilas, tavernas, ruínas, masmorras, fortalezas, minas, portais, monumentos e assentamentos no oceano.</li><li>A geração de biomas acrescenta detalhes como árvores caídas, clareiras, rochas e vegetação, sem substituir a identidade dos biomas conhecidos. Algumas vilas e masmorras oferecem mapas que ajudam a localizar outros pontos de interesse.</li></ul>
+<h3 id="datapacks-de-aventura-e-construcao">Datapacks de aventura e construção</h3>
+<ul><li><strong>A Jornada do Herói (Hero's Journey):</strong> uma coleção de <strong>16 Olhos especiais</strong> ligados a exploração e desafios. As pistas aparecem nos avanços com o tema <strong>Gateway / A Jornada do Herói</strong>. É preciso encontrar 12 olhos diferentes para abrir o portal do End; reunir os 16 completa o avanço <strong>Monomito</strong>. É conteúdo extra de exploração; não substitui a progressão de níveis do servidor.</li><li><strong>Ferramentas de Construção do Jake (Jake's Build Tools):</strong> adiciona ferramentas utilitárias para construção, como cinzel, chave de blocos, martelo, colher de pedreiro (trowel), fita métrica, escada de corda, magneto de itens, bolsa de mobs e frasco de experiência, além de itens especiais como balde e pacote do vazio. Cada ferramenta tem regras próprias; confira sua descrição e o avanço/receita correspondente antes de usar. O livro <strong>Owner's Manual</strong> reúne orientação do datapack.</li><li>A geração personalizada acrescenta estruturas, masmorras, minas, ruínas e povoados em diferentes biomas e dimensões. Esses conteúdos aparecem naturalmente durante a exploração e não precisam ser instalados pelo jogador.</li></ul>
+<h3 id="dimensoes">Dimensões</h3>
+<table>
+<thead><tr>
+<th scope="col">Dimensão</th>
+<th scope="col">Acesso</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">🌋 Nether</th>
+<td>Nível 15</td>
+</tr>
+<tr>
+<th scope="row">🔮 End</th>
+<td>Nível 30 — explore as Cidades do End e seus cofres</td>
+</tr>
+</tbody></table>
+<p>O portal avisa o nível necessário. O End também usa o desafio de exploração dos Olhos especiais.</p>
+<h3 id="mapa-e-conexao">Mapa e conexão</h3>
+<ul><li><strong>Mapa 3D no navegador:</strong> <code>http://&lt;ip-do-servidor&gt;:8100</code>.</li><li><strong>Terreno distante:</strong> clientes compatíveis podem visualizar terreno além da distância normal; o alcance configurado chega a 512 chunks no Overworld e no End e 64 no Nether.</li></ul>
+<h3 id="tesouros-e-recompensas-do-mundo">Tesouros e recompensas do mundo</h3>
+<ul><li><strong>Baús de tesouro</strong> aparecem para jogadores ativos a cada <strong>20–40 minutos</strong>, a 16–40 blocos de distância. Cada jogador pode ter <strong>1 por vez</strong>; o baú desaparece após <strong>10 minutos</strong>.</li><li>O baú fica reservado para você por <strong>30 segundos</strong>. Depois, qualquer pessoa pode abri-lo. Abrir e fechar o baú consome a recompensa, então confira o conteúdo antes de sair.</li><li>Há <strong>quatro raridades</strong>: comum, rara, lendária e mítica. A chance de um baú ser um mimic depende da raridade e é maior nos míticos. Derrotá-lo pode render o dobro do saque e <strong>50 XP</strong>; alguns são amistosos, enquanto outros lutam ou tentam fugir. Parte das recompensas é liberada durante o combate.</li><li><strong>Recompensas de pesca:</strong> ao pescar, há chance de receber um baú-recompensa animado com itens e outras surpresas.</li><li><strong>Cofres das Cidades do End</strong> garantem elytra para mais de um jogador.</li></ul>
+<hr>
+<h2 id="qualidade-de-vida">✨ Qualidade de vida</h2>
+<p class="section-lead">Ajustes de conveniência que reduzem tarefas repetitivas sem mudar as regras centrais de sobrevivência e progressão.</p>
+<h3 id="agricultura">🌱 Agricultura</h3>
+<ul><li>Colher plantações maduras concede XP.</li><li>Plantações continuam avançando enquanto você está offline; animais de criação também podem amadurecer nesse período e a lã das ovelhas volta a crescer.</li><li>Receitas alternativas permitem obter muitos drops de mobs sem precisar derrotá-los, como couro, penas, slime, canas de blaze, pólvora e itens de criaturas hostis.</li><li>Há receitas adicionais para aproveitar melhor materiais de construção, incluindo blocos e itens de Nether.</li></ul>
+<h3 id="equipamentos-e-encantamentos">🛠️ Equipamentos e encantamentos</h3>
+<ul><li><strong>Bigornas sem “Muito Caro!”</strong> — o limite de 40 níveis não existe; o custo real de XP é exibido e cobrado.</li><li><strong>Nomes coloridos na bigorna</strong> — use códigos de cor compatíveis ao renomear um item.</li><li><strong>Recuperação de Encantamentos</strong> — permite <strong>guardar encantamentos de itens em livros</strong> usando a pedra de amolar.</li></ul>
+<h3 id="reciclagem">♻️ Reciclagem</h3>
+<ul><li><strong>Agache e clique com o direito numa mesa de ferraria</strong> para abrir o reciclador.</li><li>Coloque uma <strong>ferramenta, arma ou armadura</strong> e clique em <strong>Reciclar Item</strong>: você recebe de <strong>40% a 80%</strong> dos materiais de crafting, sorteados a cada reciclagem.</li><li>Funciona com itens <strong>encantados, danificados ou renomeados</strong>. Itens com <strong>modelo customizado</strong> são bloqueados.</li><li>Itens sem receita de crafting têm retorno próprio: <strong>netherita</strong> → sucata de netherita + diamante, <strong>malha</strong> → ferro, <strong>tridente</strong> → fragmento de prismarinho, <strong>elytra</strong> → membrana de phantom.</li><li>Selas e armaduras de cavalo e de lobo também podem ser recicladas.</li></ul>
+<h3 id="blocos-e-utilidades">🔥 Blocos e utilidades</h3>
+<ul><li><strong>Forno em cima de lava</strong> funciona sem combustível — a fonte de lava embaixo é consumida.</li><li><strong>Creepers não destroem mais blocos</strong> — a explosão continua machucando jogadores e mobs, mas não abre crateras nem apaga construções.</li><li><strong>Pedra de corte</strong> machuca quem pisa nela: <strong>1 coração</strong> por passo.</li><li><strong>Beacons</strong> funcionam através de vidro tingido.</li><li>É possível colocar <strong>água no End</strong> com baldes.</li><li><strong>Mineração em cadeia</strong> — agache e quebre com a ferramenta certa para minerar blocos conectados compatíveis. O desgaste da ferramenta acompanha os blocos quebrados.</li><li><strong>Cortes e receitas expandidos</strong> — a pedra de corte aceita muitas receitas adicionais para trabalhar madeira, pedra e outros materiais com menos desperdício.</li><li><strong>Luz dinâmica</strong> — tochas e lanternas na mão iluminam ao redor.</li><li><strong>Localizador de slime chunks</strong> — use uma bola de slime: clique com o direito para alternar a visualização dos chunks de slime no mundo ou agache e clique com o direito para abrir o mapa.</li><li><strong>Fogueiras curam</strong> lentamente num raio de 3 blocos.</li><li><strong>Decaimento de folhas</strong> — folhas sem tronco próximo desaparecem mais rápido e ainda podem deixar seus drops.</li><li><strong>Votação de sono</strong> — deitar na cama inicia uma votação com bossbar; metade dos jogadores pula a noite. Tempestades também podem ser puladas.</li><li><strong>Interações visíveis</strong> — animações mostram itens e processos em várias bancadas e blocos funcionais, como crafting, fornos e encantamentos.</li><li><strong>Mobs que pegaram itens</strong> voltam a despawnar normalmente.</li><li><strong>Trocas de aldeões</strong> podem ser rerroladas na própria tela de troca.</li></ul>
+<ul><li><strong>Poses e interações sociais</strong> — sente-se, deite-se ou rasteje, e use emotes para interagir com outras pessoas. Também há skins, capas, rastros visuais e sprays personalizados.</li></ul>
+<hr>
+<h2 id="chat-guildas-e-interface">💬 Chat, guildas e interface</h2>
+<p class="section-lead">A interface social exibe nível, guilda e estado de PvP; os menus reúnem administração de equipes e personalização.</p>
+<ul><li>O chat público mostra seu nível e, quando você pertence a uma guilda, sua tag ao lado do nome. Mensagens privadas e conversas de guilda continuam disponíveis pelos menus e recursos sociais.</li><li>A opção de PvP aparece na lista de jogadores e no placar. Os nametags acima dos jogadores mostram nível, tag da guilda e estado do PvP; abaixo do nome aparecem sua raça e vida.</li><li>A lista de jogadores mostra o nível e a dimensão; o placar alterna entre visão geral, profissões e combate. A visão geral inclui progresso de nível, poder total do mcMMO, saldo, guilda, tempo jogado e PvP.</li><li>O NPC <strong>Guildas</strong> dá acesso à administração da equipe. Guildas podem ter cargos, permissões, chat, banco, baú compartilhado (que pode aumentar de tamanho com melhorias), alianças, missões e evolução; os recursos disponíveis aparecem nos menus.</li><li><strong>Aparência pessoal:</strong> skins, capas, rastros de partículas e sprays decorativos. Alguns efeitos gráficos podem variar entre clientes Java e Bedrock.</li><li><strong>Exibição de itens:</strong> agache e interaja com um quadro de item colocado na face superior de um bloco para deixar o item flutuando como decoração. Clique no item exibido para removê-lo.</li><li>O canal público de HelpOP está desativado.</li></ul>
+<h2 id="comandos-essenciais">🧾 Comandos essenciais</h2>
+<p class="section-lead">Referência rápida dos comandos mais usados no dia a dia. Alguns exigem permissão de administrador ou só funcionam em certas situações.</p>
+<table>
+<thead><tr>
+<th scope="col">Comando</th>
+<th scope="col">Para quê</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row"><code>/codex</code></th>
+<td>compêndio de descobertas</td>
+</tr>
+<tr>
+<th scope="row"><code>/fishing</code></th>
+<td>progresso da habilidade (ou <code>/mining</code>, <code>/swords</code>…)</td>
+</tr>
+<tr>
+<th scope="row"><code>/c</code></th>
+<td>proteção de bases</td>
+</tr>
+<tr>
+<th scope="row"><code>/graves</code></th>
+<td>seus túmulos e teleporte</td>
+</tr>
+<tr>
+<th scope="row"><code>/sb</code></th>
+<td>alterna o placar</td>
+</tr>
+</tbody></table>
+<section id="ver-tambem" class="wiki-see-also" aria-labelledby="ver-tambem-titulo">
+<h2 id="ver-tambem-titulo">🔎 Ver também</h2>
+<ul>
+<li><a href="changelog.html">Atualizações — histórico de mudanças e correções</a></li>
+<li><a href="index.html">Página inicial — como entrar no servidor e IPs de acesso</a></li>
+<li><a href="suporte.html">Suporte — ajuda com problemas técnicos</a></li>
+</ul>
+</section>
+<p class="wiki-end">Fim do guia. Bom jogo. 🎉</p>
+        </article>
+    </main>
+
+    <footer id="bottom">
+        <p>Tem dúvidas ou quer saber mais? Fale com a equipe.</p>
+        <p><a href="SEU_LINK_DO_DISCORD">Discord</a> &middot;
+        <a href="mailto:SEU_EMAIL@EXEMPLO.COM">Contato</a></p>
+        <p>&copy; 2026 WrathSMP. Todos os direitos reservados.</p>
+        <p><a href="#top">Voltar ao topo</a></p>
+    </footer>
+</body>
+</html>

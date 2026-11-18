@@ -3,83 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Servidor Minecraft SMP com mecânicas de MMORPG, raças, níveis e economia.">
+    <!-- Texto exibido em resultados de busca -->
+    <meta name="description" content="Servidor Minecraft SMP com mecânicas de MMORPG, raças, níveis, economia e mundo ampliado. Disponível para Java e Bedrock.">
+    <!-- Prévia do link em Discord e redes sociais: mudar o título/descrição aqui -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:title" content="WrathSMP - Home">
+    <meta property="og:description" content="Um SMP com alma de MMORPG: raças, progressão, economia e masmorras para explorar.">
+    <meta property="og:image" content="assets/img/background.png">
+    <meta name="twitter:card" content="summary_large_image">
     <title>WrathSMP - Home</title>
+    <!-- Ícone mostrado na aba do navegador -->
     <link rel="icon" href="assets/img/wrathsmp_icon.png">
+    <!-- Fonte Outfit: se não houver internet, o CSS usa Arial como reserva -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <!-- Script que copia os IPs ao clicar -->
+    <script src="script.js" defer></script>
 </head>
 <body>
+    <!-- Fica escondido até receber foco pelo teclado (Tab) -->
+    <a class="skip-link" href="#content">Pular para o conteúdo</a>
+
+    <!-- Os ids do cabeçalho (top, logo, topbar, ips) são usados pelo CSS -->
     <header id="top">
-        <img src="assets/img/wrathsmp_logo_W.png" alt="" id="logo">
-        <nav id="topbar">
-            <a href="#">Home</a>
-            <a href="#">Wiki</a>
-            <a href="#">Suporte</a>
+        <img src="assets/img/wrathsmp_logo_W.png" alt="WrathSMP" id="logo">
+
+        <!-- Links para páginas separadas: crie wiki.html e suporte.html depois -->
+        <nav id="topbar" aria-label="Navegação principal">
+            <a href="index.html">Home</a>
+            <a href="wiki.html">Wiki</a>
+            <a href="changelog.html">Atualizações</a>
+            <a href="suporte.html">Suporte</a>
         </nav>
+
+        <!-- IPs do servidor: clique em um deles para copiar -->
         <div id="ips">
             <dl>
-            <dt>IP Java</dt>
-            <dd><code>wrathsmp.blackhosting.com.br</code></dd>
-            <dt>IP Bedrock</dt>
-            <dd><code>wrathsmpbr.blackhosting.com.br:27184</code></dd>
+                <dt>IP Java</dt>
+                <dd><button type="button" class="ip-copy" data-tooltip="Clique para copiar" aria-label="Copiar IP Java"><code>wrathsmp.blackhosting.com.br</code></button></dd>
+                <dt>IP Bedrock</dt>
+                <dd><button type="button" class="ip-copy" data-tooltip="Clique para copiar" aria-label="Copiar IP Bedrock"><code>wrathsmpbr.blackhosting.com.br:27184</code></button></dd>
             </dl>
+            <!-- Aviso temporário após copiar (o JS preenche e limpa este texto) -->
+            <p id="copy-status" role="status" aria-live="polite"></p>
         </div>
     </header>
+
     <main id="content">
-        <section id="titlesec">
+        <!-- Banner: a imagem é decorativa, por isso alt="" (o texto já descreve o conteúdo) -->
+        <section id="titlesec" aria-labelledby="titulo-principal">
             <img src="assets/img/background.png" alt="" id="backgroundimg">
+            <!-- #title é posicionado sobre a imagem pelo CSS -->
             <div id="title">
-                <h1>WrathSMP</h1>
-                <p>Um servidor que experimenta trazer mecânicas e funções de um jogo MMORPG para o Minecraft SMP</p>
+                <h1 id="titulo-principal"><img src="assets/img/wrathsmp_logo.png" alt="WrathSMP" id="hero-logo"></h1>
+                <p>Um servidor que experimenta trazer mecânicas e funções de um jogo MMORPG para o Minecraft SMP.</p>
+                <p>Raças, níveis, economia e um mundo maior para explorar — tudo dentro do Minecraft.</p>
+                <p><a href="#sobre">Conheça o servidor</a></p>
             </div>
         </section>
-        <section id="sobre">
-            <h2>O que esperar deste servidor?</h2>
+
+        <!-- Apresentação: os links internos apontam para os ids das seções -->
+        <section id="sobre" aria-labelledby="sobre-titulo">
+            <h2 id="sobre-titulo">O que esperar deste servidor?</h2>
+            <p>O WrathSMP mantém a liberdade de um SMP e adiciona camadas de progressão inspiradas em RPG. Você escolhe sua raça, evolui suas habilidades e participa de uma economia movida pelos jogadores.</p>
             <ul>
-                <li>Raças temáticas de RPG como Dungeons & Dragons, Senhor dos Aneis e Warcraft</li>
-                <li>Níveis de jornada, combate e profissões, utilizando o famoso <a href="#" id="mcmmo">McMMO</a></li>
-                <li>Economia a base de esmeraldas com mercado, leilão e sistema de encomenda de itens</li>
-                <li>Geração de mundo aumentada, com novas estruturas, masmorras e mais para explorar</li>
-                <li>E mais! Leia nossa <a href="#">Wiki</a> para saber mais</li>
+                <li><strong>Raças temáticas:</strong> inspirações de Dungeons &amp; Dragons, Senhor dos Anéis e Warcraft.</li>
+                <li><strong>Progressão:</strong> níveis de jornada, combate e profissões com o famoso <strong>McMMO</strong>.</li>
+                <li><strong>Economia:</strong> esmeraldas com mercado, leilão e sistema de encomenda de itens.</li>
+                <li><strong>Mundo ampliado:</strong> novas estruturas, masmorras e lugares para explorar.</li>
+                <li>E mais! Confira as <a href="#faq">perguntas frequentes</a> e as <a href="#versoes">versões suportadas</a>.</li>
             </ul>
         </section>
-        <section id="versoes">
-            <h2>Versão</h2>
-            <table>
-                <caption>IPs e versões suportadas</caption>
-                <thead>
-                    <tr>
-                        <th scope="col">Edição</th>
-                        <th scope="col">IP</th>
-                        <th scope="col">Versão</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">Java</th>
-                        <td>wrathsmp.blackhosting.com.br</td>
-                        <td>26.3</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Bedrock</th>
-                        <td>wrathsmpbr.blackhosting.com.br:27184</td>
-                        <td>26.50+</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-        <section id="faq">
-            <h2>Perguntas frequentes</h2>
+
+        <!-- Duas colunas: os passos e, ao lado, um card só com as versões -->
+        <div class="section-row">
+            <!-- <ol> numera os passos sozinho: adicione ou remova <li> conforme necessário -->
+            <section id="como-entrar" aria-labelledby="entrar-titulo">
+                <h2 id="entrar-titulo">Como entrar</h2>
+                <ol>
+                    <li>Escolha sua edição de Minecraft: Java ou Bedrock. Os IPs estão no <a href="#ips">cabeçalho</a>.</li>
+                    <li>Abra a lista de servidores no jogo e clique em <strong>Adicionar servidor</strong>.</li>
+                    <li>Cole o IP correspondente à sua edição e salve.</li>
+                    <li>Selecione o servidor na lista e clique em <strong>Entrar no servidor</strong>.</li>
+                    <li>Pronto! Não é preciso instalar mods: plugins e resourcepacks são gerenciados pelo servidor.</li>
+                </ol>
+            </section>
+
+            <!-- Card lateral: apenas as versões, sem IP -->
+            <aside id="versoes" aria-labelledby="versoes-titulo">
+                <h2 id="versoes-titulo">Versões</h2>
+                <dl>
+                    <dt>Java</dt>
+                    <dd>26.3</dd>
+                    <dt>Bedrock</dt>
+                    <dd>26.50+</dd>
+                </dl>
+            </aside>
+        </div>
+
+        <!-- FAQ: copie um bloco <details> para adicionar novas perguntas -->
+        <section id="faq" aria-labelledby="faq-titulo">
+            <h2 id="faq-titulo">Perguntas frequentes</h2>
             <details>
                 <summary>Preciso instalar mods?</summary>
-                <p>Não, o servidor apenas utiliza plugins e resourcepacks, tudo é gerênciado pelo servidor. É só entrar e jogar!</p>
+                <p>Não, o servidor apenas utiliza plugins e resourcepacks, tudo é gerenciado pelo servidor. É só entrar e jogar!</p>
+            </details>
+            <details>
+                <summary>Onde encontro os IPs?</summary>
+                <p>No cabeçalho da página, ao lado do logotipo. É só clicar no IP para copiar.</p>
+            </details>
+            <details>
+                <summary>Posso jogar no celular ou no console?</summary>
+                <p>Sim. Use o IP Bedrock listado no cabeçalho e entre pela edição Bedrock do Minecraft.</p>
             </details>
         </section>
     </main>
+
     <footer id="bottom">
-        <p>&copy; 2026 WrathSMP. Todos os direitos reservados.</p>
+        <p>Tem dúvidas ou quer saber mais? Fale com a equipe.</p>
+        <!-- Substitua os placeholders pelo Discord e e-mail reais -->
         <p><a href="SEU_LINK_DO_DISCORD">Discord</a> &middot;
         <a href="mailto:SEU_EMAIL@EXEMPLO.COM">Contato</a></p>
+        <p>&copy; 2026 WrathSMP. Todos os direitos reservados.</p>
         <p><a href="#top">Voltar ao topo</a></p>
     </footer>
 </body>
