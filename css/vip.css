@@ -1,0 +1,445 @@
+/* Página VIP — usa as variáveis de cores definidas em css/style.css */
+
+#vip-page {
+    text-align: left;
+}
+
+/* Banner */
+.vip-hero {
+    position: relative;
+    display: grid;
+    place-items: center;
+    min-height: min(60vh, 480px);
+    overflow: hidden;
+    border-bottom: 3px solid var(--line);
+}
+
+.vip-hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(6px) brightness(0.4);
+    transform: scale(1.06);
+}
+
+.vip-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(115, 2, 44, 0.55), rgba(242, 5, 159, 0.2));
+    pointer-events: none;
+}
+
+.vip-hero-content {
+    position: relative;
+    z-index: 1;
+    width: min(90%, 720px);
+    padding: 3rem 0;
+    text-align: center;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.85);
+}
+
+.vip-eyebrow {
+    margin: 0 0 0.5rem;
+    color: var(--gold);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.vip-hero h1 {
+    margin: 0 0 1rem;
+    font-size: clamp(2.5rem, 7vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.vip-hero h1 span {
+    color: var(--pink-light);
+}
+
+.vip-hero-content > p:not(.vip-eyebrow) {
+    margin: 0 0 0.75rem;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+}
+
+.vip-hero-cta {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 1.75rem;
+    border: 1px solid var(--pink);
+    border-radius: 6px;
+    background: var(--wine);
+    color: var(--text);
+    font-weight: bold;
+    text-decoration: none;
+    text-shadow: none;
+}
+
+.vip-hero-cta:hover,
+.vip-hero-cta:focus-visible {
+    background: var(--pink-light);
+    color: var(--bg);
+}
+
+/* Seções de texto */
+.vip-section {
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+}
+
+.vip-section + .vip-section {
+    border-top: 1px solid var(--line);
+}
+
+.vip-section h2 {
+    margin: 0 0 1rem;
+    color: var(--pink-light);
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+}
+
+.vip-section h3 {
+    margin: 0 0 0.35rem;
+    color: var(--pink-mid);
+}
+
+.vip-section h4 {
+    margin: 0 0 0.35rem;
+    color: var(--pink-light);
+}
+
+.vip-section p {
+    margin: 0 0 1rem;
+}
+
+.vip-section a {
+    color: var(--pink-light);
+}
+
+/* Benefícios */
+.vip-benefits {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.vip-benefits li {
+    margin: 0;
+    padding: 1.25rem;
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--pink);
+    border-radius: 8px;
+    background: var(--surface);
+}
+
+.vip-benefit-icon {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    color: var(--gold);
+    font-size: 1.6rem;
+    line-height: 1;
+}
+
+.vip-benefits p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+/* Passos */
+.vip-steps {
+    padding-left: 1.4rem;
+}
+
+.vip-steps li {
+    margin-bottom: 0.75rem;
+}
+
+.vip-note {
+    margin-top: 1.5rem;
+    padding: 0.85rem 1rem;
+    border-left: 3px solid var(--gold);
+    border-radius: 0 6px 6px 0;
+    background: var(--surface);
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+/* Aviso de retorno do pagamento */
+.vip-notice {
+    margin-bottom: 1.5rem;
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--gold);
+    border-radius: 6px;
+    background: var(--surface);
+}
+
+.vip-notice.is-success {
+    border-left-color: var(--gold);
+    color: var(--text);
+}
+
+.vip-notice.is-error {
+    border-left-color: var(--pink);
+    color: var(--text);
+}
+
+/* Card de compra */
+.vip-checkout {
+    display: grid;
+    grid-template-columns: minmax(230px, 0.85fr) minmax(0, 1.15fr);
+    gap: 1.5rem;
+    align-items: start;
+}
+
+.vip-price-card,
+.vip-form-card {
+    padding: 1.75rem;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+}
+
+.vip-price-card {
+    border-top: 4px solid var(--gold);
+    background: linear-gradient(160deg, var(--wine), var(--plum));
+    text-align: center;
+}
+
+.vip-plan-label {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.vip-price {
+    margin: 0.35rem 0 0;
+    color: var(--gold);
+    font-size: clamp(2.5rem, 6vw, 3.4rem);
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.vip-price-period {
+    margin: 0 0 1.25rem;
+    color: var(--text);
+    font-size: 0.95rem;
+}
+
+.vip-price-list {
+    margin: 0 0 1.25rem;
+    padding: 1rem 0 0;
+    border-top: 1px solid var(--line);
+    list-style: none;
+    text-align: left;
+}
+
+.vip-price-list li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.4rem;
+    position: relative;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.vip-price-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-weight: bold;
+}
+
+.vip-price-foot {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.8rem;
+}
+
+.vip-form-card {
+    background: var(--plum);
+}
+
+.vip-form-card h3 {
+    margin-top: 0;
+}
+
+.vip-field {
+    margin-bottom: 1rem;
+}
+
+.vip-field label {
+    display: block;
+    margin-bottom: 0.35rem;
+    color: var(--text);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.vip-field input {
+    width: 100%;
+    padding: 0.75rem 0.85rem;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: var(--bg);
+    color: var(--text);
+    font: inherit;
+}
+
+.vip-field input::placeholder {
+    color: #8c7b84;
+}
+
+.vip-field input:focus {
+    outline: 2px solid var(--pink);
+    outline-offset: 1px;
+}
+
+.vip-hint {
+    margin: 0.3rem 0 0;
+    color: var(--muted);
+    font-size: 0.78rem;
+}
+
+.vip-button {
+    display: inline-block;
+    width: 100%;
+    padding: 0.85rem 1.25rem;
+    border: 1px solid var(--pink);
+    border-radius: 6px;
+    background: var(--wine);
+    color: var(--text);
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+.vip-button:hover:not(:disabled),
+.vip-button:focus-visible:not(:disabled) {
+    background: var(--pink-light);
+    color: var(--bg);
+}
+
+.vip-button:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+.vip-button-secondary {
+    width: auto;
+    padding: 0.6rem 1.1rem;
+    border-color: var(--line);
+    background: var(--surface);
+    font-size: 0.9rem;
+}
+
+.vip-form-status {
+    min-height: 1.3rem;
+    margin: 0.6rem 0 0;
+    font-size: 0.9rem;
+}
+
+.vip-form-status.is-error {
+    color: var(--pink-light);
+}
+
+.vip-form-status.is-success {
+    color: var(--gold);
+}
+
+/* Consulta de status */
+.vip-status-box {
+    margin-top: 1.25rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--line);
+}
+
+.vip-status-box p {
+    margin: 0 0 0.85rem;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.vip-status-result {
+    margin-top: 1rem;
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: var(--surface);
+    font-size: 0.95rem;
+}
+
+.vip-status-result.is-active {
+    border-color: var(--gold);
+}
+
+.vip-status-result strong {
+    color: var(--gold);
+}
+
+.vip-status-days {
+    display: block;
+    margin-top: 0.35rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.vip-status-bar {
+    height: 6px;
+    margin-top: 0.75rem;
+    border-radius: 99px;
+    background: var(--bg);
+    overflow: hidden;
+}
+
+.vip-status-bar span {
+    display: block;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, var(--pink), var(--gold));
+}
+
+/* FAQ */
+#vip-faq details {
+    padding: 0.85rem 0;
+    border-bottom: 1px solid var(--line);
+}
+
+#vip-faq summary {
+    color: var(--pink-light);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#vip-faq details p {
+    margin: 0.7rem 0 0;
+}
+
+@media (max-width: 720px) {
+    .vip-checkout {
+        grid-template-columns: 1fr;
+    }
+
+    .vip-hero {
+        min-height: 320px;
+    }
+
+    .vip-section {
+        padding: 2.25rem 1.25rem;
+    }
+
+    .vip-price-card,
+    .vip-form-card {
+        padding: 1.25rem;
+    }
+}
