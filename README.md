@@ -3,24 +3,24 @@
 Visão geral do fluxo:
 
 1. O jogador informa nick + e-mail em `view/vip.html` e clica em **Comprar VIP**.
-2. `php/checkout.php` cria a preferência no MercadoPago e devolve a URL de checkout.
-3. O MercadoPago processa o pagamento e chama `php/webhook.php`.
+2. `controller/checkout.php` cria a preferência no MercadoPago e devolve a URL de checkout.
+3. O MercadoPago processa o pagamento e chama `controller/webhook.php`.
 4. O webhook busca o pagamento na API, grava o registro e **soma os dias ao `vip_until` do jogador**.
 5. Um aviso é enviado ao plugin do servidor (`SET_VIP`) para ativar o status in-game.
 6. Um cron remove (`REMOVE_VIP`) quando a data expira. Renovações mensais somam mais dias à data atual.
 
 ## 1. Banco de dados
 
-Crie o banco e importe `php/schema.sql`:
+Crie o banco e importe `database/schema.sql`:
 
 ```bash
 mysql -u root -p -e "CREATE DATABASE wrathsmp CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
-mysql -u root -p wrathsmp < php/schema.sql
+mysql -u root -p wrathsmp < database/schema.sql
 ```
 
 ## 2. Variáveis de ambiente
 
-Todas as configurações são lidas de `getenv()` em `php/config.php` (nunca commite credenciais).
+Todas as configurações são lidas de `getenv()` em `model/config.php` (nunca commite credenciais).
 No Apache você pode usar `SetEnv` no `.htaccess`; no Nginx/PHP-FPM use `env[...]` no pool;
 em desenvolvimento, `export` antes de subir o servidor.
 
@@ -45,11 +45,11 @@ em desenvolvimento, `export` antes de subir o servidor.
 | `VIP_CRON_TOKEN` | `token-aleatorio` | Protege `expire.php` quando chamado por HTTP |
 
 Requisitos: PHP 8.1+ com `pdo_mysql`, `curl`, `mbstring` e MySQL 5.7+.
-Também existe `php/env.example` com linhas `export` prontas para copiar e preencher.
+Também existe `env.example` com linhas `export` prontas para copiar e preencher.
 
 ## 3. MercadoPago
 
-- **URL de notificação**: `https://seusite/php/webhook.php` (precisa ser pública e HTTPS).
+- **URL de notificação**: `https://seusite/controller/webhook.php` (precisa ser pública e HTTPS).
 - **Webhook secret**: gere nas configurações da aplicação e coloque em `MP_WEBHOOK_SECRET`.
   Sem ele a assinatura não é validada (use apenas em desenvolvimento local).
 - O `external_reference` da preferência é o `id` do usuário no banco; é assim que o
@@ -95,13 +95,13 @@ HMAC do corpo cru com o mesmo token. Depois disso, basta aplicar permissões/gru
 Adicione ao crontab (a cada 5 minutos, ajustável):
 
 ```cron
-*/5 * * * * php /caminho/do/projeto/php/expire.php >> /caminho/do/projeto/php/cron.log 2>&1
+*/5 * * * * php /caminho/do/projeto/controller/expire.php >> /caminho/do/projeto/cron.log 2>&1
 ```
 
 Ou, sem acesso ao cron, agende uma requisição HTTP autenticada:
 
 ```bash
-curl -H "X-Cron-Token: $VIP_CRON_TOKEN" https://seusite/php/expire.php
+curl -H "X-Cron-Token: $VIP_CRON_TOKEN" https://seusite/controller/expire.php
 ```
 
 Além do cron, `status.php` também remove VIP vencido como rede de segurança quando
@@ -109,21 +109,34 @@ alguém consulta o status.
 
 ## 6. Estrutura
 
+```text
+.
+├── conexao.php          # conexão PDO com o banco
+├── index.php            # front-end (página inicial e rotas para view/)
+├── controller/          # endpoints HTTP chamados pelo front-end e pelo MercadoPago
+├── database/            # schema SQL
+├── model/               # configuração, bootstrap e classes de domínio
+├── view/                # páginas HTML
+├── css/ e js/           # assets estáticos do site
+└── assets/              # imagens
+```
+
 | Arquivo | Função |
 | --- | --- |
-| `config.php` | Configuração via variáveis de ambiente |
-| `bootstrap.php` | Carrega classes, config e tratamento de erros |
-| `Database.php` | Conexão PDO |
-| `User.php` | Entidade do jogador: dias restantes, concessão e remoção |
-| `MercadoPagoClient.php` | Preferência, consulta de pagamento e assinatura do webhook |
-| `PluginClient.php` | Comunicação HTTP com o plugin do Minecraft |
-| `VipService.php` | Regras de negócio, idempotência e efeitos externos |
-| `checkout.php` | Inicia a compra |
-| `webhook.php` | Recebe a confirmação do pagamento |
-| `status.php` | Consulta dias restantes |
-| `pricing.php` | Preço/duração para o front-end |
-| `expire.php` | Cron de expiração e reenvios |
-| `schema.sql` | Tabelas `users`, `payments` e `vip_events` |
+| `model/config.php` | Configuração via variáveis de ambiente |
+| `model/bootstrap.php` | Carrega classes, config e tratamento de erros |
+| `conexao.php` | Conexão PDO |
+| `model/Response.php` | Respostas JSON padronizadas |
+| `model/User.php` | Entidade do jogador: dias restantes, concessão e remoção |
+| `model/MercadoPagoClient.php` | Preferência, consulta de pagamento e assinatura do webhook |
+| `model/PluginClient.php` | Comunicação HTTP com o plugin do Minecraft |
+| `model/VipService.php` | Regras de negócio, idempotência e efeitos externos |
+| `controller/checkout.php` | Inicia a compra |
+| `controller/webhook.php` | Recebe a confirmação do pagamento |
+| `controller/status.php` | Consulta dias restantes |
+| `controller/pricing.php` | Preço/duração para o front-end |
+| `controller/expire.php` | Cron de expiração e reenvios |
+| `database/schema.sql` | Tabelas `users`, `payments` e `vip_events` |
 
 ## 7. Ajustes de conteúdo
 

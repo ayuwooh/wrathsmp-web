@@ -4,13 +4,13 @@
  *  1. remove no servidor o VIP de quem já passou da data;
  *  2. reenvia avisos ao plugin que falharam no webhook.
  *
- * CLI:   php php/expire.php
- * HTTP:  curl -H "X-Cron-Token: SEU_TOKEN" https://seusite/php/expire.php
+ * CLI:   php controller/expire.php
+ * HTTP:  curl -H "X-Cron-Token: SEU_TOKEN" https://seusite/controller/expire.php
  */
 
 declare(strict_types=1);
 
-require __DIR__ . '/bootstrap.php';
+require __DIR__ . '/../model/bootstrap.php';
 
 $config = config();
 
@@ -29,7 +29,7 @@ if (PHP_SAPI !== 'cli') {
 }
 
 try {
-    $db = (new Database($config['db']))->pdo();
+    $db = (new Conexao($config['db']))->getConnection();
     $service = new VipService($db, $config);
 
     $result = [

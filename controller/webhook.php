@@ -2,14 +2,14 @@
 /**
  * Endpoint de notificação do MercadoPago.
  *
- * Configurar no painel: URL de notificação = https://seusite/php/webhook.php
+ * Configurar no painel: URL de notificação = https://seusite/controller/webhook.php
  * e gerar um secret de webhook para MP_WEBHOOK_SECRET.
  * Responder 500 quando falhar faz o MercadoPago tentar de novo.
  */
 
 declare(strict_types=1);
 
-require __DIR__ . '/bootstrap.php';
+require __DIR__ . '/../model/bootstrap.php';
 
 $raw = file_get_contents('php://input') ?: '';
 $config = config();
@@ -50,7 +50,7 @@ try {
     );
     $payment = $mercadoPago->getPayment($paymentId);
 
-    $db = (new Database($config['db']))->pdo();
+    $db = (new Conexao($config['db']))->getConnection();
     $service = new VipService($db, $config);
     $service->processPayment($payment);
 

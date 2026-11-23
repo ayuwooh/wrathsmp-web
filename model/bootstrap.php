@@ -1,6 +1,6 @@
 <?php
 /**
- * Carregamento comum de todos os endpoints PHP.
+ * Carregamento comum de todos os endpoints (controller/).
  */
 
 declare(strict_types=1);
@@ -16,7 +16,7 @@ function config(): array
 }
 
 require_once __DIR__ . '/Response.php';
-require_once __DIR__ . '/Database.php';
+require_once __DIR__ . '/../conexao.php';
 require_once __DIR__ . '/User.php';
 require_once __DIR__ . '/MercadoPagoClient.php';
 require_once __DIR__ . '/PluginClient.php';

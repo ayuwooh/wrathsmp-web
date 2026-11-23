@@ -3,28 +3,31 @@
 declare(strict_types=1);
 
 /** Conexão PDO com MySQL. Exige as extensões pdo e pdo_mysql. */
-final class Database
+final class Conexao
 {
-    private PDO $pdo;
+    private ?PDO $connection = null;
 
-    public function __construct(array $config)
+    public function __construct(private array $config)
     {
-        $dsn = sprintf(
-            'mysql:host=%s;port=%s;dbname=%s;charset=utf8mb4',
-            $config['host'],
-            $config['port'],
-            $config['name']
-        );
-
-        $this->pdo = new PDO($dsn, $config['user'], $config['pass'], [
-            PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
-            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-            PDO::ATTR_EMULATE_PREPARES   => false,
-        ]);
     }
 
-    public function pdo(): PDO
+    public function getConnection(): PDO
     {
-        return $this->pdo;
+        if ($this->connection === null) {
+            $dsn = sprintf(
+                'mysql:host=%s;port=%s;dbname=%s;charset=utf8mb4',
+                $this->config['host'],
+                $this->config['port'],
+                $this->config['name']
+            );
+
+            $this->connection = new PDO($dsn, $this->config['user'], $this->config['pass'], [
+                PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+                PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+                PDO::ATTR_EMULATE_PREPARES   => false,
+            ]);
+        }
+
+        return $this->connection;
     }
 }

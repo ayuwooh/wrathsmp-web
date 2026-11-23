@@ -5,7 +5,7 @@ declare(strict_types=1);
 /**
  * Envia a mudança de status para o plugin do servidor de Minecraft.
  *
- * Contrato (documentado em php/README.md):
+ * Contrato (documentado em README.md):
  *   POST {url}
  *   Authorization: Bearer {token}
  *   X-WrathSMP-Signature: hash_hmac sha256 do corpo JSON com o token

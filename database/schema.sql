@@ -1,5 +1,5 @@
 -- Estrutura do banco de dados do sistema VIP.
--- Importe com: mysql -u root -p wrathsmp < php/schema.sql
+-- Importe com: mysql -u root -p wrathsmp < database/schema.sql
 --
 -- CREATE DATABASE wrathsmp CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 

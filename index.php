@@ -1,3 +1,23 @@
+<?php
+/**
+ * Entrada do site: página inicial e rotas para as páginas em view/.
+ * Ex.: /index.php?action=vip redireciona para /view/vip.html.
+ */
+
+declare(strict_types=1);
+
+$routes = [
+    'wiki'      => 'view/wiki.html',
+    'changelog' => 'view/changelog.html',
+    'vip'       => 'view/vip.html',
+];
+
+$action = isset($_GET['action']) ? (string) $_GET['action'] : '';
+if (isset($routes[$action])) {
+    header('Location: ' . $routes[$action], true, 302);
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -34,10 +54,10 @@
 
         <!-- Páginas secundárias ficam em view/ (wiki, changelog, VIP e suporte) -->
         <nav id="topbar" aria-label="Navegação principal">
-            <a href="index.html" aria-current="page">Home</a>
-            <a href="view/wiki.html">Wiki</a>
-            <a href="view/changelog.html">Atualizações</a>
-            <a href="view/vip.html">VIP</a>
+            <a href="index.php" aria-current="page">Home</a>
+            <a href="index.php?action=wiki">Wiki</a>
+            <a href="index.php?action=changelog">Atualizações</a>
+            <a href="index.php?action=vip">VIP</a>
             <a href="view/suporte.html">Suporte</a>
         </nav>
 

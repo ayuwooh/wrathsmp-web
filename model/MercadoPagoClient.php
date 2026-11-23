@@ -53,7 +53,7 @@ final class MercadoPagoClient
                 'failure' => "{$site}/{$page}?payment=rejected",
             ],
             'auto_return'       => 'approved',
-            'notification_url'  => "{$site}/php/webhook.php",
+            'notification_url'  => "{$site}/controller/webhook.php",
         ];
 
         $response = $this->request('POST', self::API . '/checkout/preferences', $payload);

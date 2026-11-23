@@ -3,7 +3,7 @@
 
 declare(strict_types=1);
 
-require __DIR__ . '/bootstrap.php';
+require __DIR__ . '/../model/bootstrap.php';
 
 $username = trim((string) ($_GET['username'] ?? ''));
 if (!User::isValidUsername($username)) {
@@ -12,7 +12,7 @@ if (!User::isValidUsername($username)) {
 
 try {
     $config = config();
-    $db = (new Database($config['db']))->pdo();
+    $db = (new Conexao($config['db']))->getConnection();
     $service = new VipService($db, $config);
     Response::ok($service->status($username));
 } catch (Throwable $e) {

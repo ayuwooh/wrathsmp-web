@@ -4,7 +4,7 @@
  *
  * As credenciais NÃO ficam no código: use variáveis de ambiente
  * (painel da hospedagem, .htaccess SetEnv, systemd, export, etc).
- * Veja php/README.md para a lista completa e um exemplo.
+ * Veja README.md para a lista completa e um exemplo.
  */
 
 if (!function_exists('env')) {
@@ -42,7 +42,7 @@ return [
     ],
 
     'plugin' => [
-        // Endpoint HTTP exposto pelo plugin de Minecraft (contract em php/README.md).
+        // Endpoint HTTP exposto pelo plugin de Minecraft (contrato em README.md).
         'url'     => env('VIP_PLUGIN_URL'),
         'token'   => env('VIP_PLUGIN_TOKEN'),
         'timeout' => max(1, (int) env('VIP_PLUGIN_TIMEOUT', '5')),
