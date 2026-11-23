@@ -65,9 +65,9 @@ if (isset($routes[$action])) {
         <div id="ips">
             <dl>
                 <dt>IP Java</dt>
-                <dd><button type="button" class="ip-copy" data-tooltip="Clique para copiar" aria-label="Copiar IP Java"><code>wrathsmp.blackhosting.com.br</code></button></dd>
+                <dd><button type="button" class="ip-copy" data-tooltip="Clique para copiar" aria-label="Copiar IP Java"><code>wrathsmp.redmc.com.br</code></button></dd>
                 <dt>IP Bedrock</dt>
-                <dd><button type="button" class="ip-copy" data-tooltip="Clique para copiar" aria-label="Copiar IP Bedrock"><code>wrathsmpbr.blackhosting.com.br:27184</code></button></dd>
+                <dd><button type="button" class="ip-copy" data-tooltip="Clique para copiar" aria-label="Copiar IP Bedrock"><code>wrathsmpbr.redmc.com.br25587</code></button></dd>
             </dl>
             <!-- Aviso temporário após copiar (o JS preenche e limpa este texto) -->
             <p id="copy-status" role="status" aria-live="polite"></p>
