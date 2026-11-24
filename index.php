@@ -1,7 +1,9 @@
 <?php
 /**
- * Entrada do site: página inicial e rotas para as páginas em view/.
+ * Entrada do site: página inicial e rotas legadas para as páginas em view/.
  * Ex.: /index.php?action=vip redireciona para /view/vip.html.
+ * A navegação usa links diretos para view/ e também funciona sem PHP
+ * (a versão estática da home está em index.html).
  */
 
 declare(strict_types=1);
@@ -52,12 +54,12 @@ if (isset($routes[$action])) {
     <header id="top">
         <img src="assets/img/wrathsmp_logo_W.webp" alt="WrathSMP" id="logo">
 
-        <!-- Páginas secundárias ficam em view/ (wiki, changelog, VIP e suporte) -->
+        <!-- Páginas secundárias ficam em view/. Links diretos funcionam também em hospedagem estática, sem PHP. -->
         <nav id="topbar" aria-label="Navegação principal">
-            <a href="index.php" aria-current="page">Home</a>
-            <a href="index.php?action=wiki">Wiki</a>
-            <a href="index.php?action=changelog">Atualizações</a>
-            <a href="index.php?action=vip">VIP</a>
+            <a href="index.html" aria-current="page">Home</a>
+            <a href="view/wiki.html">Wiki</a>
+            <a href="view/changelog.html">Atualizações</a>
+            <a href="view/vip.html">VIP</a>
             <a href="view/suporte.html">Suporte</a>
         </nav>
 
@@ -67,7 +69,7 @@ if (isset($routes[$action])) {
                 <dt>IP Java</dt>
                 <dd><button type="button" class="ip-copy" data-tooltip="Clique para copiar" aria-label="Copiar IP Java"><code>wrathsmp.redmc.com.br</code></button></dd>
                 <dt>IP Bedrock</dt>
-                <dd><button type="button" class="ip-copy" data-tooltip="Clique para copiar" aria-label="Copiar IP Bedrock"><code>wrathsmpbr.redmc.com.br25587</code></button></dd>
+                <dd><button type="button" class="ip-copy" data-tooltip="Clique para copiar" aria-label="Copiar IP Bedrock"><code>wrathsmpbr.redmc.com.br:25587</code></button></dd>
             </dl>
             <!-- Aviso temporário após copiar (o JS preenche e limpa este texto) -->
             <p id="copy-status" role="status" aria-live="polite"></p>
