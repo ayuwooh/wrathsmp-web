@@ -38,9 +38,9 @@
     }
 
     function formatDate(iso) {
-        if (!iso) return "—";
+        if (!iso) return "-";
         const date = new Date(iso);
-        if (Number.isNaN(date.getTime())) return "—";
+        if (Number.isNaN(date.getTime())) return "-";
         return date.toLocaleString("pt-BR", {
             day: "2-digit", month: "2-digit", year: "numeric",
             hour: "2-digit", minute: "2-digit"
@@ -67,7 +67,7 @@
     const notices = {
         approved: {
             kind: "is-success",
-            text: "Pagamento aprovado! O VIP está sendo ativado — pode levar alguns segundos. Use “Consultar status” abaixo para confirmar."
+            text: "Pagamento aprovado! O VIP está sendo ativado, pode levar alguns segundos. Use “Consultar status” abaixo para confirmar."
         },
         pending: {
             kind: "",

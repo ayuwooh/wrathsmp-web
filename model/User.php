@@ -180,7 +180,7 @@ final class User
 
     /**
      * Concede (ou renova) VIP por N dias.
-     * Se ainda sobram dias, os novos dias são somados ao fim do período atual —
+     * Se ainda sobram dias, os novos dias são somados ao fim do período atual,
      * é assim que o pagamento mensal renova sem perder tempo restante.
      *
      * @return DateTimeImmutable nova data de expiração (UTC)

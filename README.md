@@ -1,4 +1,4 @@
-# Sistema VIP — WrathSMP
+# Sistema VIP: WrathSMP
 
 Visão geral do fluxo:
 
@@ -87,7 +87,7 @@ O plugin deve validar o header `Authorization` e, de preferência, conferir a as
 HMAC do corpo cru com o mesmo token. Depois disso, basta aplicar permissões/grupos
 (como `lp user <nick> permission set ...` do LuckPerms, ou o que o servidor usar).
 
-> O plugin deve aceitar o mesmo nick repetido sem duplicar benefícios — as chamadas
+> O plugin deve aceitar o mesmo nick repetido sem duplicar benefícios: as chamadas
 > são idempotentes por design (reenvios do webhook e do cron são normais).
 
 ## 5. Expiração automática

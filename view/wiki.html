@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Guia completo do WrathSMP: progressão, Codex, bases, combate, exploração, qualidade de vida e comandos.">
+    <meta name="description" content="Guia do WrathSMP em linguagem simples: jornada, raças, habilidades, Codex, bases, combate e comandos.">
     <meta name="theme-color" content="#0E0F0F">
     <!-- Prévia do link em Discord e redes sociais -->
     <meta property="og:type" content="website">
     <meta property="og:locale" content="pt_BR">
     <meta property="og:title" content="WrathSMP - Wiki">
-    <meta property="og:description" content="Guia completo do WrathSMP: progressão, Codex, bases, combate, exploração, qualidade de vida e comandos.">
+    <meta property="og:description" content="Guia do WrathSMP em linguagem simples: jornada, raças, habilidades, Codex, bases, combate e comandos.">
     <meta property="og:image" content="../assets/img/background.webp">
     <meta name="twitter:card" content="summary_large_image">
     <title>WrathSMP - Wiki</title>
@@ -53,11 +53,11 @@
 <p class="side-title">Índice</p>
 <ul class="side-list">
 <li class="side-group"><a href="#progressao">📈 Progressão</a><ul>
-<li><a href="#jornada-de-niveis-1-60">Jornada de níveis — 1 → 60</a></li>
-<li><a href="#codex-o-compendio-de-descobertas">Codex — o compêndio de descobertas 📖</a></li>
-<li><a href="#habilidades">Habilidades ⚔️</a></li>
+<li><a href="#jornada-de-niveis-1-60">Jornada de níveis: 1 → 60</a></li>
 <li><a href="#racas-e-origens">Raças e origens 🧬</a></li>
-<li><a href="#conquistas-xp-por-avancar">Conquistas — XP por avançar 🏆</a></li>
+<li><a href="#habilidades-e-profissoes">Habilidades e profissões ⚔️</a></li>
+<li><a href="#codex-o-compendio-de-descobertas">Codex: o compêndio de descobertas 📖</a></li>
+<li><a href="#conquistas-xp-por-avancar">Conquistas: XP por avançar 🏆</a></li>
 </ul></li>
 <li class="side-group"><a href="#base-e-itens">🏡 Itens</a><ul>
 <li><a href="#protecao-de-bases">Proteção de bases 🏠</a></li>
@@ -89,18 +89,6 @@
 <li><a href="#ver-tambem">🔎 Ver também</a></li>
 <li><a href="changelog.html">🧾 Atualizações</a></li>
 </ul></nav></aside>
-        <aside class="wiki-infobox" aria-label="Ficha rápida do servidor">
-    <h2>Ficha rápida</h2>
-    <dl>
-        <dt>Tipo</dt><dd>SMP com progressão de RPG</dd>
-        <dt>Edições</dt><dd>Java e Bedrock</dd>
-        <dt>Níveis</dt><dd>1 a 60</dd>
-        <dt>Moeda</dt><dd>Esmeralda</dd>
-        <dt>PvP</dt><dd>Opt-in (desligado por padrão)</dd>
-        <dt>Mapa</dt><dd><code>http://&lt;ip-do-servidor&gt;:8100</code></dd>
-        <dt>Atualizado em</dt><dd><time datetime="2026-11-03">3 de novembro de 2026</time></dd>
-    </dl>
-</aside>
 
         <article id="wiki">
 <nav class="wiki-breadcrumb" aria-label="Trilha de navegação">
@@ -111,22 +99,28 @@
 
 <header class="wiki-header">
     <h1 id="guia-do-jogador">Guia do Jogador</h1>
-    <p class="wiki-subtitle">Enciclopédia do WrathSMP — sistemas, regras e recursos para jogadores Java e Bedrock.</p>
+    <p class="wiki-subtitle">Guia em linguagem simples do WrathSMP, do primeiro login às grandes descobertas.</p>
     <p class="wiki-meta">Última atualização: <time datetime="2026-11-03">3 de novembro de 2026</time> · 12 seções · leitura aproximada de 15 min</p>
 </header>
 
-<p class="wiki-lead">O WrathSMP é um servidor de sobrevivência com progressão própria: os jogadores sobem do <strong>nível 1 ao 60</strong>, exploram o mundo pelo <strong>Codex</strong> e evoluem habilidades com o mcMMO. Este guia organiza os sistemas principais em seções independentes para consulta rápida durante o jogo.</p>
+<p class="wiki-lead">Bem-vindo ao WrathSMP! Aqui você sobrevive, constrói e evolui no seu ritmo. Em vez de um único nível, a aventura é acompanhada por quatro sistemas: o <strong>Nível de Jornada</strong> (1 a 60), as <strong>raças</strong>, as <strong>habilidades e profissões</strong> e o <strong>Codex</strong>, um diário das suas descobertas. Não precisa conhecer plugins para começar: basta entrar e jogar. Este guia explica tudo com palavras do dia a dia e exemplos práticos.</p>
 
-<blockquote><p>Este guia cobre recursos disponíveis para jogadores Java e Bedrock. Alguns itens especiais usam modelos e efeitos visuais enviados pelo servidor; a aparência pode variar entre plataformas. Receitas adicionais podem ser encontradas no livro de receitas e nos avanços do jogo.</p></blockquote>
+<blockquote><p><strong>Java ou Bedrock?</strong> As duas edições funcionam aqui. Alguns itens especiais usam modelos e efeitos visuais enviados pelo servidor, então a aparência pode mudar um pouco de uma plataforma para outra. As receitas extras aparecem no livro de receitas e nos avanços do jogo.</p></blockquote>
+
+<details class="wiki-glossary">
+    <summary>Termos que aparecem muito (clique para abrir)</summary>
+    <p><strong>XP</strong> é a experiência que faz você subir de nível. <strong>Mob</strong> é qualquer criatura do jogo, amiga ou hostil. <strong>Spawn</strong> é o ponto onde você começa e onde ficam os NPCs. <strong>Chunk</strong> é uma "fatia" do mapa usada para proteger bases. <strong>Nametag</strong> é o nome que aparece sobre a cabeça dos jogadores e criaturas.</p>
+</details>
 
 <h2 id="progressao">📈 Progressão</h2>
-<p class="section-lead">A progressão combina níveis de jornada, habilidades, descobertas do Codex e conquistas. Cada sistema tem seus próprios contadores e recompensas.</p>
-<h3 id="jornada-de-niveis-1-60">Jornada de níveis — 1 → 60</h3>
-<p>Todos os jogadores seguem a mesma jornada. Os primeiros níveis sobem rápido; os últimos pedem mais tempo.</p>
-<p><strong>Como ganhar XP:</strong></p>
-<ul><li><strong>Jogando</strong> — XP a cada 5 minutos.</li><li><strong>Caçando</strong> — quanto mais forte o mob, maior a recompensa.</li><li><strong>Minerando</strong> — minérios mais raros dão mais XP.</li><li><strong>Avanços e descobertas do Codex</strong> — cada um rende XP de jornada.</li></ul>
-<blockquote><p>💡 <strong>Três contadores de XP:</strong> a barra verde vanilla, os níveis de habilidade e a jornada 1–60 são separados. Recompensas do Codex e dos avanços alimentam a <strong>jornada</strong>.</p></blockquote>
-<p><strong>Recompensas por nível:</strong></p>
+<p class="section-lead">Quatro sistemas andam juntos (jornada, raça, habilidades e Codex), e cada um tem seu próprio contador. A ordem abaixo segue o caminho que você encontra ao começar a jogar.</p>
+<h3 id="jornada-de-niveis-1-60">Jornada de níveis: 1 → 60</h3>
+<p>Ao abrir o jogo, você vê a barra verde de experiência acima dos itens. Esse é o nível do Minecraft, usado para encantamentos. O <strong>Nível de Jornada</strong> é outro contador, separado. Ele mostra o quanto você já participou do WrathSMP e vai do <strong>nível 1 ao 60</strong>. Subir um não mexe no outro.</p>
+<p><strong>Por que a jornada existe?</strong> Para a diversão durar mais do que o primeiro dia. Algumas metas só liberam lugares novos, como o <strong>Nether (nível 15)</strong> e o <strong>End (nível 30)</strong>. No futuro, outras dimensões podem entrar nessa lista. Assim, os itens poderosos são conquistados aos poucos, em vez de entregues logo de cara.</p>
+<p><strong>Como ganhar XP de jornada:</strong> praticamente tudo o que você fizer no servidor conta:</p>
+<ul><li><strong>Tempo de jogo</strong>: XP a cada 5 minutos;</li><li><strong>Caçada</strong>: quanto mais forte o mob, maior a recompensa;</li><li><strong>Coleta</strong>: minerar, cortar árvores, colher plantações, pescar e até colocar blocos;</li><li><strong>Avanços e descobertas do Codex</strong>: cada um rende XP de jornada.</li></ul>
+<blockquote><p>💡 <strong>Não confunda os contadores:</strong> a barra verde do Minecraft, os níveis de habilidade (até 100) e a jornada (até 60) são três barras diferentes. O que você ganha no Codex e nos avanços vai para a <strong>jornada</strong>.</p></blockquote>
+<p><strong>O que você ganha subindo de nível:</strong></p>
 <table>
 <thead><tr>
 <th scope="col">Nível</th>
@@ -179,12 +173,24 @@
 </tr>
 <tr>
 <th scope="row">60</th>
-<td>10× Diamante + 8× Maçã Dourada + 4× Sucata de Netherite — nível máximo, com celebração global 🎉</td>
+<td>10× Diamante + 8× Maçã Dourada + 4× Sucata de Netherite, nível máximo, com celebração global 🎉</td>
 </tr>
 </tbody></table>
-<ul><li><strong>Todo nível</strong> cura e enche sua fome por completo, além de mostrar o aviso de subida.</li></ul>
-<h3 id="codex-o-compendio-de-descobertas">Codex — o compêndio de descobertas 📖</h3>
-<p>Abra com <strong><code>/codex</code></strong>. Cada descoberta desbloqueia uma página de lore permanente e rende <strong>XP</strong>. Ao encontrar algo novo, aparece o banner <strong>“CÓDICE ATUALIZADO”</strong>.</p>
+<ul><li><strong>Em todos os níveis:</strong> sua vida e sua fome voltam ao máximo e um aviso aparece na tela. É como parar para descansar no meio da aventura.</li></ul>
+<h3 id="racas-e-origens">Raças e origens 🧬</h3>
+<p>Assim como em <em>Dungeons &amp; Dragons</em>, <em>World of Warcraft</em> ou <em>O Senhor dos Anéis</em>, o WrathSMP tem raças de um universo de fantasia. Elas dão um "sabor" diferente ao jogo, porque cada uma tem vantagens próprias para certos jeitos de jogar.</p>
+<p><strong>Para você ter uma ideia:</strong></p>
+<ul><li><strong>Anão:</strong> minerador nato. Minera mais rápido, enxerga melhor no escuro depois de tanto tempo em cavernas e é mais baixo que os outros jogadores.</li><li><strong>Sereiano:</strong> ligado ao mar. Respira embaixo d'água sem precisar subir, nada mais rápido e vê melhor debaixo d'água, ideal para quem quer construir bases submersas.</li></ul>
+<p>Na primeira entrada você escolhe sua raça. Depois, pode trocar quando quiser no NPC <strong>Mudar de Raça</strong>, no Spawn. São 12 opções: <strong>Anão, Elfo, Goblin, Halfling, Humano, Sereiano, Orc, Tiefling, Troll, Morto-Vivo, Vampiro e Lobisomem</strong>. Leia a descrição de cada uma no menu antes de decidir: não existe escolha errada, só estilos diferentes. Sua raça aparece na linha abaixo do seu nome, junto com a vida.</p>
+<h3 id="habilidades-e-profissoes">Habilidades e profissões ⚔️</h3>
+<p>Minerar, cortar madeira, pescar, usar espada, arco ou machado: tudo isso aumenta sua <strong>proficiência</strong> naquela área. É como treinar: quanto mais você pratica, melhor você fica.</p>
+<p>Cada habilidade tem <strong>seu próprio nível, de 1 a 100</strong>, e metas ao longo do caminho desbloqueiam habilidades extras. O progresso vem apenas jogando, sem atalhos.</p>
+<p>Cada jogador tem um jeito de jogar e uma atividade preferida. Quem escolhe um <strong>foco</strong> é recompensado por isso: recebe <strong>o dobro de recompensas</strong>, evolui <strong>mais rápido</strong> na profissão e causa <strong>mais dano</strong> no combate.</p>
+<blockquote><p>🎯 <strong>Dica:</strong> em vez de tentar fazer tudo ao mesmo tempo, escolha o que você mais gosta e foque nisso. O resto vem naturalmente.</p></blockquote>
+<p>Para acompanhar cada habilidade, use <strong><code>/fishing</code></strong>, <strong><code>/mining</code></strong>, <strong><code>/swords</code></strong> e assim por diante. O placar também mostra seu poder total em habilidades.</p>
+<h3 id="codex-o-compendio-de-descobertas">Codex: o compêndio de descobertas 📖</h3>
+<p>Pense no Codex como um <strong>diário de viagem</strong>: ele guarda o que você descobre no servidor. Abra com <strong><code>/codex</code></strong>. Entrar pela primeira vez em um bioma ou numa estrutura, derrotar uma criatura especial ou encontrar um item raro desbloqueia uma anotação permanente com informações e história sobre aquela descoberta.</p>
+<p>Cada anotação rende <strong>XP de jornada</strong> e funciona como uma conquista extra, além dos avanços do Minecraft. Quando algo novo aparece, você vê o aviso <strong>“CÓDICE ATUALIZADO”</strong>. As categorias abaixo reúnem informações úteis, e novas podem ser adicionadas com o tempo.</p>
 <table>
 <thead><tr>
 <th scope="col">Categoria</th>
@@ -272,13 +278,9 @@
 <td>+1000 XP</td>
 </tr>
 </tbody></table>
-<ul><li>Descobertas ainda bloqueadas aparecem como <code>??</code>.</li><li>Desbloqueie derrotando mobs, domesticando animais, visitando biomas, obtendo itens, preparando poções, subindo habilidades, acumulando tempo de jogo e pescando.</li></ul>
-<h3 id="habilidades">Habilidades ⚔️</h3>
-<ul><li><strong>Nível 100 é o máximo</strong> em todas as habilidades, alcançado apenas jogando.</li><li>Cada habilidade tem seu próprio <strong>nível</strong>.</li><li>Veja o progresso de cada uma com <strong><code>/fishing</code></strong>, <strong><code>/mining</code></strong>, <strong><code>/swords</code></strong>…</li></ul>
-<h3 id="racas-e-origens">Raças e origens 🧬</h3>
-<p>Escolha uma raça no menu do NPC <strong>Mudar de Raça</strong> no Spawn. Há 12 opções: <strong>Anão, Elfo, Goblin, Halfling, Humano, Sereiano, Orc, Tiefling, Troll, Morto-Vivo, Vampiro e Lobisomem</strong>. Cada uma oferece habilidades próprias; leia a descrição no menu antes de escolher. A raça também aparece abaixo do nome dos jogadores.</p>
-<h3 id="conquistas-xp-por-avancar">Conquistas — XP por avançar 🏆</h3>
-<p>Cada conquista rende XP automaticamente, uma única vez por jogador:</p>
+<ul><li><strong>Como descobrir:</strong> derrote mobs, dome animais, visite biomas, obtenha itens, prepare poções, suba habilidades, acumule tempo de jogo e pesque.</li><li><strong>Onde ver:</strong> use <code>/codex</code>. As páginas já desbloqueadas ficam salvas para consultar quando quiser; as que faltam aparecem como <code>??</code>.</li></ul>
+<h3 id="conquistas-xp-por-avancar">Conquistas: XP por avançar 🏆</h3>
+<p>Cada avanço que você conclui rende XP automaticamente, uma única vez por jogador. É o sistema de conquistas do Minecraft, só que com um empurrão extra na sua jornada:</p>
 <table>
 <thead><tr>
 <th scope="col">Tipo</th>
@@ -310,10 +312,10 @@
 <td>80–300</td>
 </tr>
 </tbody></table>
-<ul><li>O chat mostra <code>[+N XP] Conquista desbloqueada: Nome da Conquista</code>.</li></ul>
+<ul><li>Quando isso acontece, o chat mostra <code>[+N XP] Conquista desbloqueada: Nome da Conquista</code>.</li></ul>
 <hr>
 <h2 id="base-e-itens">🏡 Base e itens</h2>
-<p class="section-lead">Reúne os sistemas de proteção de base, armazenamento, teleporte e itens especiais. Cada subsistema tem regras próprias e pode ser usado de forma independente.</p>
+<p class="section-lead">Tudo para chamar o mundo de seu: proteger a base, guardar itens, viajar e usar itens especiais. Cada sistema funciona por conta própria: comece pelo que precisar agora.</p>
 <h3 id="protecao-de-bases">Proteção de bases 🏠</h3>
 <ul><li>Reivindique o chunk onde está com <strong><code>/c</code></strong>. Os chunks da base precisam se tocar.</li><li>Limites: <strong>32 chunks</strong>, <strong>2 regiões</strong> e <strong>10 membros</strong> por base.</li><li>A base começa com <strong>24 horas</strong> de energia para você construir a powercell. Sem ela, a energia cai e a base acaba dissolvida.</li><li><strong>Powercell:</strong> monte a receita no centro de um <strong>baú único</strong> (não duplo) dentro da base e feche o baú.</li></ul>
 <figure class="recipe"><img src="../assets/img/crafts/cell.webp" alt="Receita da Powercell" width="216" height="216" loading="lazy"><figcaption>Receita da Powercell</figcaption></figure>
@@ -504,7 +506,7 @@
 <hr>
 <h2 id="combate-e-pvp">⚔️ Combate e PvP</h2>
 <p class="section-lead">O combate conta com mobs de nível escalado, um Dragão do End adaptativo e PvP opcional, desligado por padrão.</p>
-<ul><li><strong>Raça no nametag</strong> — sua raça aparece na linha abaixo do seu nome, junto à vida. Ela não aparece mais como prefixo na lista de jogadores.</li><li><strong>Níveis dos mobs</strong> — o nível acompanha o nível de jornada do jogador próximo, varia em até 2 níveis e aumenta em 1 por anel de 750 blocos após os primeiros 250 blocos do ponto de spawn da dimensão. O limite é nível 60. Ao mirar, acompanhar ou atacar um mob, o nametag mostra nível, nome e vida atual/máxima; animais passivos mostram essas informações quando são atacados.</li><li><strong>Dragão do End escalado</strong> 🐉 — vida, dano e resistência crescem com o número de jogadores. Ele usa raios, sopro e bolas de fogo, e as recompensas são divididas pelo dano causado. <strong>Cristais do End explodem com mais força e causam fogo</strong>.</li><li><strong>PvP opt-in</strong> — começa <strong>desligado</strong>. Use o NPC <strong>PvP</strong> no Spawn para ligar ou desligar. Sem PvP, você não dá nem recebe dano de jogadores (leva knockback), e animais domados, fogo/lava próximos e efeitos hostis também são protegidos. Após entrar em combate, são <strong>30s</strong> para poder alternar. Sair do jogo durante o combate não mata seu personagem.</li><li><strong>Ovos de spawn</strong> — 2% de chance ao derrotar um mob, inclusive os de spawners.</li><li><strong>Efeitos de adornos</strong> — usar quatro peças de armadura com o mesmo padrão de trim concede um efeito passivo associado ao padrão. Exemplos: velocidade, pressa, visão noturna, resistência ao fogo e regeneração.</li><li><strong>Cabeças de mobs</strong> — chance de cair ao derrotar; Looting aumenta a chance. Também dá para fazer mini-blocos na pedra de corte ou comprar do vendedor ambulante.</li></ul>
+<ul><li><strong>Raça no nametag</strong>: sua raça aparece na linha abaixo do seu nome, junto à vida. Ela não aparece mais como prefixo na lista de jogadores.</li><li><strong>Níveis dos mobs</strong>: o nível acompanha o nível de jornada do jogador próximo, varia em até 2 níveis e aumenta em 1 por anel de 750 blocos após os primeiros 250 blocos do ponto de spawn da dimensão. O limite é nível 60. Ao mirar, acompanhar ou atacar um mob, o nametag mostra nível, nome e vida atual/máxima; animais passivos mostram essas informações quando são atacados.</li><li><strong>Dragão do End escalado</strong> 🐉: vida, dano e resistência crescem com o número de jogadores. Ele usa raios, sopro e bolas de fogo, e as recompensas são divididas pelo dano causado. <strong>Cristais do End explodem com mais força e causam fogo</strong>.</li><li><strong>PvP opt-in</strong>: começa <strong>desligado</strong>. Use o NPC <strong>PvP</strong> no Spawn para ligar ou desligar. Sem PvP, você não dá nem recebe dano de jogadores (leva knockback), e animais domados, fogo/lava próximos e efeitos hostis também são protegidos. Após entrar em combate, são <strong>30s</strong> para poder alternar. Sair do jogo durante o combate não mata seu personagem.</li><li><strong>Ovos de spawn</strong>: 2% de chance ao derrotar um mob, inclusive os de spawners.</li><li><strong>Efeitos de adornos</strong>: usar quatro peças de armadura com o mesmo padrão de trim concede um efeito passivo associado ao padrão. Exemplos: velocidade, pressa, visão noturna, resistência ao fogo e regeneração.</li><li><strong>Cabeças de mobs</strong>: chance de cair ao derrotar; Looting aumenta a chance. Também dá para fazer mini-blocos na pedra de corte ou comprar do vendedor ambulante.</li></ul>
 <hr>
 <h2 id="o-mundo">🌍 O mundo</h2>
 <p class="section-lead">A geração personalizada adiciona estruturas, dimensões com acesso por nível, mapa 3D e recompensas ligadas à exploração.</p>
@@ -526,7 +528,7 @@
 </tr>
 <tr>
 <th scope="row">🔮 End</th>
-<td>Nível 30 — explore as Cidades do End e seus cofres</td>
+<td>Nível 30: explore as Cidades do End e seus cofres</td>
 </tr>
 </tbody></table>
 <p>O portal avisa o nível necessário. O End também usa o desafio de exploração dos Olhos especiais.</p>
@@ -540,12 +542,12 @@
 <h3 id="agricultura">🌱 Agricultura</h3>
 <ul><li>Colher plantações maduras concede XP.</li><li>Plantações continuam avançando enquanto você está offline; animais de criação também podem amadurecer nesse período e a lã das ovelhas volta a crescer.</li><li>Receitas alternativas permitem obter muitos drops de mobs sem precisar derrotá-los, como couro, penas, slime, canas de blaze, pólvora e itens de criaturas hostis.</li><li>Há receitas adicionais para aproveitar melhor materiais de construção, incluindo blocos e itens de Nether.</li></ul>
 <h3 id="equipamentos-e-encantamentos">🛠️ Equipamentos e encantamentos</h3>
-<ul><li><strong>Bigornas sem “Muito Caro!”</strong> — o limite de 40 níveis não existe; o custo real de XP é exibido e cobrado.</li><li><strong>Nomes coloridos na bigorna</strong> — use códigos de cor compatíveis ao renomear um item.</li><li><strong>Recuperação de Encantamentos</strong> — permite <strong>guardar encantamentos de itens em livros</strong> usando a pedra de amolar.</li></ul>
+<ul><li><strong>Bigornas sem “Muito Caro!”</strong>: o limite de 40 níveis não existe; o custo real de XP é exibido e cobrado.</li><li><strong>Nomes coloridos na bigorna</strong>: use códigos de cor compatíveis ao renomear um item.</li><li><strong>Recuperação de Encantamentos</strong>: permite <strong>guardar encantamentos de itens em livros</strong> usando a pedra de amolar.</li></ul>
 <h3 id="reciclagem">♻️ Reciclagem</h3>
 <ul><li><strong>Agache e clique com o direito numa mesa de ferraria</strong> para abrir o reciclador.</li><li>Coloque uma <strong>ferramenta, arma ou armadura</strong> e clique em <strong>Reciclar Item</strong>: você recebe de <strong>40% a 80%</strong> dos materiais de crafting, sorteados a cada reciclagem.</li><li>Funciona com itens <strong>encantados, danificados ou renomeados</strong>. Itens com <strong>modelo customizado</strong> são bloqueados.</li><li>Itens sem receita de crafting têm retorno próprio: <strong>netherita</strong> → sucata de netherita + diamante, <strong>malha</strong> → ferro, <strong>tridente</strong> → fragmento de prismarinho, <strong>elytra</strong> → membrana de phantom.</li><li>Selas e armaduras de cavalo e de lobo também podem ser recicladas.</li></ul>
 <h3 id="blocos-e-utilidades">🔥 Blocos e utilidades</h3>
-<ul><li><strong>Forno em cima de lava</strong> funciona sem combustível — a fonte de lava embaixo é consumida.</li><li><strong>Creepers não destroem mais blocos</strong> — a explosão continua machucando jogadores e mobs, mas não abre crateras nem apaga construções.</li><li><strong>Pedra de corte</strong> machuca quem pisa nela: <strong>1 coração</strong> por passo.</li><li><strong>Beacons</strong> funcionam através de vidro tingido.</li><li>É possível colocar <strong>água no End</strong> com baldes.</li><li><strong>Mineração em cadeia</strong> — agache e quebre com a ferramenta certa para minerar blocos conectados compatíveis. O desgaste da ferramenta acompanha os blocos quebrados.</li><li><strong>Cortes e receitas expandidos</strong> — a pedra de corte aceita muitas receitas adicionais para trabalhar madeira, pedra e outros materiais com menos desperdício.</li><li><strong>Luz dinâmica</strong> — tochas e lanternas na mão iluminam ao redor.</li><li><strong>Localizador de slime chunks</strong> — use uma bola de slime: clique com o direito para alternar a visualização dos chunks de slime no mundo ou agache e clique com o direito para abrir o mapa.</li><li><strong>Fogueiras curam</strong> lentamente num raio de 3 blocos.</li><li><strong>Decaimento de folhas</strong> — folhas sem tronco próximo desaparecem mais rápido e ainda podem deixar seus drops.</li><li><strong>Votação de sono</strong> — deitar na cama inicia uma votação com bossbar; metade dos jogadores pula a noite. Tempestades também podem ser puladas.</li><li><strong>Interações visíveis</strong> — animações mostram itens e processos em várias bancadas e blocos funcionais, como crafting, fornos e encantamentos.</li><li><strong>Mobs que pegaram itens</strong> voltam a despawnar normalmente.</li><li><strong>Trocas de aldeões</strong> podem ser rerroladas na própria tela de troca.</li></ul>
-<ul><li><strong>Poses e interações sociais</strong> — sente-se, deite-se ou rasteje, e use emotes para interagir com outras pessoas. Também há skins, capas, rastros visuais e sprays personalizados.</li></ul>
+<ul><li><strong>Forno em cima de lava</strong> funciona sem combustível: a fonte de lava embaixo é consumida.</li><li><strong>Creepers não destroem mais blocos</strong>: a explosão continua machucando jogadores e mobs, mas não abre crateras nem apaga construções.</li><li><strong>Pedra de corte</strong> machuca quem pisa nela: <strong>1 coração</strong> por passo.</li><li><strong>Beacons</strong> funcionam através de vidro tingido.</li><li>É possível colocar <strong>água no End</strong> com baldes.</li><li><strong>Mineração em cadeia</strong>: agache e quebre com a ferramenta certa para minerar blocos conectados compatíveis. O desgaste da ferramenta acompanha os blocos quebrados.</li><li><strong>Cortes e receitas expandidos</strong>: a pedra de corte aceita muitas receitas adicionais para trabalhar madeira, pedra e outros materiais com menos desperdício.</li><li><strong>Luz dinâmica</strong>: tochas e lanternas na mão iluminam ao redor.</li><li><strong>Localizador de slime chunks</strong>: use uma bola de slime: clique com o direito para alternar a visualização dos chunks de slime no mundo ou agache e clique com o direito para abrir o mapa.</li><li><strong>Fogueiras curam</strong> lentamente num raio de 3 blocos.</li><li><strong>Decaimento de folhas</strong>: folhas sem tronco próximo desaparecem mais rápido e ainda podem deixar seus drops.</li><li><strong>Votação de sono</strong>: deitar na cama inicia uma votação com bossbar; metade dos jogadores pula a noite. Tempestades também podem ser puladas.</li><li><strong>Interações visíveis</strong>: animações mostram itens e processos em várias bancadas e blocos funcionais, como crafting, fornos e encantamentos.</li><li><strong>Mobs que pegaram itens</strong> voltam a despawnar normalmente.</li><li><strong>Trocas de aldeões</strong> podem ser rerroladas na própria tela de troca.</li></ul>
+<ul><li><strong>Poses e interações sociais</strong>: sente-se, deite-se ou rasteje, e use emotes para interagir com outras pessoas. Também há skins, capas, rastros visuais e sprays personalizados.</li></ul>
 <hr>
 <h2 id="chat-guildas-e-interface">💬 Chat, guildas e interface</h2>
 <p class="section-lead">A interface social exibe nível, guilda e estado de PvP; os menus reúnem administração de equipes e personalização.</p>
@@ -582,9 +584,9 @@
 <section id="ver-tambem" class="wiki-see-also" aria-labelledby="ver-tambem-titulo">
 <h2 id="ver-tambem-titulo">🔎 Ver também</h2>
 <ul>
-<li><a href="changelog.html">Atualizações — histórico de mudanças e correções</a></li>
-<li><a href="../index.html">Página inicial — como entrar no servidor e IPs de acesso</a></li>
-<li><a href="suporte.html">Suporte — ajuda com problemas técnicos</a></li>
+<li><a href="changelog.html">Atualizações: histórico de mudanças e correções</a></li>
+<li><a href="../index.html">Página inicial: como entrar no servidor e IPs de acesso</a></li>
+<li><a href="suporte.html">Suporte: ajuda com problemas técnicos</a></li>
 </ul>
 </section>
 <p class="wiki-end">Fim do guia. Bom jogo. 🎉</p>

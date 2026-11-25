@@ -84,7 +84,7 @@ if (isset($routes[$action])) {
             <div id="title">
                 <h1 id="titulo-principal"><img src="assets/img/wrathsmp_logo.webp" alt="WrathSMP" id="hero-logo"></h1>
                 <p>Um servidor que experimenta trazer mecânicas e funções de um jogo MMORPG para o Minecraft SMP.</p>
-                <p>Raças, níveis, economia e um mundo maior para explorar — tudo dentro do Minecraft.</p>
+                <p>Raças, níveis, economia e um mundo maior para explorar: tudo dentro do Minecraft.</p>
                 <p><a href="#sobre">Conheça o servidor</a></p>
             </div>
         </section>
