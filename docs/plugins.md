@@ -2,7 +2,7 @@
 
 Este documento explica, em linguagem simples, os quatro sistemas que acompanham o jogador desde o primeiro login: **Nível de Jornada**, **Raças**, **Habilidades e Profissões** e **Codex**.
 
-A ordem abaixo é a mesma usada na Wiki do servidor. Sempre que alterar um destes tópicos, atualize também a página `view/wiki.html`.
+A ordem abaixo é a mesma usada na Wiki do servidor. Sempre que alterar um destes tópicos, atualize também a página `view/wiki.php`.
 
 ## 1. Nível de Jornada
 

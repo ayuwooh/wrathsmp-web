@@ -2,7 +2,7 @@
 
 Visão geral do fluxo:
 
-1. O jogador informa nick + e-mail em `view/vip.html` e clica em **Comprar VIP**.
+1. O jogador informa nick + e-mail em `view/vip.php` e clica em **Comprar VIP**.
 2. `controller/checkout.php` cria a preferência no MercadoPago e devolve a URL de checkout.
 3. O MercadoPago processa o pagamento e chama `controller/webhook.php`.
 4. O webhook busca o pagamento na API, grava o registro e **soma os dias ao `vip_until` do jogador**.
@@ -35,7 +35,7 @@ em desenvolvimento, `export` antes de subir o servidor.
 | `MP_ACCESS_TOKEN` | `APP_USR-...` | Access token do MercadoPago |
 | `MP_WEBHOOK_SECRET` | `...` | Secret gerado no painel do MP (assinatura `x-signature`) |
 | `MP_SANDBOX` | `true` | `true` = link de teste; `false` = produção |
-| `VIP_PRICE` | `15.00` | Preço mensal |
+| `VIP_PRICE` | `8.00` | Preço mensal |
 | `VIP_DAYS` | `30` | Dias concedidos por pagamento |
 | `VIP_CURRENCY` | `BRL` | Moeda |
 | `VIP_TITLE` | `VIP WrathSMP - 30 dias` | Nome do item no checkout |
@@ -56,7 +56,7 @@ Também existe `env.example` com linhas `export` prontas para copiar e preencher
   webhook sabe quem receberá o VIP.
 - `binary_mode = true`: pagamentos aprovados ou recusados direto (sem "pendente"),
   o que evita creditar VIP antes da confirmação.
-- URLs de retorno: `view/vip.html?payment=approved|pending|rejected`. Elas **não** dão o VIP;
+- URLs de retorno: `view/vip.php?payment=approved|pending|rejected`. Elas **não** dão o VIP;
   apenas avisam o usuário. O crédito real acontece no webhook.
 - O webhook responde `500` em caso de falha para que o MercadoPago reenvie a notificação.
 
@@ -113,16 +113,20 @@ alguém consulta o status.
 .
 ├── conexao.php          # conexão PDO com o banco
 ├── index.php            # front-end (página inicial e rotas para view/)
+├── view/header.php      # cabeçalho compartilhado (incluído pelas páginas)
+├── view/footer.php      # rodapé compartilhado (incluído pelas páginas)
 ├── controller/          # endpoints HTTP chamados pelo front-end e pelo MercadoPago
 ├── database/            # schema SQL
 ├── model/               # configuração, bootstrap e classes de domínio
-├── view/                # páginas HTML
+├── view/                # páginas PHP (wiki, changelog, VIP, Mapa e suporte)
 ├── css/ e js/           # assets estáticos do site
 └── assets/              # imagens
 ```
 
 | Arquivo | Função |
 | --- | --- |
+| `view/header.php` | Cabeçalho e menu compartilhados; use `$base`, `$active` e `$skipTarget` antes do include |
+| `view/footer.php` | Rodapé compartilhado |
 | `model/config.php` | Configuração via variáveis de ambiente |
 | `model/bootstrap.php` | Carrega classes, config e tratamento de erros |
 | `conexao.php` | Conexão PDO |
@@ -140,7 +144,8 @@ alguém consulta o status.
 
 ## 7. Ajustes de conteúdo
 
-Os textos de benefícios ficam em `view/vip.html`. Ajuste a lista de vantagens e o preço
+Os textos de benefícios ficam em `view/vip.php` e devem acompanhar
+`docs/vip_beneficios.md` (somente vantagens cosméticas). Ajuste a lista de vantagens e o preço
 configurando `VIP_PRICE`/`VIP_DAYS` (o valor exibido na página vem de `pricing.php`).
 
 ## 8. Segurança e extensões

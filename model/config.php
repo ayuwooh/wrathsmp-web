@@ -27,7 +27,7 @@ return [
     'site' => [
         // URL pública do site, sem barra no final. Usada nos back_urls e no webhook.
         'url' => rtrim(env('SITE_URL', 'http://localhost/wrathsmp-web'), '/'),
-        'vip_page' => 'view/vip.html',
+        'vip_page' => 'view/vip.php',
     ],
 
     'mercadopago' => [
@@ -35,7 +35,7 @@ return [
         'webhook_secret' => env('MP_WEBHOOK_SECRET'),
         // true = sandbox_init_point (teste); false = init_point (produção)
         'sandbox' => filter_var(env('MP_SANDBOX', 'true'), FILTER_VALIDATE_BOOL),
-        'price'   => (float) env('VIP_PRICE', '15.00'),
+        'price'   => (float) env('VIP_PRICE', '8.00'),
         'days'    => max(1, (int) env('VIP_DAYS', '30')),
         'currency' => env('VIP_CURRENCY', 'BRL'),
         'title'    => env('VIP_TITLE', 'VIP WrathSMP - 30 dias'),

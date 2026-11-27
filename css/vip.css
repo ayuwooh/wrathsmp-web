@@ -120,6 +120,10 @@
     color: var(--pink-light);
 }
 
+.vip-section a:hover {
+    color: var(--pink-mid);
+}
+
 /* Benefícios */
 .vip-benefits {
     display: grid;
@@ -137,6 +141,13 @@
     border-top: 3px solid var(--pink);
     border-radius: 8px;
     background: var(--surface);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.vip-benefits li:hover {
+    transform: translateY(-4px);
+    border-color: var(--pink);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
 }
 
 .vip-benefit-icon {
@@ -205,6 +216,14 @@
     padding: 1.75rem;
     border: 1px solid var(--line);
     border-radius: 10px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.vip-price-card:hover,
+.vip-form-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--pink);
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.4);
 }
 
 .vip-price-card {

@@ -1,14 +1,19 @@
+<?php
+$base = '../';
+$active = 'vip';
+$skipTarget = '#vip-page';
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Seja VIP no WrathSMP: vantagens no servidor, pagamento seguro pelo MercadoPago e renovação mensal automática.">
+    <meta name="description" content="Seja VIP no WrathSMP: benefícios apenas cosméticos, sem pay-to-win, com pagamento seguro pelo MercadoPago.">
     <meta name="theme-color" content="#0E0F0F">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="pt_BR">
     <meta property="og:title" content="WrathSMP - VIP">
-    <meta property="og:description" content="Vantagens, preço e compra do VIP do WrathSMP.">
+    <meta property="og:description" content="Vantagens cosméticas, preço e compra do VIP do WrathSMP.">
     <meta property="og:image" content="../assets/img/background.webp">
     <meta name="twitter:card" content="summary_large_image">
     <title>WrathSMP - VIP</title>
@@ -22,29 +27,7 @@
     <script src="../js/vip.js" defer></script>
 </head>
 <body>
-    <a class="skip-link" href="#vip-page">Pular para o conteúdo</a>
-
-    <header id="top">
-        <img src="../assets/img/wrathsmp_logo_W.webp" alt="WrathSMP" id="logo">
-
-        <nav id="topbar" aria-label="Navegação principal">
-            <a href="../index.html">Home</a>
-            <a href="wiki.html">Wiki</a>
-            <a href="changelog.html">Atualizações</a>
-            <a href="vip.html" aria-current="page">VIP</a>
-            <a href="suporte.html">Suporte</a>
-        </nav>
-
-        <div id="ips">
-            <dl>
-                <dt>IP Java</dt>
-                <dd><button type="button" class="ip-copy" data-tooltip="Clique para copiar" aria-label="Copiar IP Java"><code>wrathsmp.blackhosting.com.br</code></button></dd>
-                <dt>IP Bedrock</dt>
-                <dd><button type="button" class="ip-copy" data-tooltip="Clique para copiar" aria-label="Copiar IP Bedrock"><code>wrathsmpbr.blackhosting.com.br:27184</code></button></dd>
-            </dl>
-            <p id="copy-status" role="status" aria-live="polite"></p>
-        </div>
-    </header>
+<?php require __DIR__ . '/header.php'; ?>
 
     <main id="vip-page">
         <!-- Apresentação -->
@@ -53,7 +36,7 @@
             <div class="vip-hero-content">
                 <p class="vip-eyebrow">Apoie o servidor</p>
                 <h1 id="vip-titulo">VIP <span>WrathSMP</span></h1>
-                <p>Mais conforto para jogar e um jeito direto de ajudar o servidor a continuar crescendo.</p>
+                <p>Vantagens apenas cosméticas, sem pay-to-win, e um jeito direto de ajudar o servidor a continuar crescendo.</p>
                 <p><a class="vip-hero-cta" href="#vip-comprar">Ver preço e comprar</a></p>
             </div>
         </section>
@@ -62,36 +45,31 @@
         <section id="vip-info" class="vip-section" aria-labelledby="vip-info-titulo">
             <h2 id="vip-info-titulo">O que é o VIP?</h2>
             <p>
-                O VIP é um pacote de vantagens que facilita o dia a dia no servidor sem mudar a
-                experiência do SMP. Você continua jogando normalmente, só com alguns confortos
-                extras e com a satisfação de apoiar a manutenção do WrathSMP.
+                Todos os benefícios de VIP são apenas cosméticos, eliminando qualquer elemento
+                "pay 2 win". Acreditamos em um ambiente justo e vantagens via dinheiro são contra
+                nossa filosofia de game design.
             </p>
             <p>
                 Cada pagamento concede <strong data-vip-days>30 dias</strong> de VIP. Se você pagar
                 novamente antes de expirar, o tempo restante é somado ao novo período: nada é perdido.
             </p>
 
-            <!-- Ajuste esta lista com as vantagens reais do seu servidor -->
+            <!-- Benefícios conforme docs/vip_beneficios.md: apenas cosméticos -->
             <ul class="vip-benefits">
                 <li>
-                    <span class="vip-benefit-icon" aria-hidden="true">✦</span>
-                    <h3>Prefixo no chat</h3>
-                    <p>Seu nick se destaca com um prefixo exclusivo nas mensagens do servidor.</p>
+                    <span class="vip-benefit-icon" aria-hidden="true">💬</span>
+                    <h3>Prefixo VIP</h3>
+                    <p>Prefixo VIP no chat e na TAB/lista de jogadores.</p>
                 </li>
                 <li>
-                    <span class="vip-benefit-icon" aria-hidden="true">🎁</span>
-                    <h3>Kit mensal</h3>
-                    <p>Receba um kit de apoio a cada renovação para começar o mês com tudo.</p>
+                    <span class="vip-benefit-icon" aria-hidden="true">🎨</span>
+                    <h3>Sprays</h3>
+                    <p>Sprays personalizados para usar no servidor.</p>
                 </li>
                 <li>
-                    <span class="vip-benefit-icon" aria-hidden="true">⚡</span>
-                    <h3>Comandos de conveniência</h3>
-                    <p>Acesso a atalhos como feed, heal, craft e homes extras no seu dia a dia.</p>
-                </li>
-                <li>
-                    <span class="vip-benefit-icon" aria-hidden="true">🛡️</span>
-                    <h3>Prioridade de entrada</h3>
-                    <p>Quando o servidor estiver cheio, VIP entra na frente na fila.</p>
+                    <span class="vip-benefit-icon" aria-hidden="true">✨</span>
+                    <h3>Trails</h3>
+                    <p>Efeitos de trilha para acompanhar você no mundo.</p>
                 </li>
             </ul>
         </section>
@@ -166,6 +144,14 @@
         <section id="vip-faq" class="vip-section" aria-labelledby="vip-faq-titulo">
             <h2 id="vip-faq-titulo">Perguntas frequentes</h2>
             <details>
+                <summary>O que é pay 2 win?</summary>
+                <p>É quando o dinheiro compra vantagens que mudam o jogo, como mais força, progressão mais rápida ou itens melhores. No WrathSMP isso não acontece: o VIP é apenas cosmético.</p>
+            </details>
+            <details>
+                <summary>O VIP dá vantagens no jogo?</summary>
+                <p>Não. Todos os benefícios são apenas cosméticos (prefixo, sprays e trails): não há pay 2 win nem alteração na progressão, no combate ou na economia.</p>
+            </details>
+            <details>
                 <summary>O VIP é ativado na hora?</summary>
                 <p>Assim que o MercadoPago confirmar o pagamento. A confirmação pode levar alguns segundos; entre no servidor novamente se o status não aparecer de imediato.</p>
             </details>
@@ -184,12 +170,7 @@
         </section>
     </main>
 
-    <footer id="bottom">
-        <p>Tem dúvidas ou quer saber mais? Fale com a equipe.</p>
-        <p><a href="SEU_LINK_DO_DISCORD">Discord</a> &middot;
-        <a href="mailto:SEU_EMAIL@EXEMPLO.COM">Contato</a></p>
-        <p>&copy; 2026 WrathSMP. Todos os direitos reservados.</p>
-        <p><a href="#top">Voltar ao topo</a></p>
-    </footer>
+<?php require __DIR__ . '/footer.php'; ?>
+
 </body>
 </html>

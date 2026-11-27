@@ -1,17 +1,18 @@
 <?php
 /**
- * Entrada do site: página inicial e rotas legadas para as páginas em view/.
- * Ex.: /index.php?action=vip redireciona para /view/vip.html.
- * A navegação usa links diretos para view/ e também funciona sem PHP
- * (a versão estática da home está em index.html).
+ * Entrada do site: página inicial e rotas para as páginas em view/.
+ * Ex.: /index.php?action=vip redireciona para /view/vip.php.
+ * O cabeçalho e o rodapé vêm de view/header.php e view/footer.php.
  */
 
 declare(strict_types=1);
 
 $routes = [
-    'wiki'      => 'view/wiki.html',
-    'changelog' => 'view/changelog.html',
-    'vip'       => 'view/vip.html',
+    'wiki'      => 'view/wiki.php',
+    'changelog' => 'view/changelog.php',
+    'vip'       => 'view/vip.php',
+    'mapa'      => 'view/mapa.php',
+    'suporte'   => 'view/suporte.php',
 ];
 
 $action = isset($_GET['action']) ? (string) $_GET['action'] : '';
@@ -19,6 +20,9 @@ if (isset($routes[$action])) {
     header('Location: ' . $routes[$action], true, 302);
     exit;
 }
+
+$base = '';
+$active = 'home';
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -47,34 +51,7 @@ if (isset($routes[$action])) {
     <script src="js/script.js" defer></script>
 </head>
 <body>
-    <!-- Fica escondido até receber foco pelo teclado (Tab) -->
-    <a class="skip-link" href="#content">Pular para o conteúdo</a>
-
-    <!-- Os ids do cabeçalho (top, logo, topbar, ips) são usados pelo CSS -->
-    <header id="top">
-        <img src="assets/img/wrathsmp_logo_W.webp" alt="WrathSMP" id="logo">
-
-        <!-- Páginas secundárias ficam em view/. Links diretos funcionam também em hospedagem estática, sem PHP. -->
-        <nav id="topbar" aria-label="Navegação principal">
-            <a href="index.html" aria-current="page">Home</a>
-            <a href="view/wiki.html">Wiki</a>
-            <a href="view/changelog.html">Atualizações</a>
-            <a href="view/vip.html">VIP</a>
-            <a href="view/suporte.html">Suporte</a>
-        </nav>
-
-        <!-- IPs do servidor: clique em um deles para copiar -->
-        <div id="ips">
-            <dl>
-                <dt>IP Java</dt>
-                <dd><button type="button" class="ip-copy" data-tooltip="Clique para copiar" aria-label="Copiar IP Java"><code>wrathsmp.redmc.com.br</code></button></dd>
-                <dt>IP Bedrock</dt>
-                <dd><button type="button" class="ip-copy" data-tooltip="Clique para copiar" aria-label="Copiar IP Bedrock"><code>wrathsmpbr.redmc.com.br:25587</code></button></dd>
-            </dl>
-            <!-- Aviso temporário após copiar (o JS preenche e limpa este texto) -->
-            <p id="copy-status" role="status" aria-live="polite"></p>
-        </div>
-    </header>
+<?php require __DIR__ . '/view/header.php'; ?>
 
     <main id="content">
         <!-- Banner: a imagem é decorativa, por isso alt="" (o texto já descreve o conteúdo) -->
@@ -146,13 +123,7 @@ if (isset($routes[$action])) {
         </section>
     </main>
 
-    <footer id="bottom">
-        <p>Tem dúvidas ou quer saber mais? Fale com a equipe.</p>
-        <!-- Substitua os placeholders pelo Discord e e-mail reais -->
-        <p><a href="SEU_LINK_DO_DISCORD">Discord</a> &middot;
-        <a href="mailto:SEU_EMAIL@EXEMPLO.COM">Contato</a></p>
-        <p>&copy; 2026 WrathSMP. Todos os direitos reservados.</p>
-        <p><a href="#top">Voltar ao topo</a></p>
-    </footer>
+<?php require __DIR__ . '/view/footer.php'; ?>
+
 </body>
 </html>

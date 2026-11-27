@@ -1,3 +1,6 @@
+// Marca que o JavaScript está ativo: o CSS usa isso para animar a entrada do conteúdo.
+document.documentElement.classList.add("js");
+
 // Copia um texto para a área de transferência.
 // O navigator.clipboard exige HTTPS ou localhost; o bloco abaixo serve como reserva.
 async function copiarTexto(texto) {
@@ -27,6 +30,8 @@ botoes.forEach((botao) => {
         try {
             await copiarTexto(ip);
             aviso.textContent = "IP copiado!";
+            botao.classList.add("is-copied");
+            setTimeout(() => botao.classList.remove("is-copied"), 1000);
         } catch (erro) {
             aviso.textContent = "Não foi possível copiar. Selecione o IP manualmente.";
         }
@@ -94,6 +99,46 @@ function atualizarProgresso() {
     barraProgresso.style.setProperty("--progresso", `${percentual}%`);
 }
 
+// Cabeçalho ganha sombra e fundo mais opaco depois que a página é rolada.
+function atualizarCabecalho() {
+    document.documentElement.classList.toggle("is-scrolled", window.scrollY > 8);
+}
+
+// Entrada suave dos blocos principais quando eles aparecem na tela.
+const elementosRevelar = document.querySelectorAll(
+    '#content section:not(#titlesec), #content article, .section-row > *, .vip-benefits li, .vip-price-card, .vip-form-card, .recipe'
+);
+
+if ("IntersectionObserver" in window && elementosRevelar.length) {
+    const observador = new IntersectionObserver((entradas) => {
+        entradas.forEach((entrada) => {
+            if (!entrada.isIntersecting) return;
+            entrada.target.classList.add("is-visible");
+            observador.unobserve(entrada.target);
+        });
+    }, { threshold: 0, rootMargin: "0px 0px -40px 0px" });
+
+    elementosRevelar.forEach((elemento) => {
+        elemento.classList.add("reveal");
+        observador.observe(elemento);
+    });
+}
+
+// Botão flutuante "voltar ao topo" (a página do mapa ocupa a tela toda e não precisa dele).
+let botaoTopo = null;
+if (!document.body.classList.contains("mapa-body")) {
+    botaoTopo = document.createElement("button");
+    botaoTopo.type = "button";
+    botaoTopo.className = "to-top";
+    botaoTopo.textContent = "↑";
+    botaoTopo.setAttribute("aria-label", "Voltar ao topo");
+    botaoTopo.addEventListener("click", () => {
+        const semAnimacao = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        window.scrollTo({ top: 0, behavior: semAnimacao ? "auto" : "smooth" });
+    });
+    document.body.appendChild(botaoTopo);
+}
+
 let atualizando = false;
 window.addEventListener("scroll", () => {
     if (atualizando) return;
@@ -101,12 +146,17 @@ window.addEventListener("scroll", () => {
     requestAnimationFrame(() => {
         destacarSecao();
         atualizarProgresso();
+        atualizarCabecalho();
+        if (botaoTopo) {
+            botaoTopo.classList.toggle("is-visible", window.scrollY > 400);
+        }
         atualizando = false;
     });
 }, { passive: true });
 
 destacarSecao();
 atualizarProgresso();
+atualizarCabecalho();
 
 // No celular, o índice começa fechado e pode ser aberto pelo botão.
 const sidebar = document.querySelector(".wiki-sidebar");

@@ -1,3 +1,7 @@
+<?php
+$base = '../';
+$active = 'wiki';
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -21,30 +25,9 @@
     <script src="../js/script.js" defer></script>
 </head>
 <body>
-    <a class="skip-link" href="#content">Pular para o conteúdo</a>
+<?php require __DIR__ . '/header.php'; ?>
+
     <div class="reading-progress" aria-hidden="true"></div>
-
-    <header id="top">
-        <img src="../assets/img/wrathsmp_logo_W.webp" alt="WrathSMP" id="logo">
-
-        <nav id="topbar" aria-label="Navegação principal">
-            <a href="../index.html">Home</a>
-            <a href="wiki.html" aria-current="page">Wiki</a>
-            <a href="changelog.html">Atualizações</a>
-            <a href="vip.html">VIP</a>
-            <a href="suporte.html">Suporte</a>
-        </nav>
-
-        <div id="ips">
-            <dl>
-                <dt>IP Java</dt>
-                <dd><button type="button" class="ip-copy" data-tooltip="Clique para copiar" aria-label="Copiar IP Java"><code>wrathsmp.blackhosting.com.br</code></button></dd>
-                <dt>IP Bedrock</dt>
-                <dd><button type="button" class="ip-copy" data-tooltip="Clique para copiar" aria-label="Copiar IP Bedrock"><code>wrathsmpbr.blackhosting.com.br:27184</code></button></dd>
-            </dl>
-            <p id="copy-status" role="status" aria-live="polite"></p>
-        </div>
-    </header>
 
     <main id="content" class="wiki-layout">
     <aside class="wiki-sidebar">
@@ -87,12 +70,12 @@
 <li><a href="#chat-guildas-e-interface">💬 Chat, guildas e interface</a></li>
 <li><a href="#comandos-essenciais">🧾 Comandos essenciais</a></li>
 <li><a href="#ver-tambem">🔎 Ver também</a></li>
-<li><a href="changelog.html">🧾 Atualizações</a></li>
+<li><a href="changelog.php">🧾 Atualizações</a></li>
 </ul></nav></aside>
 
         <article id="wiki">
 <nav class="wiki-breadcrumb" aria-label="Trilha de navegação">
-    <a href="../index.html">Início</a> <span aria-hidden="true">›</span>
+    <a href="../index.php">Início</a> <span aria-hidden="true">›</span>
     <span aria-current="page">Wiki</span> <span aria-hidden="true">›</span>
     <span>Guia do Jogador</span>
 </nav>
@@ -584,21 +567,16 @@
 <section id="ver-tambem" class="wiki-see-also" aria-labelledby="ver-tambem-titulo">
 <h2 id="ver-tambem-titulo">🔎 Ver também</h2>
 <ul>
-<li><a href="changelog.html">Atualizações: histórico de mudanças e correções</a></li>
-<li><a href="../index.html">Página inicial: como entrar no servidor e IPs de acesso</a></li>
-<li><a href="suporte.html">Suporte: ajuda com problemas técnicos</a></li>
+<li><a href="changelog.php">Atualizações: histórico de mudanças e correções</a></li>
+<li><a href="../index.php">Página inicial: como entrar no servidor e IPs de acesso</a></li>
+<li><a href="suporte.php">Suporte: ajuda com problemas técnicos</a></li>
 </ul>
 </section>
 <p class="wiki-end">Fim do guia. Bom jogo. 🎉</p>
         </article>
     </main>
 
-    <footer id="bottom">
-        <p>Tem dúvidas ou quer saber mais? Fale com a equipe.</p>
-        <p><a href="SEU_LINK_DO_DISCORD">Discord</a> &middot;
-        <a href="mailto:SEU_EMAIL@EXEMPLO.COM">Contato</a></p>
-        <p>&copy; 2026 WrathSMP. Todos os direitos reservados.</p>
-        <p><a href="#top">Voltar ao topo</a></p>
-    </footer>
+<?php require __DIR__ . '/footer.php'; ?>
+
 </body>
 </html>

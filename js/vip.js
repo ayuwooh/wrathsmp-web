@@ -2,7 +2,7 @@
 (() => {
     "use strict";
 
-    // vip.html fica em view/: os controllers PHP estão um nível acima.
+    // vip.php fica em view/: os controllers PHP estão um nível acima.
     const API = "../controller/";
     const form = document.getElementById("vip-form");
     if (!form) return;

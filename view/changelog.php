@@ -1,3 +1,7 @@
+<?php
+$base = '../';
+$active = 'changelog';
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -21,39 +25,17 @@
     <script src="../js/script.js" defer></script>
 </head>
 <body>
-    <a class="skip-link" href="#content">Pular para o conteúdo</a>
-
-    <header id="top">
-        <img src="../assets/img/wrathsmp_logo_W.webp" alt="WrathSMP" id="logo">
-
-        <nav id="topbar" aria-label="Navegação principal">
-            <a href="../index.html">Home</a>
-            <a href="wiki.html">Wiki</a>
-            <a href="changelog.html" aria-current="page">Atualizações</a>
-            <a href="vip.html">VIP</a>
-            <a href="suporte.html">Suporte</a>
-        </nav>
-
-        <div id="ips">
-            <dl>
-                <dt>IP Java</dt>
-                <dd><button type="button" class="ip-copy" data-tooltip="Clique para copiar" aria-label="Copiar IP Java"><code>wrathsmp.blackhosting.com.br</code></button></dd>
-                <dt>IP Bedrock</dt>
-                <dd><button type="button" class="ip-copy" data-tooltip="Clique para copiar" aria-label="Copiar IP Bedrock"><code>wrathsmpbr.blackhosting.com.br:27184</code></button></dd>
-            </dl>
-            <p id="copy-status" role="status" aria-live="polite"></p>
-        </div>
-    </header>
+<?php require __DIR__ . '/header.php'; ?>
 
     <main id="content">
         <article id="changelog">
         <nav class="wiki-breadcrumb" aria-label="Trilha de navegação">
-            <a href="../index.html">Início</a> <span aria-hidden="true">›</span>
+            <a href="../index.php">Início</a> <span aria-hidden="true">›</span>
             <span aria-current="page">Atualizações</span>
         </nav>
 
         <h1>🧾 Atualizações</h1>
-        <p><a href="wiki.html">Voltar ao guia do jogador</a></p>
+        <p><a href="wiki.php">Voltar ao guia do jogador</a></p>
 <h3 id="3-de-novembro-de-2026">3 de novembro de 2026</h3>
 <ul><li>Corrigidos os limites documentados de proteção de bases: agora são 32 chunks, com energia inicial de 24 horas e consumo ajustado ao tamanho da área.</li><li>Atualizados os dados dos túmulos: duração de 24 horas, armazenamento de 70% do XP, limite de 18 por jogador e proteção inicial de cinco minutos.</li><li>Corrigidos os níveis de acesso às dimensões: Nether no nível 15 e End no nível 30.</li><li>Atualizada a bússola de explorador com os 16 alvos atualmente definidos, incluindo vilas, minas, ruínas, fortalezas e destinos do Nether e do End.</li><li>Revisados os baús de tesouro: frequência, distância, duração, reserva inicial, chance de mimic e recompensas conforme as configurações atuais.</li><li>Incluído o NPC Guia e detalhados os recursos atuais de chat, guildas, nametags, lista de jogadores e placar.</li><li>Documentados a Pedra do Regresso, o localizador de chunks de slime e as aparições misteriosas em áreas selvagens.</li><li>Atualizada a documentação das melhorias de geração, receitas, agricultura, decoração e personalização.</li><li>Corrigidas informações desatualizadas sobre efeitos de armadura e entrega de mochila inicial; removidos recursos que não constam mais nas configurações atuais.</li><li>Registrados ajustes recentes de economia, XP de pesca do mcMMO e XP de jornada por colocação de blocos.</li></ul>
 <h3 id="2-de-novembro-de-2026">2 de novembro de 2026</h3>
@@ -61,12 +43,7 @@
         </article>
     </main>
 
-    <footer id="bottom">
-        <p>Tem dúvidas ou quer saber mais? Fale com a equipe.</p>
-        <p><a href="SEU_LINK_DO_DISCORD">Discord</a> &middot;
-        <a href="mailto:SEU_EMAIL@EXEMPLO.COM">Contato</a></p>
-        <p>&copy; 2026 WrathSMP. Todos os direitos reservados.</p>
-        <p><a href="#top">Voltar ao topo</a></p>
-    </footer>
+<?php require __DIR__ . '/footer.php'; ?>
+
 </body>
 </html>
